@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "footer": {
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London",
+    "shopTitle": "Shop",
+    "shopLinks": {
+      "about": "About",
+      "testimonials": "Testimonials",
+      "services": "Services",
+      "faq": "FAQ",
+      "team": "Team"
+    },
+    "talkTitle": "Talk To Us",
+    "email": "info@gmattorneyscr.com",
+    "phone": "(+506) 4108-4070",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.",
+    "copyright": "© 2026 GM Attorneys. All rights reserved."
+  },
+  "team": {
+    "title": "The team",
+    "sortBy": "Sort by",
+    "sortAll": "All",
+    "getInTouch": "Get in touch",
+    "roles": {
+      "partner": "Partner",
+      "attorney": "Attorney",
+      "businessDevelopment": "Business Development",
+      "paralegals": "Paralegal",
+      "assistants": "Assistant",
+      "seniorCounsel": "Senior Counsel"
+    },
+    "tags": {
+      "managingPartner": "Managing Partner",
+      "experience25": "25+ years of experience",
+      "seniorPartner": "Senior Partner",
+      "founder": "Founder",
+      "experience40": "40+ years of experience",
+      "seniorAdminOfficer": "Senior Administrative Officer",
+      "years16": "16 years at the firm",
+      "strategicDevelopment": "Strategic Development",
+      "clientExperienceConsultant": "Client Experience Consultant",
+      "officeManager": "Office Manager",
+      "since2018": "Since 2018",
+      "litigator": "Litigator",
+      "speaksSpanishItalian": "Speaks Spanish and Italian",
+      "formerSupremeCourtJustice": "Former Supreme Court Justice",
+      "lawyer": "Lawyer",
+      "publicNotary": "Public Notary",
+      "speaksSpanishItalianEnglish": "Spanish, Italian and English"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "Nosotros",
+    "services": "Servicios",
+    "team": "Equipo",
+    "blog": "Blog",
+    "faq": "Preguntas",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London",
+    "shopTitle": "Shop",
+    "shopLinks": {
+      "about": "Nosotros",
+      "testimonials": "Testimonios",
+      "services": "Servicios",
+      "faq": "Preguntas",
+      "team": "Equipo"
+    },
+    "talkTitle": "Hablemos",
+    "email": "info@gmattorneyscr.com",
+    "phone": "(+506) 4108-4070",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.",
+    "copyright": "© 2026 GM Attorneys. Todos los derechos reservados."
+  },
+  "team": {
+    "title": "El equipo",
+    "sortBy": "Ordenar por",
+    "sortAll": "Todos",
+    "getInTouch": "Contáctanos",
+    "roles": {
+      "partner": "Socio",
+      "attorney": "Abogado",
+      "businessDevelopment": "Desarrollo de Negocios",
+      "paralegals": "Asistente Legal",
+      "assistants": "Asistente",
+      "seniorCounsel": "Asesor Senior"
+    },
+    "tags": {
+      "managingPartner": "Socio Director",
+      "experience25": "25+ años de experiencia",
+      "seniorPartner": "Socio Senior",
+      "founder": "Fundador",
+      "experience40": "40+ años de experiencia",
+      "seniorAdminOfficer": "Oficial Administrativo Senior",
+      "years16": "16 años en la firma",
+      "strategicDevelopment": "Desarrollo Estratégico",
+      "clientExperienceConsultant": "Consultora de Experiencia al Cliente",
+      "officeManager": "Gerente de Oficina",
+      "since2018": "Desde 2018",
+      "litigator": "Abogado litigante",
+      "speaksSpanishItalian": "Habla español e italiano",
+      "formerSupremeCourtJustice": "Exmagistrado de la Corte Suprema",
+      "lawyer": "Abogado",
+      "publicNotary": "Notario público",
+      "speaksSpanishItalianEnglish": "Español, italiano e inglés"
+    }
+  }
+}

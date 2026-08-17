@@ -10,7 +10,7 @@ export default function JsonLd() {
       "@type": "ContactPoint",
       telephone: "",
       contactType: "customer service",
-      availableLanguage: ["Spanish"],
+      availableLanguage: ["Spanish", "English"],
     },
     sameAs: [
       "https://facebook.com/",
