@@ -111,5 +111,16 @@
         "heading": "Lorem Ipsum is simply dummy text of the printing industry"
       }
     }
+  },
+  "blog": {
+    "title": "The blog",
+    "sortBy": "Sort by",
+    "sortAll": "All",
+    "search": "Search",
+    "noResults": "No articles found.",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "backToBlog": "Back to blog",
+    "relatedPosts": "Related posts"
   }
 }

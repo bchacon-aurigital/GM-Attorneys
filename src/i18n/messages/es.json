@@ -111,5 +111,16 @@
         "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
       }
     }
+  },
+  "blog": {
+    "title": "El blog",
+    "sortBy": "Ordenar por",
+    "sortAll": "Todos",
+    "search": "Buscar",
+    "noResults": "No se encontraron artículos.",
+    "previousPage": "Página anterior",
+    "nextPage": "Página siguiente",
+    "backToBlog": "Volver al blog",
+    "relatedPosts": "Artículos relacionados"
   }
 }

@@ -1,9 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import { useLenis } from "lenis/react";
 import { cn } from "@/lib/utils";
+
+const SCROLL_DIRECTION_THRESHOLD = 10;
 
 const navLinks = [
   { key: "about", href: "/about" },
@@ -33,30 +36,23 @@ const Navbar = ({ variant = "default" }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const lastScrollY = useRef(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  useLenis(({ scroll }) => {
+    const currentScrollY = scroll;
+    const delta = currentScrollY - lastScrollY.current;
 
-      setHasScrolled(currentScrollY > 50);
+    setHasScrolled(currentScrollY > 50);
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+    if (delta > SCROLL_DIRECTION_THRESHOLD && currentScrollY > 100) {
+      setIsVisible(false);
+      lastScrollY.current = currentScrollY;
+    } else if (delta < -SCROLL_DIRECTION_THRESHOLD || currentScrollY <= 100) {
+      setIsVisible(true);
+      lastScrollY.current = currentScrollY;
+    }
+  });
 
   useEffect(() => {
     if (isOpen) {
