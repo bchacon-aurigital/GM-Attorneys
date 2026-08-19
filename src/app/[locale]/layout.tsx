@@ -6,6 +6,7 @@ import "../globals.css";
 import { LoadingProvider } from "./context/LoadingContext";
 import Script from "next/script";
 import AOSInit from "@/components/AOSInit";
+import LenisProvider from "@/components/LenisProvider";
 import JsonLd from "@/components/JsonLd";
 import { manrope, inter } from "@/lib/fonts";
 import { routing, type Locale } from "@/i18n/routing";
@@ -105,6 +106,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="antialiased font-sans">
         <NextIntlClientProvider>
           <LoadingProvider>
+            <LenisProvider />
             <AOSInit />
             {children}
           </LoadingProvider>

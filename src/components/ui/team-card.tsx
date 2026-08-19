@@ -4,17 +4,23 @@ import type { TeamMember } from "@/data/team";
 
 interface TeamCardProps {
   member: TeamMember;
+  index?: number;
 }
 
-export function TeamCard({ member }: TeamCardProps) {
+export function TeamCard({ member, index = 0 }: TeamCardProps) {
   const t = useTranslations("team");
+  const delay = (index % 6) * 150;
 
   return (
     <div className="flex flex-col gap-4 sm:gap-6 border-t border-black/20 pt-4 sm:pt-6">
       <p className="text-xs sm:text-sm font-bold uppercase tracking-wide text-black">
-        {member.name} - {t(`roles.${member.roleKey}`)} 
+        {member.name} - {t(`roles.${member.roleKey}`)}
       </p>
-      <div className="relative w-full aspect-[610/770] rounded-[4px] overflow-hidden">
+      <div
+        data-aos="zoom-in"
+        data-aos-delay={delay}
+        className="relative w-full aspect-[610/770] rounded-[4px] overflow-hidden"
+      >
         <Image
           src="/assets/team/team-placeholder.png"
           alt={member.name}

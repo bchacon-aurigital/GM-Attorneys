@@ -119,8 +119,8 @@ export default function TeamPage() {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-                {filteredTeam.map((member) => (
-                  <TeamCard key={member.slug} member={member} />
+                {filteredTeam.map((member, index) => (
+                  <TeamCard key={member.slug} member={member} index={index} />
                 ))}
               </div>
             </div>

@@ -58,5 +58,58 @@
       "publicNotary": "Public Notary",
       "speaksSpanishItalianEnglish": "Spanish, Italian and English"
     }
+  },
+  "services": {
+    "heroTitle1": "WE HAVE YOU",
+    "heroTitle2": "Covered.",
+    "getInTouch": "Get in touch",
+    "mainServicesLabel": "Main services",
+    "complementaryLabel": "Complementaries",
+    "sortBy": "Sort by",
+    "sortAll": "All",
+    "bullets": ["Lorem Ipsum", "Simply dummy", "Printing industry"],
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "list": {
+      "realEstate": {
+        "title": "Residential and\nCommercial Real Estate",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "corporateLaw": {
+        "title": "Corporate\nand Business Law",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "immigration": {
+        "title": "Immigration & Residence",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "taxLaw": {
+        "title": "Tax Law",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "familyEstate": {
+        "title": "Family and Estate Planning",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "notaryPublic": {
+        "title": "Notary Public Services",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "mergersAcquisitions": {
+        "title": "Mergers & Acquisitions",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "disputeResolution": {
+        "title": "Dispute Resolution",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      },
+      "foreignInvestments": {
+        "title": "Foreign Investments",
+        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+      }
+    }
   }
 }

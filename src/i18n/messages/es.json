@@ -58,5 +58,58 @@
       "publicNotary": "Notario público",
       "speaksSpanishItalianEnglish": "Español, italiano e inglés"
     }
+  },
+  "services": {
+    "heroTitle1": "TE TENEMOS",
+    "heroTitle2": "Cubierto.",
+    "getInTouch": "Contáctanos",
+    "mainServicesLabel": "Servicios principales",
+    "complementaryLabel": "Complementarios",
+    "sortBy": "Ordenar por",
+    "sortAll": "Todos",
+    "bullets": ["Lorem Ipsum", "Simply dummy", "Printing industry"],
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "list": {
+      "realEstate": {
+        "title": "Bienes Raíces\nResidenciales y Comerciales",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "corporateLaw": {
+        "title": "Derecho\nCorporativo y Empresarial",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "immigration": {
+        "title": "Inmigración y Residencia",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "taxLaw": {
+        "title": "Derecho Tributario",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "familyEstate": {
+        "title": "Derecho de Familia y Planificación Patrimonial",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "notaryPublic": {
+        "title": "Servicios Notariales",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "mergersAcquisitions": {
+        "title": "Fusiones y Adquisiciones",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "disputeResolution": {
+        "title": "Resolución de Disputas",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "intellectualProperty": {
+        "title": "Propiedad Intelectual",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      },
+      "foreignInvestments": {
+        "title": "Inversión Extranjera",
+        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+      }
+    }
   }
 }
