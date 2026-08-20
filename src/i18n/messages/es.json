@@ -123,5 +123,49 @@
     "backToBlog": "Volver al blog",
     "onThisPage": "En esta página",
     "otherArticles": "Otros artículos"
+  },
+  "about": {
+    "heroTitle": "Somos GM Attorneys",
+    "heroSubtitle": "Somos un despacho boutique premium. Respuesta rápida, sin apuros.",
+    "heroFooterNote": "Lorem Ipsum es simplemente texto de relleno de la",
+    "valuesIntro": "WE ARE the premier boutique legal firm specializing in Luxury Real Estate. Maintaining the highest standards of excellence and delivering",
+    "valuesHighlight": "premium service to our valued clients, while contributing to the well-being and sustainability of our local environment.",
+    "values": {
+      "commitment": {
+        "title": "Commitment",
+        "quote": "“GM Attorneys is exceptionally responsive, combining outstanding professionalism with a genuinely personal approach. Their team is knowledgeable, approachable, and a pleasure to work with. They make complex legal matters feel manageable while ensuring clients feel supported and confident throughout the process.”"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "quote": "“What stands out most about GM Attorneys is the integrity of their team. Every recommendation and every action is guided by a genuine commitment to doing what is right and in the best interests of their clients.”"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "quote": "“One of the greatest advantages of working with GM Attorneys is their strong local presence. Their team is accessible, engaged, and genuinely connected to the communities they serve. Clients can meet with them personally, fostering trust and confidence while benefiting from legal counsel that combines local insight with extensive experience.”"
+      }
+    },
+    "impactTitle": "Our Impact"
+  },
+  "locator": {
+    "title": "Dónde encontrarnos",
+    "foundLocations": "Encontramos {count} ubicaciones cerca de ti:",
+    "viewWebsite": "Ver sitio web",
+    "show": "Mostrar",
+    "mapUnavailable": "Mapa no disponible"
+  },
+  "faq": {
+    "title": "FAQ",
+    "sortBy": "Ordenar por",
+    "sortAll": "Todas",
+    "getInTouch": "Contáctanos",
+    "categories": {
+      "corporateTax": "Corporativo y Fiscal",
+      "realEstatePurchases": "Compra de Bienes Raíces",
+      "sellingRealEstate": "Venta de Bienes Raíces",
+      "residencyImmigration": "Residencia e Inmigración",
+      "banking": "Banca",
+      "rentalProperties": "Propiedades de Alquiler",
+      "officeLocations": "Ubicación de Oficinas"
+    }
   }
 }

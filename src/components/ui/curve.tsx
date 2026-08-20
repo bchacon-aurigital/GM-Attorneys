@@ -4,6 +4,12 @@ interface CurveProps {
   curveColor?: string;
   cornerColor?: string;
   corner?: "left" | "right";
+  flip?: boolean;
+  // Shifts the whole curve shape left/right by this many percentage points
+  // (of the container width), without distorting it — e.g. -10 moves the
+  // curve's corner cut 10% closer to the edge (smaller sobrante), +10 moves
+  // it further out (bigger sobrante). Defaults to 0 (original Figma geometry).
+  offset?: number;
   className?: string;
   children?: React.ReactNode;
   contentClassName?: string;
@@ -14,6 +20,7 @@ interface CurveProps {
 // (sampled into points) -> across the straight top edge -> back to start.
 // Percentages (not px/viewBox units) so clip-path scales correctly with the
 // container at any size/DPR, with no separate SVG or transform layer to misalign.
+const CURVE_END_X = 25.082; // where the Bezier run finishes (start of the flat/content side)
 const CURVE_POINTS_LEFT: [number, number][] = [
   [100, 100],
   [0, 100],
@@ -38,13 +45,25 @@ const CURVE_POINTS_LEFT: [number, number][] = [
   [23.057, 2.715],
   [23.713, 1.222],
   [24.39, 0.309],
-  [25.082, 0],
+  [CURVE_END_X, 0],
   [100, 0],
 ];
 
-function toPolygon(points: [number, number][], mirror: boolean) {
+function toPolygon(
+  points: [number, number][],
+  mirrorX: boolean,
+  mirrorY: boolean,
+  offset: number
+) {
   return points
-    .map(([x, y]) => `${mirror ? 100 - x : x}% ${y}%`)
+    .map(([x, y]) => {
+      // Only the Bezier run itself (strictly between the flat vertical edge
+      // at x=0 and the flat top edge at CURVE_END_X) shifts with offset.
+      // The container corners (0/100) and the flat-edge point at x=0 must
+      // stay pinned to the container's actual edge, or the shape tears.
+      const shiftedX = x > 0 && x <= CURVE_END_X ? Math.max(0, x + offset) : x;
+      return `${mirrorX ? 100 - shiftedX : shiftedX}% ${mirrorY ? 100 - y : y}%`;
+    })
     .join(", ");
 }
 
@@ -52,12 +71,15 @@ export function Curve({
   curveColor = "#240824",
   cornerColor = "#ffffff",
   corner = "left",
+  flip = false,
+  offset = 0,
   className,
   children,
   contentClassName,
 }: CurveProps) {
-  const mirror = corner === "right";
-  const clipPath = `polygon(${toPolygon(CURVE_POINTS_LEFT, mirror)})`;
+  const mirrorX = corner === "right";
+  const clipPath = `polygon(${toPolygon(CURVE_POINTS_LEFT, mirrorX, flip, offset)})`;
+  const contentWidth = 100 - Math.max(0, CURVE_END_X + offset);
 
   return (
     <div
@@ -81,7 +103,7 @@ export function Curve({
             contentClassName
           )}
           style={{
-            width: "74.92%",
+            width: `${contentWidth}%`,
             ...(corner === "right" ? { left: 0 } : { right: 0 }),
           }}
         >

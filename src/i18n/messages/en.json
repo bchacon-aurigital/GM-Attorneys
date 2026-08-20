@@ -123,5 +123,49 @@
     "backToBlog": "Back to blog",
     "onThisPage": "On this page",
     "otherArticles": "Other articles"
+  },
+  "about": {
+    "heroTitle": "We Are GM Attorneys",
+    "heroSubtitle": "We are a premium boutique Law Firm. Responsiveness without haste",
+    "heroFooterNote": "Lorem Ipsum is simply dummy text of the",
+    "valuesIntro": "WE ARE the premier boutique legal firm specializing in Luxury Real Estate. Maintaining the highest standards of excellence and delivering",
+    "valuesHighlight": "premium service to our valued clients, while contributing to the well-being and sustainability of our local environment.",
+    "values": {
+      "commitment": {
+        "title": "Commitment",
+        "quote": "“GM Attorneys is exceptionally responsive, combining outstanding professionalism with a genuinely personal approach. Their team is knowledgeable, approachable, and a pleasure to work with. They make complex legal matters feel manageable while ensuring clients feel supported and confident throughout the process.”"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "quote": "“What stands out most about GM Attorneys is the integrity of their team. Every recommendation and every action is guided by a genuine commitment to doing what is right and in the best interests of their clients.”"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "quote": "“One of the greatest advantages of working with GM Attorneys is their strong local presence. Their team is accessible, engaged, and genuinely connected to the communities they serve. Clients can meet with them personally, fostering trust and confidence while benefiting from legal counsel that combines local insight with extensive experience.”"
+      }
+    },
+    "impactTitle": "Our Impact"
+  },
+  "locator": {
+    "title": "Where to find us",
+    "foundLocations": "We found {count} locations near you:",
+    "viewWebsite": "View website",
+    "show": "Show",
+    "mapUnavailable": "Map unavailable"
+  },
+  "faq": {
+    "title": "FAQ",
+    "sortBy": "Sort by",
+    "sortAll": "All",
+    "getInTouch": "Get in touch",
+    "categories": {
+      "corporateTax": "Corporate and Tax Compliance",
+      "realEstatePurchases": "Real Estate Purchases and Ownership",
+      "sellingRealEstate": "Selling Real Estate",
+      "residencyImmigration": "Residency and Immigration",
+      "banking": "Banking and Financial Services",
+      "rentalProperties": "Rental Properties and Investment Management",
+      "officeLocations": "Office Locations and Contact Information"
+    }
   }
 }

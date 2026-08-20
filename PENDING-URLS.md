@@ -32,9 +32,7 @@ Source of truth for the old URLs: the 6 sitemaps listed in Yoast's
 These were left **without a redirect** on purpose, per client instruction —
 do not invent a destination for them. Revisit once a decision comes back.
 
-- **`/about-us/`** — no equivalent page exists yet in the new site. No page
-  built, no redirect added.
-- **`/contact-us/`** — same as above, page doesn't exist yet.
+- **`/contact-us/`** — page doesn't exist yet in the new site.
 - **`/newslettersubs/`** — likely an old newsletter signup landing/form. Not
   rebuilt, not redirected. Confirm whether the newsletter flow is even still
   active before deciding.

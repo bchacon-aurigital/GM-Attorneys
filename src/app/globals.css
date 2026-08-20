@@ -68,6 +68,17 @@
   }
 }
 
+/* SVGs embedded via <object type="image/svg+xml"> (used for our logos so
+   currentColor/brightness filters can apply) load as a separate embedded
+   document. Without this, the browser routes wheel/mouse events to that
+   inner document while the cursor is over it instead of bubbling them to
+   the page — e.g. breaking Lenis smooth-scroll under the cursor. None of
+   our <object> SVGs are interactive on their own, so disable pointer
+   events on the element itself; wrap it in a <Link>/<a> for click targets. */
+object[type="image/svg+xml"] {
+  pointer-events: none;
+}
+
 /* Styles the raw HTML WordPress/Elementor returns via WPGraphQL's `content`
    field. Real content sits several levels deep inside Elementor wrapper
    divs, so selectors target descendants, not direct children. Includes
