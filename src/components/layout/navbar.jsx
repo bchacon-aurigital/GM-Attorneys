@@ -10,8 +10,8 @@ const SCROLL_DIRECTION_THRESHOLD = 10;
 
 const navLinks = [
   { key: "about", href: "/about" },
-  { key: "services", href: "/services" },
-  { key: "team", href: "/team" },
+  { key: "services", href: "/practice-areas" },
+  { key: "team", href: "/our-team" },
   { key: "blog", href: "/blog" },
   { key: "faq", href: "/faq" },
   { key: "contact", href: "/contact" },

@@ -226,7 +226,7 @@ export async function getCategories(): Promise<WPCategory[]> {
 }
 
 export async function getRelatedPosts(
-  categoryId: string,
+  categorySlug: string,
   excludePostId: string,
   limit = 3
 ): Promise<WPPost[]> {
@@ -240,7 +240,7 @@ export async function getRelatedPosts(
 
   const data = await fetchGraphQL<{ posts: { nodes: WPPost[] } }>(query, {
     first: limit + 1,
-    where: { categoryId, status: "PUBLISH" },
+    where: { categoryName: categorySlug, status: "PUBLISH" },
   });
 
   const posts = data?.posts.nodes ?? [];

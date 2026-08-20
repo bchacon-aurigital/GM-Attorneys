@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -37,7 +38,9 @@ export default async function BlogPage({ params }: BlogPageProps) {
               </object>
             </div>
 
-            <BlogListing posts={posts} categories={categories} locale={locale} />
+            <Suspense fallback={null}>
+              <BlogListing posts={posts} categories={categories} locale={locale} />
+            </Suspense>
           </div>
         </Section>
       </main>

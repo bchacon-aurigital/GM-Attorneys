@@ -70,8 +70,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const categoryId = post.categories.nodes[0]?.id;
-  const relatedPosts = categoryId ? await getRelatedPosts(categoryId, post.id, 3) : [];
+  const categorySlug = post.categories.nodes[0]?.slug;
+  const relatedPosts = categorySlug ? await getRelatedPosts(categorySlug, post.id, 3) : [];
   const imageUrl = getFeaturedImageUrl(post);
   const jsonLd = post.seo?.schema?.raw;
 

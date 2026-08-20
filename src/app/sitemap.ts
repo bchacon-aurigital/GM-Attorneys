@@ -5,8 +5,8 @@ import { routing } from "@/i18n/routing";
 const BASE_URL = "https://gmattorneyscr.com";
 
 // Static routes that exist for every locale. Add new pages here as they're
-// built (e.g. "/about", "/faq") so they're picked up automatically.
-const STATIC_ROUTES = ["", "/services", "/team", "/blog"];
+// built (e.g. "/about-us", "/faq") so they're picked up automatically.
+const STATIC_ROUTES = ["", "/practice-areas", "/our-team", "/blog"];
 
 function localizedPath(path: string, locale: string) {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;

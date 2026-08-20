@@ -5,11 +5,11 @@ import { Curve } from "@/components/ui/curve";
 import { cn } from "@/lib/utils";
 
 const shopLinks = [
-  { key: "about", href: "/about" },
+  { key: "about", href: "/about-us" },
   { key: "testimonials", href: "/testimonials" },
-  { key: "services", href: "/services" },
+  { key: "services", href: "/practice-areas" },
   { key: "faq", href: "/faq" },
-  { key: "team", href: "/team" },
+  { key: "team", href: "/our-team" },
 ];
 
 const talkLinks = [

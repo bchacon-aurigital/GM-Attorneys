@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { BlogPostCard } from "@/components/ui/blog-post-card";
 import type { WPCategory, WPPost } from "@/lib/wordpress";
@@ -16,12 +17,23 @@ const POSTS_PER_PAGE = 9;
 
 export function BlogListing({ posts, categories, locale }: BlogListingProps) {
   const t = useTranslations("blog");
+  const searchParams = useSearchParams();
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [isSortOpen, setIsSortOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
+
+  // Pre-select a category when arriving via ?category=<slug> — this is the
+  // destination of the redirect from the old /category/<slug>/ archive URLs
+  // (see next.config.ts), so old category links still land pre-filtered.
+  useEffect(() => {
+    const categorySlug = searchParams.get("category");
+    if (!categorySlug) return;
+    const match = categories.find((c) => c.slug === categorySlug);
+    if (match) setSelectedCategory(match.id);
+  }, [searchParams, categories]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
