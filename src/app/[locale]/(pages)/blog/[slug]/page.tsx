@@ -5,7 +5,8 @@ import { getTranslations } from "next-intl/server";
 import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
-import { Link } from "@/i18n/navigation";
+import { BlogTableOfContents } from "@/components/sections/blog/blog-table-of-contents";
+import { BlogArticleBody } from "@/components/sections/blog/blog-article-body";
 import {
   getPostBySlug,
   getAllPostSlugs,
@@ -14,6 +15,8 @@ import {
   getAuthorName,
   getCategoryName,
   formatDate,
+  addHeadingIdsAndExtract,
+  replaceStandaloneLinksWithPreviews,
 } from "@/lib/wordpress";
 import { BlogPostCard } from "@/components/ui/blog-post-card";
 import type { Locale } from "@/i18n/routing";
@@ -74,6 +77,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const relatedPosts = categorySlug ? await getRelatedPosts(categorySlug, post.id, 3) : [];
   const imageUrl = getFeaturedImageUrl(post);
   const jsonLd = post.seo?.schema?.raw;
+  const { html: withHeadingIds, headings } = addHeadingIdsAndExtract(post.content);
+  const contentHtml = replaceStandaloneLinksWithPreviews(withHeadingIds);
 
   return (
     <>
@@ -86,65 +91,62 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <Navbar variant="default" />
       <main>
-        <Section className="!pt-6">
-          <article className="flex flex-col gap-8 sm:gap-10 max-w-[900px] mx-auto">
-            <Link
-              href="/blog"
-              className="flex items-center gap-2 text-sm font-medium text-black/60 hover:text-black transition-colors duration-150 w-fit"
-            >
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M8 2L4 6L8 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              {t("backToBlog")}
-            </Link>
+        <Section className="!pt-16 sm:!pt-20">
+          <div className="flex flex-col items-center gap-9">
+            <div className="flex flex-col items-center gap-6 sm:gap-9">
+              <span className="rounded-lg border border-black/[0.12] px-6 sm:px-8 py-3 text-base sm:text-xl font-semibold text-black/50">
+                {getCategoryName(post)}
+              </span>
 
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded bg-[#240824] border border-[#240824] px-4 py-2 text-sm font-semibold uppercase text-white">
-                  {formatDate(post.date, locale)}
-                </span>
-                <span className="text-sm text-black/50">
-                  By {getAuthorName(post)} · {getCategoryName(post)}
-                </span>
+              <div className="flex flex-col items-center gap-4 sm:gap-6 max-w-3xl">
+                <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-[#2f3037] leading-tight">
+                  {post.title}
+                </h1>
+                <p className="text-sm sm:text-lg">
+                  <span className="font-semibold text-[#2f3037]/80">{getAuthorName(post)}</span>
+                  <span className="text-[#2f3037]"> </span>
+                  <span className="font-semibold text-[#2f3037]/60">
+                    - {formatDate(post.date, locale)}
+                  </span>
+                </p>
               </div>
-
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-[#240824]">
-                {post.title}
-              </h1>
             </div>
 
             {imageUrl && (
-              <div className="relative w-full aspect-[16/9] rounded overflow-hidden">
+              <div className="relative w-full aspect-[16/9] sm:aspect-[1856/908] rounded-lg overflow-hidden bg-black/[0.08]">
                 <Image
                   src={imageUrl}
                   alt={post.featuredImage?.node.altText || post.title}
                   fill
-                  sizes="(min-width: 1024px) 900px, 100vw"
+                  sizes="(min-width: 1024px) 1856px, 100vw"
                   className="object-cover"
                   priority
                 />
               </div>
             )}
+          </div>
 
-            <div
-              className="prose prose-sm sm:prose-base max-w-none prose-headings:text-[#240824] prose-headings:font-bold prose-a:text-[#240824] prose-a:underline"
-              dangerouslySetInnerHTML={{ __html: post.content || "" }}
-            />
-          </article>
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 mt-8 sm:mt-10">
+            <BlogTableOfContents headings={headings} />
 
-          {relatedPosts.length > 0 && (
-            <div className="flex flex-col gap-8 sm:gap-10 mt-16 sm:mt-24 pt-10 border-t border-black/10">
-              <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-[#240824]">
-                {t("relatedPosts")}
-              </h2>
+            <BlogArticleBody html={contentHtml} className="blog-content flex-1 min-w-0" />
+          </div>
+        </Section>
+
+        {relatedPosts.length > 0 && (
+          <section className="bg-white py-16 sm:py-20">
+            <div className="w-full px-4 sm:px-6 lg:px-10">
+              <p className="text-4xl sm:text-6xl lg:text-8xl font-medium uppercase tracking-tight text-[#240824] mb-10 sm:mb-14">
+                {t("otherArticles")}
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-6 gap-y-10">
                 {relatedPosts.map((related) => (
-                  <BlogPostCard key={related.id} post={related} locale={locale} />
+                  <BlogPostCard key={related.id} post={related} locale={locale} variant="light" />
                 ))}
               </div>
             </div>
-          )}
-        </Section>
+          </section>
+        )}
       </main>
       <Footer variant="dark" />
     </>

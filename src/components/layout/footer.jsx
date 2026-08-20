@@ -44,7 +44,7 @@ export function Footer({ variant = "dark" }) {
             width="921"
             height="142"
             className={cn(
-              "h-full w-full transition-[filter] duration-300",
+              "h-full w-full pointer-events-none transition-[filter] duration-300",
               isDark ? "" : "brightness-0"
             )}
             aria-label="GM Attorneys logo"

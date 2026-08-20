@@ -121,6 +121,7 @@
     "previousPage": "Página anterior",
     "nextPage": "Página siguiente",
     "backToBlog": "Volver al blog",
-    "relatedPosts": "Artículos relacionados"
+    "onThisPage": "En esta página",
+    "otherArticles": "Otros artículos"
   }
 }

@@ -268,6 +268,89 @@ export function formatDate(dateString: string, locale: "es" | "en" = "es"): stri
   });
 }
 
+export interface Heading {
+  id: string;
+  text: string;
+  level: 2 | 3;
+}
+
+function slugifyHeading(text: string, seen: Map<string, number>): string {
+  const base = text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // strip accents (é -> e, ñ -> n, etc.)
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-") || "section";
+
+  const count = seen.get(base) ?? 0;
+  seen.set(base, count + 1);
+  return count === 0 ? base : `${base}-${count}`;
+}
+
+// Injects an id="..." onto every <h2>/<h3> in the post HTML (so anchor links
+// work) and returns both the modified HTML and the flat list used to build
+// the "On this page" sidebar. Run once per render — ids must stay in sync
+// between the two.
+export function addHeadingIdsAndExtract(html: string | null | undefined): {
+  html: string;
+  headings: Heading[];
+} {
+  if (!html) return { html: "", headings: [] };
+
+  const headings: Heading[] = [];
+  const seen = new Map<string, number>();
+
+  const withIds = html.replace(
+    /<h([23])((?:(?!>)[^])*)>([\s\S]*?)<\/h[23]>/gi,
+    (match, level, attrs, inner) => {
+      const text = cleanHtml(inner);
+      if (!text) return match;
+
+      const id = slugifyHeading(text, seen);
+      headings.push({ id, text, level: Number(level) as 2 | 3 });
+
+      const hasId = /\sid=/.test(attrs);
+      const newAttrs = hasId ? attrs : `${attrs} id="${id}"`;
+      return `<h${level}${newAttrs}>${inner}</h${level}>`;
+    }
+  );
+
+  return { html: withIds, headings };
+}
+
+// Matches a <p> whose entire content is a single link — replaced with a
+// placeholder div that BlogLinkPreviews (client) portals a
+// <LinkPreviewCard> into. Links sharing a paragraph with other text are
+// left as plain inline links.
+const STANDALONE_LINK_PARAGRAPH =
+  /<p[^>]*>\s*<a\s+[^>]*href=["']([^"']+)["'][^>]*>(?:(?!<\/a>)[\s\S])*<\/a>\s*<\/p>/gi;
+
+// WordPress auto-embeds a self-domain link via oEmbed into a
+// <figure class="wp-block-embed is-type-wp-embed"> with a hidden iframe
+// pointed at /.../embed/#secret=..., not a plain <p><a>. Recover the real
+// post URL from that iframe's src.
+const WP_SELF_EMBED_BLOCK =
+  /<figure[^>]*class="[^"]*wp-block-embed[^"]*is-type-wp-embed[^"]*"[\s\S]*?<\/figure>/gi;
+const IFRAME_SRC = /<iframe[^>]+src=["']([^"']+)["']/i;
+
+function urlFromWpEmbedIframeSrc(src: string): string {
+  return src.replace(/\/embed\/?(?:#.*)?$/, "/").replace(/#secret=[^&]*$/, "");
+}
+
+export function replaceStandaloneLinksWithPreviews(html: string): string {
+  const withSelfEmbedsReplaced = html.replace(WP_SELF_EMBED_BLOCK, (block) => {
+    const iframeMatch = block.match(IFRAME_SRC);
+    if (!iframeMatch) return block; // leave untouched if we can't recover a URL
+    const url = urlFromWpEmbedIframeSrc(iframeMatch[1]);
+    return `<div data-link-preview-url="${url}"></div>`;
+  });
+
+  return withSelfEmbedsReplaced.replace(STANDALONE_LINK_PARAGRAPH, (_match, url) => {
+    return `<div data-link-preview-url="${url}"></div>`;
+  });
+}
+
 // Strips WordPress/Gutenberg HTML and decodes common entities, for use in
 // plain-text excerpts (card previews, meta descriptions).
 export function cleanHtml(html: string | null | undefined): string {

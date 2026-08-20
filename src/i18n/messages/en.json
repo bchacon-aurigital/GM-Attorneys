@@ -121,6 +121,7 @@
     "previousPage": "Previous page",
     "nextPage": "Next page",
     "backToBlog": "Back to blog",
-    "relatedPosts": "Related posts"
+    "onThisPage": "On this page",
+    "otherArticles": "Other articles"
   }
 }

@@ -68,3 +68,296 @@
   }
 }
 
+/* Styles the raw HTML WordPress/Elementor returns via WPGraphQL's `content`
+   field. Real content sits several levels deep inside Elementor wrapper
+   divs, so selectors target descendants, not direct children. Includes
+   fallbacks for native Elementor widgets (image, video, blockquote) in
+   case an editor uses those instead of the Text Editor widget. */
+.blog-content {
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(47, 48, 55, 0.6);
+}
+
+/* Neutralize Elementor's own layout wrappers so they don't add unexpected
+   width constraints or spacing on top of ours. */
+.blog-content .elementor,
+.blog-content .e-con,
+.blog-content .e-con-inner,
+.blog-content .elementor-widget,
+.blog-content .elementor-widget-container {
+  all: unset;
+  display: block;
+  width: 100%;
+}
+
+.blog-content p + *,
+.blog-content h1 + *,
+.blog-content h2 + *,
+.blog-content h3 + *,
+.blog-content ul + *,
+.blog-content ol + *,
+.blog-content blockquote + *,
+.blog-content figure + *,
+.blog-content .wp-block-columns + * {
+  margin-top: 1.5rem;
+}
+
+.blog-content h1 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #2f3037;
+  letter-spacing: -0.02em;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2f3037;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #2f3037;
+  scroll-margin-top: 6rem;
+}
+
+@media (min-width: 640px) {
+  .blog-content h1 { font-size: 2.25rem; }
+  .blog-content h2 { font-size: 1.75rem; }
+  .blog-content h3 { font-size: 1.375rem; }
+}
+
+.blog-content p {
+  color: rgba(47, 48, 55, 0.6);
+}
+
+.blog-content a {
+  color: #01a299;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-content strong {
+  font-weight: 700;
+  color: #2f3037;
+}
+
+.blog-content ul,
+.blog-content ol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.blog-content ul > li,
+.blog-content ol > li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.blog-content ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: black;
+}
+
+.blog-content ol {
+  counter-reset: blog-ol;
+}
+
+.blog-content ol > li {
+  counter-increment: blog-ol;
+}
+
+.blog-content ol > li::before {
+  content: counter(blog-ol) ".";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: #2f3037;
+}
+
+.blog-content img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+/* Gutenberg's image-columns block (Media & Text / Columns with images) */
+.blog-content .wp-block-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .blog-content .wp-block-columns {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.blog-content .wp-block-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-content .wp-block-column img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Quote block */
+.blog-content blockquote,
+.blog-content .wp-block-quote {
+  border-left: 4px solid #01a299;
+  padding-left: 2.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-style: italic;
+  color: black;
+  font-size: 1.125rem;
+}
+
+.blog-content blockquote p,
+.blog-content .wp-block-quote p {
+  color: black;
+}
+
+.blog-content blockquote::before {
+  content: "\201C";
+}
+
+.blog-content blockquote::after {
+  content: "\201D";
+}
+
+/* Audio block */
+.blog-content .wp-block-audio {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+}
+
+.blog-content .wp-block-audio audio {
+  width: 100%;
+}
+
+/* Video block / embeds (YouTube, Vimeo, etc.) */
+.blog-content .wp-block-video,
+.blog-content .wp-block-embed {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.blog-content .wp-block-video video {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Excludes is-type-wp-embed (WordPress self-embeds) — its hidden iframe has
+   no intrinsic size, so a 16:9 wrapper here leaves a giant empty box. */
+.blog-content .wp-block-embed:not(.is-type-wp-embed) .wp-block-embed__wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.blog-content .wp-block-embed:not(.is-type-wp-embed) .wp-block-embed__wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Safety net — replaceStandaloneLinksWithPreviews already swaps these for
+   a LinkPreviewCard placeholder, so this only catches leftovers. */
+.blog-content .wp-block-embed.is-type-wp-embed {
+  display: none;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Fallbacks for native Elementor widgets (unstyled without Elementor's own
+   frontend CSS, which isn't loaded here). */
+.blog-content .elementor-widget-image img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.blog-content .elementor-widget-video .elementor-wrapper,
+.blog-content .elementor-widget-video-playlist .elementor-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.blog-content .elementor-widget-video iframe,
+.blog-content .elementor-widget-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-content .elementor-widget-audio audio {
+  width: 100%;
+}
+
+.blog-content .elementor-blockquote {
+  border-left: 4px solid #01a299;
+  padding-left: 2.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-style: italic;
+  color: black;
+  font-size: 1.125rem;
+}
+
+.blog-content .elementor-widget-image-box {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.blog-content .elementor-image-box-img {
+  flex-shrink: 0;
+  width: 30%;
+}
+
+.blog-content .elementor-image-box-img img {
+  border-radius: 0.25rem;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.blog-content .elementor-image-box-title {
+  font-weight: 700;
+  color: #2f3037;
+}
+
+.blog-content .elementor-image-box-description {
+  color: rgba(47, 48, 55, 0.6);
+}
+
