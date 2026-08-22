@@ -1,4 +1,19 @@
 {
+  "home": {
+    "heroTitle": "Let us help",
+    "heroSubtitle": "Servicios legales boutique premium en bienes raíces, inversión e inmigración. Respuesta rápida, sin apuros, en la costa desde 1978.",
+    "areYouProtected": "¿Estás protegido?",
+    "getInTouch": "Contáctanos",
+    "whoWeAre": "Quiénes somos",
+    "whoWeAreTitle": "Desde 1978, GM Attorneys ha guiado a clientes de alto patrimonio en bienes raíces, inversión extranjera e inmigración en Costa Rica. Fuimos el primer despacho en hacer de la costa nuestro hogar, no una sucursal — y esa presencia todavía nos distingue.",
+    "whoWeAreText": "Un despacho boutique premium arraigado en Guanacaste y San José. Combinamos conocimiento local con décadas de experiencia para brindar asesoría legal personalizada y precisa a inversionistas y compradores que esperan lo mejor.",
+    "whatSetsUsApart": "Qué nos distingue",
+    "apartIntro": "Un despacho boutique se mide por su criterio, no por su tamaño. Durante más de cuatro décadas nos hemos ganado la confianza de inversionistas y compradores que eligieron Costa Rica —",
+    "apartHighlight": "combinando el alcance de una práctica internacional con la cercanía que solo un socio local puede ofrecer.",
+    "complementsTitle": "Complementos",
+    "teamIntro": "Detrás de cada transacción hay un equipo de abogados, notarios y asesores elegidos con el mismo cuidado que los casos que asumimos.",
+    "teamHighlight": "Desde socios con más de cuatro décadas en el ejercicio hasta asesores que han servido en la corte más alta del país, nuestra gente es el despacho."
+  },
   "nav": {
     "about": "Nosotros",
     "services": "Servicios",
@@ -84,15 +99,15 @@
       },
       "taxLaw": {
         "title": "Derecho Tributario",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Planificación estratégica y cumplimiento, tanto corporativo como individual."
       },
       "familyEstate": {
         "title": "Derecho de Familia y Planificación Patrimonial",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Testamentos, fideicomisos y planes de sucesión."
       },
       "notaryPublic": {
         "title": "Servicios Notariales",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Autenticación de documentos, redacción de escrituras y certificaciones legales."
       },
       "mergersAcquisitions": {
         "title": "Fusiones y Adquisiciones",
@@ -100,15 +115,15 @@
       },
       "disputeResolution": {
         "title": "Resolución de Disputas",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Resolución alterna de disputas y litigio."
       },
       "intellectualProperty": {
         "title": "Propiedad Intelectual",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Registro de marcas y patentes, cumplimiento y licenciamiento."
       },
       "foreignInvestments": {
         "title": "Inversión Extranjera",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Inversión extranjera, zonas francas y sectores estratégicos."
       }
     }
   },

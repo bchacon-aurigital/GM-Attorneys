@@ -1,4 +1,19 @@
 {
+  "home": {
+    "heroTitle": "Let us help",
+    "heroSubtitle": "Premium boutique legal services in real estate, investment, and immigration. Responsiveness without haste, on the coast since 1978.",
+    "areYouProtected": "Are you protected?",
+    "getInTouch": "Get in touch",
+    "whoWeAre": "Who we are",
+    "whoWeAreTitle": "Since 1978, GM Attorneys has guided high-net-worth clients through real estate, foreign investment, and immigration in Costa Rica. We were the first firm to make the coast our home, not a branch — and that presence still sets us apart.",
+    "whoWeAreText": "A premium boutique firm rooted in Guanacaste and San José. We combine local insight with decades of experience to deliver personalized, precise legal counsel to investors and buyers who expect nothing less.",
+    "whatSetsUsApart": "What sets us apart",
+    "apartIntro": "A boutique firm is measured by its judgment, not its size. For over four decades we have earned the trust of investors and buyers who chose Costa Rica —",
+    "apartHighlight": "pairing the reach of an international practice with the closeness only a local partner can offer.",
+    "complementsTitle": "Complements",
+    "teamIntro": "Behind every transaction is a team of attorneys, notaries, and advisors chosen as carefully as the cases we take on.",
+    "teamHighlight": "From partners with over four decades at the bar to counsel who have served on the country's highest court, our people are the firm."
+  },
   "nav": {
     "about": "About",
     "services": "Services",
@@ -84,15 +99,15 @@
       },
       "taxLaw": {
         "title": "Tax Law",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Strategic planning and compliance, both corporate and individual."
       },
       "familyEstate": {
         "title": "Family and Estate Planning",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Wills, trusts, and succession plans."
       },
       "notaryPublic": {
         "title": "Notary Public Services",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Document authentication, deed drafting, and legal certifications."
       },
       "mergersAcquisitions": {
         "title": "Mergers & Acquisitions",
@@ -100,15 +115,15 @@
       },
       "disputeResolution": {
         "title": "Dispute Resolution",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Alternative dispute resolution and litigation."
       },
       "intellectualProperty": {
         "title": "Intellectual Property",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Trademark and patent registration, enforcement, and licensing."
       },
       "foreignInvestments": {
         "title": "Foreign Investments",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Foreign investment, free trade zones, and strategic sectors."
       }
     }
   },
