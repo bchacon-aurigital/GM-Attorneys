@@ -1,6 +1,6 @@
 {
   "home": {
-    "heroTitle": "Your Roots, Legally Secured",
+    "heroTitle": "Tus Raíces, Legalmente Seguras",
     "heroSubtitle": "Servicios legales boutique premium en bienes raíces, inversión extranjera, derecho corporativo e inmigración.",
     "areYouProtected": "¿Estás protegido?",
     "getInTouch": "Contáctanos",
@@ -24,7 +24,7 @@
     "contact": "Contacto"
   },
   "footer": {
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London",
+    "description": "Somos un despacho legal boutique premium. Por más de cuatro décadas nos hemos enfocado en brindar servicios legales integrales en diversas áreas a personas, empresas y organizaciones, de manera integral y personalizada, satisfaciendo pronta y eficazmente todos sus requerimientos legales.",
     "shopTitle": "Shop",
     "shopLinks": {
       "about": "Nosotros",
@@ -35,7 +35,7 @@
     },
     "talkTitle": "Hablemos",
     "email": "info@gmattorneyscr.com",
-    "phone": "(+506) 2653-2155",
+    "phone": "(+506) 4108-4070",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "facebook": "Facebook",
@@ -129,10 +129,6 @@
         "title": "Servicios Notariales",
         "heading": "Autenticación de documentos, redacción de escrituras y certificaciones legales."
       },
-      "mergersAcquisitions": {
-        "title": "Fusiones y Adquisiciones",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
-      },
       "disputeResolution": {
         "title": "Resolución de Disputas",
         "heading": "Resolución alterna de disputas y litigio."
@@ -163,23 +159,23 @@
     "heroTitle": "Somos GM Attorneys",
     "heroSubtitle": "Somos un despacho boutique premium. Respuesta rápida, sin apuros.",
     "heroFooterNote": "Lorem Ipsum es simplemente texto de relleno de la",
-    "valuesIntro": "WE ARE the premier boutique legal firm specializing in Luxury Real Estate. Maintaining the highest standards of excellence and delivering",
-    "valuesHighlight": "premium service to our valued clients, while contributing to the well-being and sustainability of our local environment.",
+    "valuesIntro": "SOMOS el despacho legal boutique líder especializado en Bienes Raíces de Lujo. Mantenemos los más altos estándares de excelencia y ofrecemos",
+    "valuesHighlight": "un servicio premium a nuestros valiosos clientes, mientras contribuimos al bienestar y la sostenibilidad de nuestro entorno local.",
     "values": {
       "commitment": {
-        "title": "Commitment",
-        "quote": "“GM Attorneys is exceptionally responsive, combining outstanding professionalism with a genuinely personal approach. Their team is knowledgeable, approachable, and a pleasure to work with. They make complex legal matters feel manageable while ensuring clients feel supported and confident throughout the process.”"
+        "title": "Compromiso",
+        "quote": "“GM Attorneys es excepcionalmente receptivo, combinando un profesionalismo sobresaliente con un trato genuinamente personal. Su equipo es conocedor, accesible y un placer con el que trabajar. Logran que asuntos legales complejos se sientan manejables, mientras aseguran que los clientes se sientan respaldados y confiados durante todo el proceso.”"
       },
       "integrity": {
-        "title": "Integrity",
-        "quote": "“What stands out most about GM Attorneys is the integrity of their team. Every recommendation and every action is guided by a genuine commitment to doing what is right and in the best interests of their clients.”"
+        "title": "Integridad",
+        "quote": "“Lo que más destaca de GM Attorneys es la integridad de su equipo. Cada recomendación y cada acción está guiada por un compromiso genuino de hacer lo correcto y velar por los mejores intereses de sus clientes.”"
       },
       "excellence": {
-        "title": "Excellence",
-        "quote": "“One of the greatest advantages of working with GM Attorneys is their strong local presence. Their team is accessible, engaged, and genuinely connected to the communities they serve. Clients can meet with them personally, fostering trust and confidence while benefiting from legal counsel that combines local insight with extensive experience.”"
+        "title": "Excelencia",
+        "quote": "“Una de las mayores ventajas de trabajar con GM Attorneys es su fuerte presencia local. Su equipo es accesible, cercano y genuinamente conectado con las comunidades a las que sirve. Los clientes pueden reunirse con ellos personalmente, fomentando confianza y seguridad, mientras se benefician de una asesoría legal que combina el conocimiento local con amplia experiencia.”"
       }
     },
-    "impactTitle": "Our Impact"
+    "impactTitle": "Nuestro Impacto"
   },
   "locator": {
     "title": "Dónde encontrarnos",

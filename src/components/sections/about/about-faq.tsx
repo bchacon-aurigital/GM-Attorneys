@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Section } from "@/components/ui/section";
 import { Curve } from "@/components/ui/curve";
 import { ContactButton } from "@/components/ui/contact-button";
@@ -14,6 +14,7 @@ interface AboutFaqProps {
 
 export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
   const t = useTranslations("faq");
+  const locale = useLocale() as "es" | "en";
   const [selectedCategory, setSelectedCategory] = useState<string>(faqCategories[0]);
   const [isSortOpen, setIsSortOpen] = useState(false);
   const [openSlug, setOpenSlug] = useState<string | null>(null);
@@ -115,7 +116,7 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
                     className="flex w-full items-start justify-between gap-6 py-6 text-left"
                   >
                     <span className="text-sm sm:text-base font-bold uppercase tracking-wide text-[#240824]">
-                      {item.question}
+                      {item.question[locale]}
                     </span>
                     <span
                       className={cn(
@@ -136,7 +137,7 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
                   >
                     <div className="overflow-hidden">
                       <p className="max-w-3xl text-sm sm:text-base font-medium text-[#240824]/70 whitespace-pre-line">
-                        {item.answer}
+                        {item.answer[locale]}
                       </p>
                     </div>
                   </div>

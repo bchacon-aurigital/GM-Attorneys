@@ -14,7 +14,7 @@ const shopLinks = [
 
 const talkLinks = [
   { key: "email", href: "mailto:info@gmattorneyscr.com" },
-  { key: "phone", href: "tel:+50626532155" },
+  { key: "phone", href: "tel:+50641084070" },
   { key: "whatsapp", href: "https://wa.me/50626532155" },
   { key: "instagram", href: "https://www.instagram.com/gm_attorneys/" },
   { key: "facebook", href: "https://www.facebook.com/gmattorneyscr?fref=ts" },

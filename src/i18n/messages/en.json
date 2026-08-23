@@ -24,7 +24,7 @@
     "contact": "Contact"
   },
   "footer": {
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London",
+    "description": "We are a premium boutique Law Firm. For more than four decades, we have focused on providing comprehensive legal services across various fields to individuals, businesses, and organizations in an integral and personalized manner while satisfying promptly and effectively all their legal requirements.",
     "shopTitle": "Shop",
     "shopLinks": {
       "about": "About",
@@ -35,7 +35,7 @@
     },
     "talkTitle": "Talk To Us",
     "email": "info@gmattorneyscr.com",
-    "phone": "(+506) 2653-2155",
+    "phone": "(+506) 4108-4070",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "facebook": "Facebook",
@@ -128,10 +128,6 @@
       "notaryPublic": {
         "title": "Notary Public Services",
         "heading": "Document authentication, deed drafting, and legal certifications."
-      },
-      "mergersAcquisitions": {
-        "title": "Mergers & Acquisitions",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
       },
       "disputeResolution": {
         "title": "Dispute Resolution",
