@@ -8,16 +8,17 @@ const shopLinks = [
   { key: "about", href: "/about-us" },
   { key: "testimonials", href: "/testimonials" },
   { key: "services", href: "/practice-areas" },
-  { key: "faq", href: "/faq" },
+  { key: "faq", href: "/#faq" },
   { key: "team", href: "/our-team" },
 ];
 
 const talkLinks = [
   { key: "email", href: "mailto:info@gmattorneyscr.com" },
-  { key: "phone", href: "tel:+50641084070" },
-  { key: "whatsapp", href: "https://wa.me/50641084070" },
-  { key: "instagram", href: "https://instagram.com" },
-  { key: "tiktok", href: "https://tiktok.com" },
+  { key: "phone", href: "tel:+50626532155" },
+  { key: "whatsapp", href: "https://wa.me/50626532155" },
+  { key: "instagram", href: "https://www.instagram.com/gm_attorneys/" },
+  { key: "facebook", href: "https://www.facebook.com/gmattorneyscr?fref=ts" },
+  { key: "linkedin", href: "https://www.linkedin.com/company/gm-attorneys" },
 ];
 
 export function Footer({ variant = "dark" }) {
@@ -107,7 +108,18 @@ export function Footer({ variant = "dark" }) {
 
         <div className={cn("flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left justify-between gap-3 sm:gap-6 border-t pt-8 mt-12 sm:mt-16 lg:mt-[100px]", borderColor, textPrimary)}>
           <p className="text-xs sm:text-sm font-medium max-w-lg">{t("disclaimer")}</p>
-          <p className="text-xs sm:text-sm font-medium whitespace-nowrap">{t("copyright")}</p>
+          <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-4">
+            <Link
+              href="/privacy-policy"
+              className={cn(
+                "text-xs sm:text-sm font-medium underline-offset-2 transition-colors duration-300 hover:underline",
+                isDark ? "hover:text-white" : "hover:text-[#240824]"
+              )}
+            >
+              {t("privacyPolicy")}
+            </Link>
+            <p className="text-xs sm:text-sm font-medium whitespace-nowrap">{t("copyright")}</p>
+          </div>
         </div>
       </Section>
     </footer>

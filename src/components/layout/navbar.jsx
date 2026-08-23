@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils";
 const SCROLL_DIRECTION_THRESHOLD = 10;
 
 const navLinks = [
-  { key: "about", href: "/about" },
+  { key: "about", href: "/about-us" },
   { key: "services", href: "/practice-areas" },
   { key: "team", href: "/our-team" },
   { key: "blog", href: "/blog" },
-  { key: "faq", href: "/faq" },
+  { key: "faq", href: "/#faq" },
   { key: "contact", href: "/contact" },
 ];
 

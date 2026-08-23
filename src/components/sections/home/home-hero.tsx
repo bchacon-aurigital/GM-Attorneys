@@ -5,9 +5,9 @@ import { Link } from "@/i18n/navigation";
 import { Curve } from "@/components/ui/curve";
 
 const socialLinks = [
-  { key: "instagram", href: "https://instagram.com", Icon: FaInstagram },
-  { key: "facebook", href: "https://facebook.com", Icon: FaFacebookF },
-  { key: "whatsapp", href: "https://wa.me/50641084070", Icon: FaWhatsapp },
+  { key: "instagram", href: "https://www.instagram.com/gm_attorneys/", Icon: FaInstagram },
+  { key: "facebook", href: "https://www.facebook.com/gmattorneyscr?fref=ts", Icon: FaFacebookF },
+  { key: "whatsapp", href: "https://wa.me/50626532155", Icon: FaWhatsapp },
 ];
 
 export function HomeHero() {

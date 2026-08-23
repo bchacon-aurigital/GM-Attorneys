@@ -119,6 +119,6 @@ export const faqItems: FaqItem[] = [
     categoryKey: "officeLocations",
     question: "Which office location is closest to me, and how can I contact it?",
     answer:
-      "GM Attorneys currently has offices in:\nSan José (Los Yoses)\nFlamingo, Guanacaste\nTamarindo, Guanacaste\nNosara, Guanacaste\n\nFor assistance determining the most convenient office, contact info@gmattorneyscr.com or call (+506) 4108-4070.",
+      "GM Attorneys currently has offices in:\nSan José (Los Yoses)\nFlamingo, Guanacaste\nTamarindo, Guanacaste\nNosara, Guanacaste\n\nFor assistance determining the most convenient office, contact info@gmattorneyscr.com or call (+506) 2653-2155.",
   },
 ];

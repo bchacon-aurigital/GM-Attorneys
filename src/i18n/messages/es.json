@@ -1,7 +1,7 @@
 {
   "home": {
-    "heroTitle": "Let us help",
-    "heroSubtitle": "Servicios legales boutique premium en bienes raíces, inversión e inmigración. Respuesta rápida, sin apuros, en la costa desde 1978.",
+    "heroTitle": "Your Roots, Legally Secured",
+    "heroSubtitle": "Servicios legales boutique premium en bienes raíces, inversión extranjera, derecho corporativo e inmigración.",
     "areYouProtected": "¿Estás protegido?",
     "getInTouch": "Contáctanos",
     "whoWeAre": "Quiénes somos",
@@ -35,12 +35,14 @@
     },
     "talkTitle": "Hablemos",
     "email": "info@gmattorneyscr.com",
-    "phone": "(+506) 4108-4070",
+    "phone": "(+506) 2653-2155",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "tiktok": "TikTok",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
     "disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.",
-    "copyright": "© 2026 GM Attorneys. Todos los derechos reservados."
+    "copyright": "© 2026 GM Attorneys. Todos los derechos reservados.",
+    "privacyPolicy": "Política de Privacidad"
   },
   "team": {
     "title": "El equipo",
@@ -185,6 +187,12 @@
     "viewWebsite": "Ver sitio web",
     "show": "Mostrar",
     "mapUnavailable": "Mapa no disponible"
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o fue movida. Te ayudamos a volver al camino correcto.",
+    "backHome": "Volver al inicio"
   },
   "faq": {
     "title": "FAQ",

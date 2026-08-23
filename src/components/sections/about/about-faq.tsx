@@ -32,7 +32,7 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
   const filteredItems = faqItems.filter((item) => item.categoryKey === selectedCategory);
 
   return (
-    <section className="relative w-full">
+    <section id="faq" className="relative w-full scroll-mt-24">
       <Curve
         curveColor="#ffffff"
         cornerColor={curveCornerColor}
