@@ -12,7 +12,8 @@
     "apartHighlight": "combinando el alcance de una práctica internacional con la cercanía que solo un socio local puede ofrecer.",
     "complementsTitle": "Complementos",
     "teamIntro": "Detrás de cada transacción hay un equipo de abogados, notarios y asesores elegidos con el mismo cuidado que los casos que asumimos.",
-    "teamHighlight": "Desde socios con más de cuatro décadas en el ejercicio hasta asesores que han servido en la corte más alta del país, nuestra gente es el despacho."
+    "teamHighlight": "Desde socios con más de cuatro décadas en el ejercicio hasta asesores que han servido en la corte más alta del país, nuestra gente es el despacho.",
+    "servicesLabel": "Servicios"
   },
   "nav": {
     "about": "Nosotros",
@@ -87,15 +88,15 @@
     "list": {
       "realEstate": {
         "title": "Bienes Raíces\nResidenciales y Comerciales",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Asesoría legal integral para comprar una vivienda o expandir un negocio comercial en Costa Rica. Desde la debida diligencia y revisión de título hasta el cierre, protegemos tu inversión en cada paso."
       },
       "corporateLaw": {
         "title": "Derecho\nCorporativo y Empresarial",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Gobierno corporativo, cumplimiento regulatorio y redacción de contratos para empresas en cualquier etapa — desde startups hasta compañías consolidadas. Estructuramos tu operación con la precisión que exige un negocio duradero."
       },
       "immigration": {
         "title": "Inmigración y Residencia",
-        "heading": "Lorem Ipsum es simplemente texto de relleno de la industria de impresión"
+        "heading": "Trámites de residencia para individuos y familias que se mudan a Costa Rica. Te guiamos en cada requisito con claridad y cuidado, convirtiendo un proceso complejo en un camino directo hacia tu nueva vida en la costa."
       },
       "taxLaw": {
         "title": "Derecho Tributario",

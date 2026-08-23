@@ -13,7 +13,7 @@ export function WhatSetsUsApart() {
   const tAbout = useTranslations("about");
 
   return (
-    <section className="relative w-full bg-[#240824]">
+    <section className="relative w-full bg-[#240824] overflow-hidden">
       <Curve
         curveColor="#240824"
         cornerColor="#ffffff"
@@ -24,7 +24,7 @@ export function WhatSetsUsApart() {
         {t("whatSetsUsApart")}
       </p>
 
-      <Section className="relative overflow-hidden !pt-8 sm:!pt-10">
+      <Section className="relative z-10 -mt-1 overflow-hidden bg-[#240824] !pt-8 sm:!pt-10">
         <img
           src="/assets/home/who-we-are-vector.svg"
           alt=""

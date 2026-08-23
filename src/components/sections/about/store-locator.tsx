@@ -171,7 +171,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
       >
         <p
           className={cn(
-            "text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium uppercase tracking-tight",
+            "text-xl sm:text-4xl lg:text-5xl xl:text-7xl font-medium uppercase tracking-tight",
             isDark ? "text-white" : "text-[#240824]"
           )}
         >

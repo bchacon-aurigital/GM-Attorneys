@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { HomeHero } from "@/components/sections/home/home-hero";
 import { WhoWeAre } from "@/components/sections/home/who-we-are";
 import { WhatSetsUsApart } from "@/components/sections/home/what-sets-us-apart";
+import { ServicesSlider } from "@/components/sections/home/services-slider";
 import { Complements } from "@/components/sections/home/complements";
 import { TeamTeaser } from "@/components/sections/home/team-teaser";
 import { AboutFaq } from "@/components/sections/about/about-faq";
@@ -16,6 +17,7 @@ export default function Home() {
         <HomeHero />
         <WhoWeAre />
         <WhatSetsUsApart />
+        <ServicesSlider />
         <Complements />
         <TeamTeaser />
         <StoreLocator variant="dark" />

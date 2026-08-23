@@ -12,7 +12,8 @@
     "apartHighlight": "pairing the reach of an international practice with the closeness only a local partner can offer.",
     "complementsTitle": "Complements",
     "teamIntro": "Behind every transaction is a team of attorneys, notaries, and advisors chosen as carefully as the cases we take on.",
-    "teamHighlight": "From partners with over four decades at the bar to counsel who have served on the country's highest court, our people are the firm."
+    "teamHighlight": "From partners with over four decades at the bar to counsel who have served on the country's highest court, our people are the firm.",
+    "servicesLabel": "Services"
   },
   "nav": {
     "about": "About",
@@ -87,15 +88,15 @@
     "list": {
       "realEstate": {
         "title": "Residential and\nCommercial Real Estate",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Comprehensive legal support for buying a home or expanding a commercial venture in Costa Rica. From due diligence and title review to closing, we protect your investment at every step."
       },
       "corporateLaw": {
         "title": "Corporate\nand Business Law",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Corporate governance, regulatory compliance, and contract drafting for ventures at every stage — from startups to established companies. We structure your operation with the precision that lasting business demands."
       },
       "immigration": {
         "title": "Immigration & Residence",
-        "heading": "Lorem Ipsum is simply dummy text of the printing industry"
+        "heading": "Residency applications for individuals and families relocating to Costa Rica. We guide you through every requirement with clarity and care, turning a complex process into a straightforward path to your new life on the coast."
       },
       "taxLaw": {
         "title": "Tax Law",

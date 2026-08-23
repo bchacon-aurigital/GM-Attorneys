@@ -45,7 +45,7 @@ export function HomeHero() {
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-[90px] sm:bottom-[110px] flex items-center justify-between px-4 sm:px-6 lg:px-10">
+      <div className="absolute inset-x-0 bottom-[76px] sm:bottom-[126px] lg:bottom-[176px] flex flex-col md:flex-row items-center justify-between gap-3 px-4 sm:px-6 lg:px-10">
         <div className="flex items-center gap-2">
           {socialLinks.map(({ key, href, Icon }) => (
             <a
