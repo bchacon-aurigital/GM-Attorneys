@@ -41,7 +41,7 @@ export function ServiceRow({ serviceKey, isDark }: ServiceRowProps) {
         </div>
 
         <ContactButton
-          href="#contact"
+          href="/contact-us"
           text={t("getInTouch")}
           bgColor="transparent"
           textColor={isDark ? "#ffffff" : "#000000"}

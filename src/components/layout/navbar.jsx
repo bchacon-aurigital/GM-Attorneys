@@ -14,7 +14,7 @@ const navLinks = [
   { key: "team", href: "/our-team" },
   { key: "blog", href: "/blog" },
   { key: "faq", href: "/#faq" },
-  { key: "contact", href: "/contact" },
+  { key: "contact", href: "/contact-us" },
 ];
 
 const NavDot = ({ light }) => (

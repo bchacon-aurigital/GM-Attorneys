@@ -62,15 +62,15 @@ export function HomeHero() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <a
-            href="#"
+          <Link
+            href="/newslettersubs"
             className="flex items-center gap-2 sm:gap-3 rounded bg-white/20 px-3 sm:px-5 py-2 sm:py-3 text-xs sm:text-base font-medium text-white transition-colors duration-300 hover:bg-white/30"
           >
             <span className="whitespace-nowrap">{t("areYouProtected")}</span>
             <FaArrowUp className="shrink-0 rotate-90 text-white" size={12} aria-hidden="true" />
-          </a>
+          </Link>
           <Link
-            href="/contact"
+            href="/contact-us"
             className="flex items-center gap-2 sm:gap-3 rounded bg-white px-3 sm:px-5 py-2 sm:py-3 text-xs sm:text-base font-medium text-black transition-opacity duration-300 hover:opacity-90"
           >
             <span className="whitespace-nowrap">{t("getInTouch")}</span>

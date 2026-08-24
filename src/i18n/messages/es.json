@@ -190,6 +190,28 @@
     "description": "La página que buscas no existe o fue movida. Te ayudamos a volver al camino correcto.",
     "backHome": "Volver al inicio"
   },
+  "contact": {
+    "title": "Ponte en contacto con nosotros",
+    "offices": "Oficinas",
+    "contact": "Contacto",
+    "phoneNumbers": "Teléfonos",
+    "openHours": "Horario",
+    "openHoursValue": "Lunes - Viernes: 9:00 am - 5:00 pm",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "John Doe",
+      "phone": "Teléfono",
+      "phonePlaceholder": "(+506) 0000-0000",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "john.doe@gmail.com",
+      "service": "Servicio",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Información general",
+      "details": "Detalles",
+      "captcha": "No soy un robot",
+      "submit": "Enviar solicitud"
+    }
+  },
   "faq": {
     "title": "FAQ",
     "sortBy": "Ordenar por",

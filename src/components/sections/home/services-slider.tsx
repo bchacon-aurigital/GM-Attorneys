@@ -120,7 +120,7 @@ export function ServicesSlider() {
                       {t(`list.${slide.key}.heading`)}
                     </p>
                     <Link
-                      href="/contact"
+                      href="/contact-us"
                       className="flex w-fit items-center gap-3 border-b-[1.5px] border-white/20 py-3 text-base font-semibold text-white transition-opacity duration-300 hover:opacity-70"
                     >
                       <span>{t("getInTouch")}</span>

@@ -96,7 +96,7 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
             </div>
 
             <ContactButton
-              href="#contact"
+              href="/contact-us"
               text={t("getInTouch")}
               bgColor="#240824"
               textColor="#ffffff"

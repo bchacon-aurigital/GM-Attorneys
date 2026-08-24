@@ -190,6 +190,28 @@
     "description": "The page you're looking for doesn't exist or has been moved. Let us help you find your way back.",
     "backHome": "Back to home"
   },
+  "contact": {
+    "title": "Please get in contact with us",
+    "offices": "Offices",
+    "contact": "Contact",
+    "phoneNumbers": "Phone numbers",
+    "openHours": "Open hours",
+    "openHoursValue": "Monday - Friday: 9:00 am - 5:00 pm",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "phone": "Phone",
+      "phonePlaceholder": "(+506) 0000-0000",
+      "email": "Email address",
+      "emailPlaceholder": "john.doe@gmail.com",
+      "service": "Service",
+      "subject": "Subject",
+      "subjectPlaceholder": "General Information",
+      "details": "Details",
+      "captcha": "I am human",
+      "submit": "Send request"
+    }
+  },
   "faq": {
     "title": "FAQ",
     "sortBy": "Sort by",

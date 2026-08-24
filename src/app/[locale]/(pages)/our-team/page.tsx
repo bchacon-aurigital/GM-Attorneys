@@ -110,7 +110,7 @@ export default function TeamPage() {
                 </div>
 
                 <ContactButton
-                  href="#contact"
+                  href="/contact-us"
                   text={t("getInTouch")}
                   bgColor="#000000"
                   textColor="#ffffff"

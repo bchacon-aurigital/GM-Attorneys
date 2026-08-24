@@ -37,7 +37,7 @@ export function Complements() {
                 </p>
               </div>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="text-xs sm:text-sm font-medium text-[#240824]/70 transition-colors duration-300 hover:text-[#240824]"
               >
                 {tServices("getInTouch")}

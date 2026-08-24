@@ -6,6 +6,7 @@ export interface Office {
   lat: number;
   lng: number;
   website?: string;
+  mapsUrl: string;
 }
 
 export const offices: Office[] = [
@@ -16,6 +17,7 @@ export const offices: Office[] = [
     address: "Los Yoses, San José, Costa Rica",
     lat: 9.931275,
     lng: -84.0622075,
+    mapsUrl: "https://goo.gl/maps/NX8TmLMA4Jow3h2j7",
   },
   {
     id: "flamingo",
@@ -24,6 +26,7 @@ export const offices: Office[] = [
     address: "Playa Flamingo, Guanacaste, Costa Rica",
     lat: 10.4313605,
     lng: -85.7824175,
+    mapsUrl: "https://goo.gl/maps/ifoBBBhZe2AVNBPE9",
   },
   {
     id: "tamarindo",
@@ -32,6 +35,7 @@ export const offices: Office[] = [
     address: "Tamarindo, Guanacaste, Costa Rica",
     lat: 10.2968537,
     lng: -85.8421561,
+    mapsUrl: "https://goo.gl/maps/ydDSP6n1aTDaz1NS6",
   },
   {
     id: "nosara",
@@ -40,5 +44,6 @@ export const offices: Office[] = [
     address: "Nosara, Guanacaste, Costa Rica",
     lat: 9.9336847,
     lng: -85.6511889,
+    mapsUrl: "https://goo.gl/maps/CScHZW2Z7nDBnZPB8",
   },
 ];

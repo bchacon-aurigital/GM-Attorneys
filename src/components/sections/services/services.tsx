@@ -18,7 +18,7 @@ export function Services() {
             {t("heroTitle2")}
           </h1>
           <ContactButton
-            href="#contact"
+            href="/contact-us"
             text={t("getInTouch")}
             bgColor="#240824"
             textColor="#ffffff"
