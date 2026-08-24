@@ -107,7 +107,38 @@ export function Footer({ variant = "dark" }) {
         </div>
 
         <div className={cn("flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left justify-between gap-3 sm:gap-6 border-t pt-8 mt-12 sm:mt-16 lg:mt-[100px]", borderColor, textPrimary)}>
-          <p className="text-xs sm:text-sm font-medium max-w-lg">{t("disclaimer")}</p>
+          <a
+            href="https://aurigital.com?utm_source=gm-attorneys-website&utm_medium=footer&utm_campaign=branding"
+            target="_blank"
+            rel="noopener"
+            aria-label="Design & development by Aurigital"
+            className="group flex items-center gap-2"
+          >
+            <span
+              className={cn(
+                "text-xs sm:text-sm font-medium uppercase tracking-widest transition-colors duration-200",
+                isDark ? "text-white/40 group-hover:text-white/80" : "text-[#240824]/40 group-hover:text-[#240824]/80"
+              )}
+            >
+              Crafted by
+            </span>
+            <em
+              className={cn(
+                "not-italic text-sm sm:text-base font-semibold transition-colors duration-200",
+                isDark ? "text-white/60 group-hover:text-white" : "text-[#240824]/60 group-hover:text-[#240824]"
+              )}
+            >
+              Aurigital
+            </em>
+            <img
+              src="/assets/isotipo.avif"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              className="h-6 w-6 rounded-full bg-[#240824] p-1 opacity-60 transition-opacity duration-200 group-hover:opacity-100"
+            />
+          </a>
           <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-4">
             <Link
               href="/privacy-policy"
