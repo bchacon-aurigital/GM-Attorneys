@@ -104,7 +104,7 @@ export function OfficesStack() {
                 style={{ clipPath: index === 0 ? "inset(0% 0% 0% 0%)" : "inset(100% 0% 0% 0%)" }}
               >
                 <OfficeCardCurve className="flex h-[90px] sm:h-[120px] lg:h-[160px] w-full items-center px-4 sm:px-6 lg:px-10">
-                  <h3 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium uppercase tracking-tight text-[#240824]">
+                  <h3 className="max-w-full truncate text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium uppercase tracking-tight text-[#240824]">
                     {office.name}
                   </h3>
                 </OfficeCardCurve>

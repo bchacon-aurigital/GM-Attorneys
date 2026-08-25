@@ -83,11 +83,11 @@ export function Curve({
 
   return (
     <div
-      className={cn("relative w-full", className)}
+      className={cn("relative w-full overflow-hidden", className)}
       style={{ backgroundColor: cornerColor }}
     >
       <div
-        className="absolute inset-0"
+        className="absolute -inset-px"
         style={{
           backgroundColor: curveColor,
           clipPath,

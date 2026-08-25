@@ -4,6 +4,15 @@
 // ~25% of the width, where the office name sits), then curves down to a lower
 // band (~46% of the block height) that runs flat for the rest of the width to
 // the right — that lower/right area is what stays transparent over the photo.
+//
+// The bezier run itself sits between the flat vertical edge (x=0) and the
+// flat top edge; only that middle stretch shifts with an offset, translating
+// the whole curve right without distorting it. On narrow screens the office
+// name needs more room than the ~25%-wide band, so mobile uses a wider band
+// (offset applied) while desktop keeps the original Figma geometry (offset 0).
+const CURVE_RUN_START = 0;
+const CURVE_RUN_END = 31.919;
+
 const CURVE_POINTS: [number, number][] = [
   [0, 100],
   [0, 2.685],
@@ -40,7 +49,16 @@ const CURVE_POINTS: [number, number][] = [
   [100, 100],
 ];
 
-const CLIP_PATH = `polygon(${CURVE_POINTS.map(([x, y]) => `${x}% ${y}%`).join(", ")})`;
+function buildClipPath(offset: number) {
+  const points = CURVE_POINTS.map(([x, y]) => {
+    const shiftedX = x > CURVE_RUN_START && x <= CURVE_RUN_END ? Math.min(100, x + offset) : x;
+    return `${shiftedX}% ${y}%`;
+  });
+  return `polygon(${points.join(", ")})`;
+}
+
+const MOBILE_CLIP_PATH = buildClipPath(20);
+const DESKTOP_CLIP_PATH = buildClipPath(0);
 
 interface OfficeCardCurveProps {
   className?: string;
@@ -49,15 +67,27 @@ interface OfficeCardCurveProps {
 
 export function OfficeCardCurve({ className, children }: OfficeCardCurveProps) {
   return (
-    <div
-      className={className}
-      style={{
-        backgroundColor: "#ffffff",
-        clipPath: CLIP_PATH,
-        WebkitClipPath: CLIP_PATH,
-      }}
-    >
-      {children}
-    </div>
+    <>
+      <div
+        className={`sm:hidden ${className ?? ""}`}
+        style={{
+          backgroundColor: "#ffffff",
+          clipPath: MOBILE_CLIP_PATH,
+          WebkitClipPath: MOBILE_CLIP_PATH,
+        }}
+      >
+        {children}
+      </div>
+      <div
+        className={`hidden sm:flex ${className ?? ""}`}
+        style={{
+          backgroundColor: "#ffffff",
+          clipPath: DESKTOP_CLIP_PATH,
+          WebkitClipPath: DESKTOP_CLIP_PATH,
+        }}
+      >
+        {children}
+      </div>
+    </>
   );
 }
