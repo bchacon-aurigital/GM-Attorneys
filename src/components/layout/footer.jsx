@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const shopLinks = [
   { key: "about", href: "/about-us" },
-  { key: "testimonials", href: "/testimonials" },
+  { key: "testimonials", href: "/#testimonials" },
   { key: "services", href: "/practice-areas" },
   { key: "faq", href: "/#faq" },
   { key: "team", href: "/our-team" },

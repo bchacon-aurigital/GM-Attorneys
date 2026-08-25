@@ -13,7 +13,7 @@ export function WhatSetsUsApart() {
   const tAbout = useTranslations("about");
 
   return (
-    <section className="relative w-full bg-[#240824] overflow-hidden">
+    <section id="testimonials" className="relative w-full bg-[#240824] overflow-hidden scroll-mt-24">
       <Curve
         curveColor="#240824"
         cornerColor="#ffffff"
@@ -33,10 +33,10 @@ export function WhatSetsUsApart() {
         />
 
         <div className="relative flex flex-col gap-16 sm:gap-24 lg:gap-[100px]">
-          <p className="text-2xl sm:text-3xl lg:text-5xl font-semibold uppercase tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold uppercase tracking-tight leading-tight">
             <span className="text-white">{t("apartIntro")} </span>
             <span className="text-white/50">{t("apartHighlight")}</span>
-          </p>
+          </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-[#00a6a0]/40">
             {values.map((value, index) => (

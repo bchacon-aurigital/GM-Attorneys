@@ -41,9 +41,9 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
         className="h-[100px] sm:h-[160px] lg:h-[226px]"
         contentClassName="items-start pt-6 sm:pt-8"
       >
-        <p className="text-5xl sm:text-7xl lg:text-8xl xl:text-[128px] font-medium uppercase tracking-tight text-[#240824]">
+        <h2 className="text-5xl sm:text-7xl lg:text-8xl xl:text-[128px] font-medium uppercase tracking-tight text-[#240824]">
           {t("title")}
-        </p>
+        </h2>
       </Curve>
 
       <Section className="!pt-8 sm:!pt-10">

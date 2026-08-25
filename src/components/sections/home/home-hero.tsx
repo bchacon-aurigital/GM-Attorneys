@@ -33,9 +33,9 @@ export function HomeHero() {
 
       <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col items-center gap-6 sm:gap-8 text-center text-white pb-12 sm:pb-16">
-          <p className="font-inter text-5xl sm:text-7xl lg:text-8xl xl:text-[160px] font-medium leading-[0.85] tracking-tight">
+          <h1 className="font-inter text-5xl sm:text-7xl lg:text-8xl xl:text-[160px] font-medium leading-[0.85] tracking-tight">
             {t("heroTitle")}
-          </p>
+          </h1>
           <p
             className="max-w-xl text-sm sm:text-base font-semibold tracking-tight"
             style={{ textShadow: "0px 0px 10px rgba(0,0,0,0.25)" }}

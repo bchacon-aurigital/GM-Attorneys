@@ -28,9 +28,9 @@ export function ServiceRow({ serviceKey, isDark }: ServiceRowProps) {
         )}
       >
         <div className="flex flex-col gap-8">
-          <p className={cn("text-sm font-semibold uppercase tracking-wide whitespace-pre-line", textPrimary)}>
+          <h3 className={cn("text-sm font-semibold uppercase tracking-wide whitespace-pre-line", textPrimary)}>
             {title}
-          </p>
+          </h3>
           <ul className="flex flex-col gap-3">
             {bullets.map((bullet) => (
               <li key={bullet} className={cn("list-disc ms-6 text-sm sm:text-base font-medium", textMuted)}>

@@ -13,12 +13,12 @@ export function AboutValues() {
   return (
     <Section>
       <div className="flex flex-col gap-16 sm:gap-24 lg:gap-[240px]">
-        <p
+        <h2
           className="text-2xl sm:text-3xl lg:text-5xl font-medium uppercase tracking-tight leading-tight indent-[30%] sm:indent-[35%] lg:indent-[42%]"
         >
           <span className="text-black/40">{t("valuesIntro")} </span>
           <span className="text-black">{t("valuesHighlight")}</span>
-        </p>
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-black/20">
           {values.map((value, index) => (
@@ -28,9 +28,9 @@ export function AboutValues() {
                 index > 0 ? "lg:border-l" : ""
               } border-black/20`}
             >
-              <p className="text-base sm:text-lg font-bold uppercase tracking-wide">
+              <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide">
                 {t(`values.${value.key}.title`)}
-              </p>
+              </h3>
               <p className="text-sm sm:text-base font-medium max-w-md">
                 {t(`values.${value.key}.quote`)}
               </p>

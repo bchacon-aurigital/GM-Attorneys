@@ -40,7 +40,6 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "linkedin": "LinkedIn",
-    "disclaimer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.",
     "copyright": "© 2026 GM Attorneys. Todos los derechos reservados.",
     "privacyPolicy": "Política de Privacidad"
   },
@@ -158,7 +157,6 @@
   "about": {
     "heroTitle": "Somos GM Attorneys",
     "heroSubtitle": "Somos un despacho boutique premium. Respuesta rápida, sin apuros.",
-    "heroFooterNote": "Lorem Ipsum es simplemente texto de relleno de la",
     "valuesIntro": "SOMOS el despacho legal boutique líder especializado en Bienes Raíces de Lujo. Mantenemos los más altos estándares de excelencia y ofrecemos",
     "valuesHighlight": "un servicio premium a nuestros valiosos clientes, mientras contribuimos al bienestar y la sostenibilidad de nuestro entorno local.",
     "values": {

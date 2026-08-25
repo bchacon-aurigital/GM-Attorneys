@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
-import { Services } from "@/components/sections/services/services";
 import { routing } from "@/i18n/routing";
 import { localizedAlternates } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 const TITLE = {
-  es: "Áreas de Práctica",
-  en: "Practice Areas",
+  es: "Nuestro Equipo",
+  en: "Our Team",
 };
 
 const DESCRIPTION = {
-  es: "Bienes raíces, derecho corporativo, inmigración, derecho tributario, planificación patrimonial, servicios notariales y más. Asesoría legal integral en Costa Rica.",
-  en: "Real estate, corporate law, immigration, tax law, estate planning, notary services, and more. Comprehensive legal advisory in Costa Rica.",
+  es: "Conoce a los abogados, notarios y asesores de GM Attorneys: un equipo con décadas de experiencia en bienes raíces, derecho corporativo e inmigración en Costa Rica.",
+  en: "Meet the attorneys, notaries, and advisors of GM Attorneys: a team with decades of experience in real estate, corporate law, and immigration in Costa Rica.",
 };
 
 export async function generateMetadata({
@@ -23,7 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const isSpanish = locale === routing.defaultLocale;
-  const { path, canonical, languages } = localizedAlternates("/practice-areas", locale);
+  const { path, canonical, languages } = localizedAlternates("/our-team", locale);
 
   return {
     title: isSpanish ? TITLE.es : TITLE.en,
@@ -33,14 +30,16 @@ export async function generateMetadata({
   };
 }
 
-export default async function ServicesPage({
+export default async function OurTeamLayout({
+  children,
   params,
 }: {
+  children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const isSpanish = locale === routing.defaultLocale;
-  const { path } = localizedAlternates("/practice-areas", locale);
+  const { path } = localizedAlternates("/our-team", locale);
 
   return (
     <>
@@ -49,11 +48,7 @@ export default async function ServicesPage({
         name={isSpanish ? TITLE.es : TITLE.en}
         homeLabel={isSpanish ? "Inicio" : "Home"}
       />
-      <Navbar variant="default" />
-      <main>
-        <Services />
-      </main>
-      <Footer variant="dark" />
+      {children}
     </>
   );
 }

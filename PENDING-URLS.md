@@ -27,19 +27,30 @@ Source of truth for the old URLs: the 6 sitemaps listed in Yoast's
   `/blog?category=<slug>`; `BlogListing` reads that query param on mount and
   pre-selects the matching category so the filtered view still shows up.
 
+## Decided & implemented (update)
+
+- **`/contact-us/`** — built. Same path as the old site (no rename needed),
+  full contact info, offices, and a static (non-functional yet) form. See
+  `SITE-STATUS.md` for what's still missing before this is wired up.
+- **`/privacy-policy/`** — built, with the real legal disclaimer text
+  provided by the client. Marked `noindex` (legal boilerplate, no SEO value,
+  avoids diluting real pages in search results). `/privacy-policy-2/` (the
+  likely duplicate/draft) still has no decided destination — see below.
+
 ## Explicitly pending — client to decide with their team
 
 These were left **without a redirect** on purpose, per client instruction —
 do not invent a destination for them. Revisit once a decision comes back.
 
-- **`/contact-us/`** — page doesn't exist yet in the new site.
 - **`/newslettersubs/`** — likely an old newsletter signup landing/form. Not
-  rebuilt, not redirected. Confirm whether the newsletter flow is even still
-  active before deciding.
-- **`/privacy-policy/`** and **`/privacy-policy-2/`** — the `-2` looks like a
-  duplicate/draft that got indexed by mistake. Need a real privacy policy
-  page in the new site (legal review likely required) before deciding
-  where these should point.
+  rebuilt, not redirected yet. The home hero's "Are you protected?" CTA now
+  points to `/newslettersubs` per client instruction, so this page needs to
+  get built once there's content for it. Confirm whether the newsletter flow
+  is even still active before deciding further.
+- **`/privacy-policy-2/`** — the likely duplicate/draft of `/privacy-policy/`
+  that got indexed by mistake on the old site. Now that the real privacy
+  policy exists at `/privacy-policy`, this old URL should probably 301 there
+  — needs client confirmation before adding the redirect.
 - **`/wpm-team/<slug>/`** (`wpm_team-sitemap.xml`, 5 URLs: Carmen Julia
   Rodríguez, Fiorella Rodríguez, Santiago Batalla, Alina Guzmán, Efraín
   Hidalgo) — the old "Team Members" plugin gave 5 of the 24 team members

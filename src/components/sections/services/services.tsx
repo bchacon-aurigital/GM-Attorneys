@@ -36,7 +36,7 @@ export function Services() {
       >
         <div className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-white" />
-          <p className="text-xs sm:text-sm font-bold uppercase text-white">{t("mainServicesLabel")}</p>
+          <h2 className="text-xs sm:text-sm font-bold uppercase text-white">{t("mainServicesLabel")}</h2>
         </div>
       </Curve>
 
@@ -57,7 +57,7 @@ export function Services() {
       >
         <div className="flex items-center gap-2">
           <span className="size-1.5 rounded-full bg-black" />
-          <p className="text-xs sm:text-sm font-bold uppercase text-black">{t("complementaryLabel")}</p>
+          <h2 className="text-xs sm:text-sm font-bold uppercase text-black">{t("complementaryLabel")}</h2>
         </div>
       </Curve>
 

@@ -14,9 +14,9 @@ export async function AboutImpact() {
   return (
     <Section>
       <div className="flex flex-col gap-10 sm:gap-16 lg:gap-20">
-        <p className="text-5xl sm:text-7xl lg:text-8xl xl:text-[140px] font-medium uppercase tracking-tight text-[#240824] leading-none">
+        <h2 className="text-5xl sm:text-7xl lg:text-8xl xl:text-[140px] font-medium uppercase tracking-tight text-[#240824] leading-none">
           {t("impactTitle")}
-        </p>
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-3">
           {posts.map((post) => (

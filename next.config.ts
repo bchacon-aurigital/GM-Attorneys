@@ -13,6 +13,22 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        // Applies to every route. The old WordPress site's .htaccess set
+        // these but .htaccess is an Apache-only directive — it does nothing
+        // under Next.js's Node/Vercel runtime, so these were silently not
+        // applied. Re-added here where they actually take effect.
+        source: "/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       // Old WordPress blog permalinks used /YYYY/MM/DD/slug/. The new site

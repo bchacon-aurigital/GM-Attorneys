@@ -1,6 +1,32 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
+import { routing } from "@/i18n/routing";
+import { localizedAlternates } from "@/lib/seo";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
+
+const TITLE = {
+  es: "Política de Privacidad",
+  en: "Privacy Policy",
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isSpanish = locale === routing.defaultLocale;
+  const { path, canonical, languages } = localizedAlternates("/privacy-policy", locale);
+
+  return {
+    title: isSpanish ? TITLE.es : TITLE.en,
+    alternates: { canonical, languages },
+    openGraph: { url: path },
+    robots: { index: false, follow: true },
+  };
+}
 
 const paragraphs = [
   "GM ATTORNEYS sponsors this website for general information about the firm only and is not intended to constitute advertising, solicitation or legal advice. This website should not be relied upon or used without consulting a lawyer to consider your specific circumstances, possible changes to applicable laws, rules and regulations and other legal issues. The information and materials contained in this website may not reflect the most current legal developments, nor are guaranteed to be complete, correct, or up-to-date. The use of this website does not establish an attorney-client relationship, nor is it intended to do so.",
@@ -14,9 +40,22 @@ const paragraphs = [
   "You may at all times request a copy of your personal information and have it corrected or updated from our files. Inquiries and requests should be sent to one of our offices directly or by e-mail to info@gmattorneyscr.com",
 ];
 
-export default function PrivacyPolicyPage() {
+export default async function PrivacyPolicyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const isSpanish = locale === routing.defaultLocale;
+  const { path } = localizedAlternates("/privacy-policy", locale);
+
   return (
     <>
+      <BreadcrumbSchema
+        path={path}
+        name={isSpanish ? TITLE.es : TITLE.en}
+        homeLabel={isSpanish ? "Inicio" : "Home"}
+      />
       <Navbar variant="default" />
       <main>
         <Section className="pt-32 sm:pt-40">
@@ -25,9 +64,9 @@ export default function PrivacyPolicyPage() {
               <p className="text-xs font-semibold uppercase tracking-tight text-[#240824]/40 sm:text-sm">
                 Legal
               </p>
-              <p className="text-4xl font-medium uppercase tracking-tight text-[#240824] sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-medium uppercase tracking-tight text-[#240824] sm:text-5xl lg:text-6xl">
                 Legal Disclaimer &amp; Privacy Statement
-              </p>
+              </h1>
             </div>
 
             <div className="flex max-w-3xl flex-col gap-6">

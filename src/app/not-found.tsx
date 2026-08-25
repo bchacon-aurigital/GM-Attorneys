@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { manrope, inter } from "@/lib/fonts";
 import "./globals.css";
 
@@ -19,7 +20,7 @@ export default function RootNotFound() {
             className="pointer-events-none absolute left-0 top-0 hidden h-full w-auto -scale-x-100 lg:block"
           />
 
-          <a href="/" aria-label="Go to home" className="relative mb-10 w-fit sm:mb-16">
+          <Link href="/" aria-label="Go to home" className="relative mb-10 w-fit sm:mb-16">
             <object
               data="/assets/GM_logotipo_Footer.svg"
               type="image/svg+xml"
@@ -30,7 +31,7 @@ export default function RootNotFound() {
             >
               <img src="/assets/GM_logotipo_Footer.svg" alt="GM Attorneys logo" />
             </object>
-          </a>
+          </Link>
 
           <div className="relative flex flex-col items-center gap-6 sm:gap-8">
             <p className="text-xs font-semibold uppercase tracking-tight text-white/40 sm:text-sm">
@@ -50,7 +51,7 @@ export default function RootNotFound() {
               </p>
             </div>
 
-            <a
+            <Link
               href="/"
               className="mt-2 flex items-center justify-between gap-2 rounded bg-white px-5 py-3 text-sm font-medium text-black transition-opacity duration-300 hover:opacity-90 sm:mt-4 sm:text-base"
             >
@@ -58,7 +59,7 @@ export default function RootNotFound() {
               <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M1 6H14M14 6L9 1M14 6L9 11" stroke="#000000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </body>

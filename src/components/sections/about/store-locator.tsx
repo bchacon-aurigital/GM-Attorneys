@@ -5,7 +5,7 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useTranslations } from "next-intl";
 import { Curve } from "@/components/ui/curve";
-import { offices, type Office } from "@/data/offices";
+import { offices } from "@/data/offices";
 import { cn } from "@/lib/utils";
 
 interface StoreLocatorProps {
@@ -169,14 +169,14 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
         className="h-[100px] sm:h-[160px] lg:h-[240px]"
         contentClassName="items-start pt-6 sm:pt-8"
       >
-        <p
+        <h2
           className={cn(
             "text-xl sm:text-4xl lg:text-5xl xl:text-7xl font-medium uppercase tracking-tight",
             isDark ? "text-white" : "text-[#240824]"
           )}
         >
           {t("title")}
-        </p>
+        </h2>
       </Curve>
 
       <div className="px-4 sm:px-6 lg:px-10 pb-16 md:pb-20">

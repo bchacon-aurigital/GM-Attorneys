@@ -22,10 +22,10 @@ export function TeamTeaser() {
   return (
     <Section>
       <div className="flex flex-col gap-16 sm:gap-20 lg:gap-[70px]">
-        <p className="font-inter text-2xl sm:text-3xl lg:text-5xl font-medium uppercase tracking-tight leading-tight indent-[38%] sm:indent-[45%] lg:indent-[52%]">
+        <h2 className="font-inter text-2xl sm:text-3xl lg:text-5xl font-medium uppercase tracking-tight leading-tight indent-[38%] sm:indent-[45%] lg:indent-[52%]">
           <span className="text-black/40">{t("teamIntro")} </span>
           <span className="text-black">{t("teamHighlight")}</span>
-        </p>
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-3">
           {members.map((member, index) => (
