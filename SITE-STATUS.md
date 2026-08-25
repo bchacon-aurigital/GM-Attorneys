@@ -206,3 +206,17 @@ Pulled directly from `gmattorneyscr.com`'s rendered HTML and its
   Lorem Ipsum leftover but wasn't actually rendered anywhere — removed the
   dead translation key instead of leaving it to confuse whoever edits that
   file next.
+
+
+
+Pendiente:
+
+
+-OG image: falta el archivo /og-image.jpg — ya sabemos que va a llegar.
+-Favicon: no existe todavía (decidiste no poner uno temporal).
+-Des-indexar el WordPress viejo una vez el sitio nuevo esté en producción.
+-Form de contacto sin backend (a propósito, según pediste — solo falta conectar el envío real).
+-Mapbox sin token — el mapa no se ve hasta que pongas el token.
+-Bios de varios miembros del equipo faltantes (Fiorella, Francella, Julia, Valeska, Isabela, Grettel, Allison, Denis, Marianne, Valeria).
+-Los 10 servicios en /practice-areas repiten el mismo texto genérico (bullets y descripción) — ni el sitio viejo tenía esto resuelto; falta que nos pases contenido real por servicio.
+-/newslettersubs/ siguen sin destino decidido (pendiente tuyo, documentado desde antes).
