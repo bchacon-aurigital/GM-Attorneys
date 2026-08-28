@@ -33,11 +33,11 @@ export async function POST(request: NextRequest) {
 
   revalidatePath("/[locale]/blog", "page");
   revalidatePath("/[locale]/(pages)/blog", "page");
-  revalidateTag("wp-posts");
+  revalidateTag("wp-posts", { expire: 0 });
 
   if (slug) {
     revalidatePath(`/[locale]/blog/${slug}`, "page");
-    revalidateTag(`wp-post-${slug}`);
+    revalidateTag(`wp-post-${slug}`, { expire: 0 });
   }
 
   return NextResponse.json({ revalidated: true, slug: slug ?? null, now: Date.now() });
