@@ -7,7 +7,6 @@ import { AboutImpact } from "@/components/sections/about/about-impact";
 import { AboutFaq } from "@/components/sections/about/about-faq";
 import { StoreLocator } from "@/components/sections/about/store-locator";
 import { OfficesStack } from "@/components/sections/about/offices-stack";
-import { routing } from "@/i18n/routing";
 import { localizedAlternates } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
@@ -27,7 +26,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path, canonical, languages } = localizedAlternates("/about-us", locale);
 
   return {
@@ -44,7 +43,7 @@ export default async function AboutPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path } = localizedAlternates("/about-us", locale);
 
   return (
@@ -58,9 +57,9 @@ export default async function AboutPage({
       <main>
         <AboutHero />
         <AboutValues />
-        <AboutImpact />
         <OfficesStack />
         <StoreLocator variant="light" />
+        <AboutImpact />
         <AboutFaq curveCornerColor="#ffffff" />
       </main>
       <Footer variant="dark" />

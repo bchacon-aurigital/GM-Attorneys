@@ -9,8 +9,10 @@ const BASE_URL = "https://gmattorneyscr.com";
 // deliberately left out.
 const STATIC_ROUTES = ["", "/about-us", "/practice-areas", "/our-team", "/blog", "/contact-us"];
 
+const LOCALE_PREFIX: Record<string, string> = { en: "", es: "/esn" };
+
 function localizedPath(path: string, locale: string) {
-  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const prefix = LOCALE_PREFIX[locale] ?? `/${locale}`;
   return `${BASE_URL}${prefix}${path || "/"}`;
 }
 

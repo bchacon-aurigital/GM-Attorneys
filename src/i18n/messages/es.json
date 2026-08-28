@@ -25,14 +25,16 @@
   },
   "footer": {
     "description": "Somos un despacho legal boutique premium. Por más de cuatro décadas nos hemos enfocado en brindar servicios legales integrales en diversas áreas a personas, empresas y organizaciones, de manera integral y personalizada, satisfaciendo pronta y eficazmente todos sus requerimientos legales.",
-    "shopTitle": "Shop",
+    "shopTitle": "Navegación",
     "shopLinks": {
       "about": "Nosotros",
-      "testimonials": "Testimonios",
       "services": "Servicios",
+      "blog": "Blog",
       "faq": "Preguntas",
+      "testimonials": "Testimonios",
       "team": "Equipo"
     },
+    "getInTouch": "Contáctanos",
     "talkTitle": "Hablemos",
     "email": "info@gmattorneyscr.com",
     "phone": "(+506) 4108-4070",
@@ -106,39 +108,55 @@
     "list": {
       "realEstate": {
         "title": "Bienes Raíces\nResidenciales y Comerciales",
-        "heading": "Asesoría legal integral para comprar una vivienda o expandir un negocio comercial en Costa Rica. Desde la debida diligencia y revisión de título hasta el cierre, protegemos tu inversión en cada paso."
+        "heading": "Asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica.",
+        "description": "Brindamos asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica. Nuestro equipo acompaña a los clientes en cada etapa del proceso, incluyendo adquisiciones, ventas, debida diligencia, revisión de títulos y estructuración de transacciones, garantizando seguridad jurídica, cumplimiento normativo y eficiencia en cada inversión.",
+        "bullets": ["Debida Diligencia y Revisión de Títulos", "Adquisiciones y Ventas", "Estructuración de Transacciones", "Desarrollo Comercial"]
       },
       "corporateLaw": {
         "title": "Derecho\nCorporativo y Empresarial",
-        "heading": "Gobierno corporativo, cumplimiento regulatorio y redacción de contratos para empresas en cualquier etapa — desde startups hasta compañías consolidadas. Estructuramos tu operación con la precisión que exige un negocio duradero."
+        "heading": "Asesoría experta para emprendedores, inversionistas y empresas consolidadas en asuntos corporativos y comerciales.",
+        "description": "Asesoramos a emprendedores, inversionistas y empresas consolidadas en una amplia variedad de asuntos corporativos y comerciales. Nuestros servicios incluyen constitución de sociedades, gobierno corporativo, redacción y revisión de contratos, cumplimiento regulatorio y asesoría legal estratégica para impulsar el crecimiento sostenible y el éxito operativo de los negocios.",
+        "bullets": ["Constitución de Sociedades", "Gobierno Corporativo", "Redacción y Revisión de Contratos", "Cumplimiento Regulatorio"]
       },
       "immigration": {
         "title": "Inmigración y Residencia",
-        "heading": "Trámites de residencia para individuos y familias que se mudan a Costa Rica. Te guiamos en cada requisito con claridad y cuidado, convirtiendo un proceso complejo en un camino directo hacia tu nueva vida en la costa."
+        "heading": "Soluciones personalizadas de inmigración y residencia para personas, familias e inversionistas en Costa Rica.",
+        "description": "Asistimos a personas, familias e inversionistas en asuntos migratorios y de residencia en Costa Rica. Nuestro equipo brinda acompañamiento personalizado durante todo el proceso de solicitud de residencia, ayudando a los clientes a cumplir con los requisitos legales de manera eficiente y facilitando una transición exitosa para vivir e invertir en el país.",
+        "bullets": ["Solicitudes de Residencia", "Visas de Inversionista", "Reunificación Familiar", "Permisos de Trabajo"]
       },
       "taxLaw": {
         "title": "Derecho Tributario",
         "heading": "Planificación estratégica y cumplimiento, tanto corporativo como individual."
       },
       "familyEstate": {
-        "title": "Derecho de Familia y Planificación Patrimonial",
-        "heading": "Testamentos, fideicomisos y planes de sucesión."
+        "title": "Familia y\nPlanificación Patrimonial",
+        "heading": "Planificación patrimonial integral para proteger su patrimonio y preservar su legado a través de las generaciones.",
+        "description": "Ayudamos a nuestros clientes a proteger su patrimonio y preservar su legado mediante soluciones integrales de planificación patrimonial. Nuestros servicios incluyen testamentos, fideicomisos, planificación sucesoria y estrategias de preservación de patrimonio diseñadas para proteger los intereses familiares y facilitar la transferencia ordenada de activos a las futuras generaciones.",
+        "bullets": ["Testamentos y Fideicomisos", "Planificación Sucesoria", "Preservación de Patrimonio", "Acuerdos Familiares"]
       },
       "notaryPublic": {
         "title": "Servicios Notariales",
-        "heading": "Autenticación de documentos, redacción de escrituras y certificaciones legales."
+        "heading": "Servicios Notariales Certificados para Documentación Legal y Transacciones Inmobiliarias",
+        "description": "Nuestros servicios notariales garantizan la validez legal y ejecutabilidad de sus documentos más importantes. Gestionamos la redacción de escrituras, autenticación de documentos, poderes notariales, actas corporativas y todos los actos notariales requeridos para transacciones inmobiliarias, operaciones empresariales y asuntos legales personales en Costa Rica.",
+        "bullets": ["Redacción de Escrituras", "Autenticación de Documentos", "Poderes Notariales", "Actas Corporativas"]
       },
       "disputeResolution": {
         "title": "Resolución de Disputas",
-        "heading": "Resolución alterna de disputas y litigio."
+        "heading": "Resolución Experta de Disputas y Litigio en Asuntos Legales Complejos",
+        "description": "Representamos a nuestros clientes en disputas comerciales, inmobiliarias y civiles complejas ante los tribunales costarricenses y tribunales de arbitraje. Nuestro equipo de litigio aporta amplia experiencia en sala de juicio y un enfoque estratégico para la resolución de conflictos, buscando resultados eficientes y favorables mediante negociación, mediación, arbitraje o procesos judiciales completos.",
+        "bullets": ["Litigio Comercial", "Arbitraje y Mediación", "Disputas Inmobiliarias", "Procesos Civiles"]
       },
       "intellectualProperty": {
         "title": "Propiedad Intelectual",
-        "heading": "Registro de marcas y patentes, cumplimiento y licenciamiento."
+        "heading": "Protección Integral de PI para Marcas, Inventos y Obras Creativas",
+        "description": "Asistimos a nuestros clientes en la protección de sus activos intelectuales mediante el registro de marcas, solicitudes de patentes, gestión de derechos de autor y contratos de licencia. Nuestro equipo brinda orientación estratégica para salvaguardar la identidad de marca, tecnologías propietarias y obras creativas en Costa Rica y mercados internacionales.",
+        "bullets": ["Registro de Marcas", "Solicitudes de Patentes", "Gestión de Derechos de Autor", "Contratos de Licencia"]
       },
       "foreignInvestments": {
         "title": "Inversión Extranjera",
-        "heading": "Inversión extranjera, zonas francas y sectores estratégicos."
+        "heading": "Apoyo Legal Estratégico para Inversión Extranjera y Establecimiento de Negocios en Costa Rica",
+        "description": "Guiamos a los inversionistas extranjeros a través del marco legal para establecer y operar negocios en Costa Rica. Nuestros servicios abarcan la estructuración de inversiones, solicitudes de zonas francas, aprobaciones regulatorias y cumplimiento sectorial estratégico, ayudando a los clientes internacionales a maximizar los beneficios del entorno favorable a la inversión de Costa Rica.",
+        "bullets": ["Estructuración de Inversiones", "Zonas Francas", "Aprobaciones Regulatorias", "Sectores Estratégicos"]
       }
     }
   },
@@ -208,6 +226,32 @@
       "details": "Detalles",
       "captcha": "No soy un robot",
       "submit": "Enviar solicitud"
+    }
+  },
+  "officesHistory": {
+    "flamingo": {
+      "p1": "La oficina de GM Attorneys en Flamingo surgió como resultado de años de trabajo y presencia constante en la zona. Mucho antes de establecer una oficina física, nuestro equipo representó desde San José los intereses legales de importantes desarrolladores e inversionistas vinculados al crecimiento de este destino.",
+      "p2": "A través de litigios complejos y asuntos inmobiliarios de gran relevancia, tuvimos la oportunidad de acompañar a clientes que depositaron su confianza en nuestra firma para la protección de sus proyectos e inversiones. Esa experiencia nos permitió conocer profundamente la realidad jurídica, empresarial y de desarrollo de la región.",
+      "p3": "Con el tiempo, la creciente necesidad de brindar una atención más cercana y eficiente hizo evidente la importancia de contar con una presencia permanente en Flamingo. Los excelentes resultados obtenidos y las relaciones construidas durante años nos impulsaron a abrir una oficina local para continuar acompañando a nuestros clientes de manera directa.",
+      "p4": "Hoy, nuestra oficina en Flamingo refleja el compromiso de GM Attorneys de estar donde nuestros clientes nos necesitan, ofreciendo asesoría legal estratégica con un profundo conocimiento del mercado inmobiliario y del desarrollo de la región."
+    },
+    "tamarindo": {
+      "p1": "La apertura de nuestra oficina en Tamarindo representó un paso natural en la evolución de la presencia de GM Attorneys en la región de Guanacaste. Tras el establecimiento de nuestra oficina en Flamingo y el crecimiento sostenido de nuestra práctica legal en la zona, identificamos la necesidad de ampliar nuestra capacidad de atención para responder a la creciente demanda de clientes e inversionistas en uno de los mercados más dinámicos de Costa Rica.",
+      "p2": "Durante años, nuestro equipo asesoró a importantes desarrolladores, inversionistas y propietarios involucrados en proyectos inmobiliarios y turísticos de gran relevancia. La experiencia acumulada en la región nos permitió desarrollar un profundo entendimiento de los desafíos legales asociados al crecimiento y desarrollo de Tamarindo.",
+      "p3": "La apertura de esta oficina fortaleció nuestra capacidad de brindar una atención más cercana, eficiente y personalizada, permitiéndonos acompañar de manera directa a quienes continúan impulsando el desarrollo de la comunidad.",
+      "p4": "Hoy, la oficina de Tamarindo refleja el compromiso continuo de GM Attorneys con la excelencia legal, la accesibilidad y el servicio personalizado, ofreciendo asesoría estratégica respaldada por décadas de experiencia en el mercado inmobiliario, corporativo y de inversión de la región."
+    },
+    "nosara": {
+      "p1": "La apertura de nuestra oficina en Nosara en 2018 respondió a una visión estratégica de largo plazo y al convencimiento de que esta comunidad se consolidaría como uno de los destinos más importantes de Costa Rica para la inversión, el desarrollo inmobiliario y el crecimiento sostenible.",
+      "p2": "Antes de establecer una presencia permanente en la zona, nuestro equipo ya había acompañado a desarrolladores, inversionistas y propietarios en diversos asuntos legales relacionados con proyectos inmobiliarios, conflictos complejos y la protección de importantes intereses patrimoniales. Esa experiencia nos permitió comprender que Nosara representaba un mercado con características únicas, dinámicas propias y necesidades legales distintas a las de otros destinos del país.",
+      "p3": "Con una firme apuesta por el crecimiento de la región, GM Attorneys decidió establecer una oficina local para brindar un servicio más cercano, ágil y especializado, alineado con las oportunidades y desafíos que acompañan el desarrollo de una comunidad en constante evolución.",
+      "p4": "Hoy, nuestra oficina en Nosara es la incorporación más reciente a la red de oficinas de GM Attorneys y refleja nuestro compromiso de acompañar a clientes nacionales e internacionales con asesoría legal estratégica, un profundo conocimiento del mercado local y una presencia directa donde más se necesita."
+    },
+    "sanJose": {
+      "p1": "La oficina de GM Attorneys en San José representa el origen de una trayectoria profesional que comenzó a finales de la década de 1970, en una época en la que la práctica legal en Costa Rica era desarrollada principalmente por profesionales independientes o pequeñas asociaciones enfocadas en compartir recursos operativos.",
+      "p2": "Desde sus inicios, la firma se distinguió por una visión innovadora para su época, apostando por la integración de personal de apoyo y una estructura de trabajo orientada a la eficiencia y al servicio al cliente. Mientras gran parte de la práctica legal se desarrollaba bajo modelos tradicionales, GM Attorneys incorporó un enfoque más organizado y colaborativo que sentó las bases para su crecimiento futuro.",
+      "p3": "Durante esos primeros años, la práctica estuvo principalmente enfocada en el litigio, particularmente en materia penal y civil. La experiencia adquirida, junto con una sólida reputación profesional, permitió que otros abogados y firmas consolidadas confiaran a la firma la representación de casos complejos que requerían amplia experiencia en los tribunales.",
+      "p4": "Con el paso del tiempo, la confianza de clientes y colegas abrió nuevas oportunidades de crecimiento y expansión. La participación en importantes asuntos comerciales, inmobiliarios y de inversión permitió a la firma extender su presencia más allá del Valle Central y desarrollar relaciones de largo plazo en algunas de las regiones con mayor crecimiento del país."
     }
   },
   "faq": {

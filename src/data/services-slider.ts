@@ -1,5 +1,5 @@
 export interface ServiceSlide {
-  key: "realEstate" | "corporateLaw" | "immigration";
+  key: "realEstate" | "corporateLaw" | "immigration" | "familyEstate";
   backgroundImage: string;
   foregroundImage: string;
 }
@@ -19,5 +19,10 @@ export const servicesSlides: ServiceSlide[] = [
     key: "immigration",
     backgroundImage: "/assets/home/B-Image3.avif",
     foregroundImage: "/assets/home/F-Image3.webp",
+  },
+  {
+    key: "familyEstate",
+    backgroundImage: "/assets/home/B-Image4.avif",
+    foregroundImage: "/assets/home/F-Image4.webp",
   },
 ];

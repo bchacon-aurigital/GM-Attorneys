@@ -274,7 +274,7 @@ export const team: TeamMember[] = [
     roleKey: "assistants",
     titleTag: "Front Desk Executive",
     tagKeys: [],
-    image: "/assets/team/placeholderm.avif",
+    image: "/assets/team/placeholder.avif",
     bio: [],
   },
   {
@@ -301,7 +301,7 @@ export const team: TeamMember[] = [
     roleKey: "seniorCounsel",
     titleTag: "Senior Counsel",
     tagKeys: ["litigator", "speaksSpanishItalian", "formerSupremeCourtJustice"],
-    image: "/assets/team/placeholderm.avif",
+    image: "/assets/team/placeholder.avif",
     bio: [
       "Álvaro Fernández Silva is a well-known trial Attorney, legal advisor and former Supreme Court Judge, who speaks Spanish, Italian and is fluent reading in English, French and Portuguese.",
       "In 1959, he began his studies in Medicine and Political Science in Padova, Italy. However, he decided to study Law at the University of Costa Rica (UCR), and in 1969, he obtained his Law Degree as an honor student. In 1970, he specialized in Administrative Law and Related Sciences with honors, (Suma Cum Laude), degree awarded by the University of Rome, Italy.",
@@ -315,7 +315,7 @@ export const team: TeamMember[] = [
     roleKey: "seniorCounsel",
     titleTag: "Senior Counsel",
     tagKeys: ["lawyer", "publicNotary", "speaksSpanishItalianEnglish"],
-    image: "/assets/team/placeholderm.avif",
+    image: "/assets/team/placeholder.avif",
     bio: [
       "Enrique Granados is an Attorney, Notary Public and also a well known Opera Singer, who speaks Spanish, Italian and English.",
       "In 1959, he began his studies at the University of Costa Rica, graduating from Law School in 1965 and the Conservatory of Music in 1969. In 1973, he specialized in Air and Space Law in Buenos Aires, Argentina.",

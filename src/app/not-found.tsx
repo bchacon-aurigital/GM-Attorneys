@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { manrope, inter } from "@/lib/fonts";
+import { manrope, arial } from "@/lib/fonts";
 import "./globals.css";
+import "mapbox-gl/dist/mapbox-gl.css";
+import "aos/dist/aos.css";
 
 export default function RootNotFound() {
   return (
-    <html lang="es" className={`${manrope.variable} ${inter.variable}`}>
+    <html lang="es" className={`${manrope.variable} ${arial.variable}`}>
       <body className="antialiased font-sans">
         <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#240824] px-4 py-16 text-center sm:px-6">
           <img
@@ -38,7 +40,7 @@ export default function RootNotFound() {
               Error 404
             </p>
 
-            <p className="font-inter text-7xl font-medium uppercase leading-none tracking-tight text-white sm:text-8xl lg:text-9xl">
+            <p className="font-arial text-7xl font-medium uppercase leading-none tracking-tight text-white sm:text-8xl lg:text-9xl">
               404
             </p>
 

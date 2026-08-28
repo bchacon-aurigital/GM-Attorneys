@@ -1,5 +1,8 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/section";
+import { GradientWaveText } from "@/components/ui/gradient-wave-text";
 
 const values = [
   { key: "commitment" },
@@ -17,7 +20,7 @@ export function AboutValues() {
           className="text-2xl sm:text-3xl lg:text-5xl font-medium uppercase tracking-tight leading-tight indent-[30%] sm:indent-[35%] lg:indent-[42%]"
         >
           <span className="text-black/40">{t("valuesIntro")} </span>
-          <span className="text-black">{t("valuesHighlight")}</span>
+          <GradientWaveText text={t("valuesHighlight")} inactiveColor="#000000" activeColor="#0aa39f" />
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-black/20">

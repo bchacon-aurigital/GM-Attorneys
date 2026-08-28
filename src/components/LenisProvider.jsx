@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { ReactLenis, useLenis } from "lenis/react";
 import AOS from "aos";
 
@@ -17,6 +18,19 @@ function AosSync() {
   return null;
 }
 
+function ScrollToTop() {
+  const pathname = usePathname();
+  const lenis = useLenis();
+
+  useEffect(() => {
+    // Skip if navigating to a specific in-page anchor
+    if (window.location.hash) return;
+    lenis?.scrollTo(0, { immediate: true });
+  }, [pathname]);
+
+  return null;
+}
+
 export default function LenisProvider() {
   return (
     <ReactLenis
@@ -28,6 +42,7 @@ export default function LenisProvider() {
       }}
     >
       <AosSync />
+      <ScrollToTop />
     </ReactLenis>
   );
 }

@@ -4,7 +4,6 @@ import { Link } from "@/i18n/navigation";
 
 const complementKeys = [
   "taxLaw",
-  "familyEstate",
   "notaryPublic",
   "disputeResolution",
   "intellectualProperty",

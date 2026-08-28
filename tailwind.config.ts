@@ -12,9 +12,12 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-manrope)", "sans-serif"],
         manrope: ["var(--font-manrope)", "sans-serif"],
-        inter: ["var(--font-inter)", "sans-serif"],
+        arial: ["var(--font-arial)", "sans-serif"],
       },
       colors: {
+        violet: "#27102b",
+        ultrateal: "#0aa39f",
+        platinum: "#e5e5e5",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

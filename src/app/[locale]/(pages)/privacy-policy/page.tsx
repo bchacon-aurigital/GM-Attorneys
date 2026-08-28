@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
-import { routing } from "@/i18n/routing";
 import { localizedAlternates } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
@@ -17,7 +16,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path, canonical, languages } = localizedAlternates("/privacy-policy", locale);
 
   return {
@@ -46,7 +45,7 @@ export default async function PrivacyPolicyPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path } = localizedAlternates("/privacy-policy", locale);
 
   return (

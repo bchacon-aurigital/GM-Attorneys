@@ -1,28 +1,27 @@
-import { routing } from "@/i18n/routing";
-
 /**
  * Builds the canonical path and hreflang alternates for a route, given its
- * locale-agnostic pathname (e.g. "/about-us", "" for the home page).
+ * locale-agnostic pathname (e.g. "/about-us", "/" for the home page).
  *
- * Spanish is the default locale with no URL prefix ("/about-us"), English
- * gets the "/en" prefix ("/en/about-us") — matches routing.localePrefix
- * "as-needed". Every page that defines its own generateMetadata should call
- * this so canonical + hreflang stay correct per-route instead of inheriting
- * the root layout's (which only ever pointed at the home page).
+ * English is the default locale with no URL prefix ("/about-us"), Spanish
+ * gets the "/esn" prefix ("/esn/about-us") — matches routing.localePrefix
+ * mode "as-needed" with a custom prefix for "es".
  */
 export function localizedAlternates(pathname: string, locale: string) {
-  const isSpanish = locale === routing.defaultLocale;
   const cleanPath = pathname === "/" ? "" : pathname;
+  const isSpanish = locale === "es";
 
-  const canonical = isSpanish ? cleanPath || "/" : `/en${cleanPath}`;
+  const enPath = cleanPath || "/";
+  const esPath = cleanPath ? `/esn${cleanPath}` : "/esn";
+
+  const canonical = isSpanish ? esPath : enPath;
 
   return {
     path: canonical,
     canonical,
     languages: {
-      "es-CR": cleanPath || "/",
-      "en-US": `/en${cleanPath}`,
-      "x-default": cleanPath || "/",
+      "en-US": enPath,
+      "es-CR": esPath,
+      "x-default": enPath,
     },
   };
 }

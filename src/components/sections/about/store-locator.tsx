@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
 import { useTranslations } from "next-intl";
 import { Curve } from "@/components/ui/curve";
 import { offices } from "@/data/offices";
@@ -15,6 +14,31 @@ interface StoreLocatorProps {
 
 const MAP_STYLE_DARK = "mapbox://styles/mapbox/dark-v11";
 const MAP_STYLE_LIGHT = "mapbox://styles/mapbox/light-v11";
+
+const PURPLE_BG = "#1d0120";
+const PURPLE_WATER = "#0d0115";
+const PURPLE_LAND_LIGHT = "#240828";
+
+function applyPurpleTheme(map: mapboxgl.Map) {
+  const layers = map.getStyle().layers ?? [];
+  for (const layer of layers) {
+    try {
+      if (layer.type === "background") {
+        map.setPaintProperty(layer.id, "background-color", PURPLE_BG);
+      } else if (layer.type === "fill") {
+        const color = layer.id.includes("water") ? PURPLE_WATER : PURPLE_LAND_LIGHT;
+        map.setPaintProperty(layer.id, "fill-color", color);
+        map.setPaintProperty(layer.id, "fill-opacity", 1);
+      } else if (layer.type === "line") {
+        const isAdmin = layer.id.includes("admin") || layer.id.includes("boundary") || layer.id.includes("border");
+        map.setPaintProperty(layer.id, "line-color", isAdmin ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.18)");
+      } else if (layer.type === "symbol") {
+        map.setPaintProperty(layer.id, "text-color", "rgba(255,255,255,0.75)");
+        map.setPaintProperty(layer.id, "text-halo-color", PURPLE_BG);
+      }
+    } catch (_) {}
+  }
+}
 
 const FALLBACK_CENTER: [number, number] = [-84.5, 10.1];
 const FALLBACK_ZOOM = 7.3;
@@ -72,7 +96,8 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
       pitch: 0,
       bearing: 0,
       attributionControl: false,
-      cooperativeGestures: true,
+      cooperativeGestures: false,
+      scrollZoom: false,
     });
 
     mapRef.current = map;
@@ -81,6 +106,8 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
     map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "top-left");
 
     map.on("load", () => {
+      if (isDark) applyPurpleTheme(map);
+
       const markers: mapboxgl.Marker[] = offices.map((office) => {
         const el = document.createElement("button");
         el.type = "button";
@@ -89,7 +116,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
         el.className = cn(
           "flex size-10 items-center justify-center rounded-full p-2 [&[data-active='true']]:outline [&[data-active='true']]:outline-1 [&[data-active='true']]:outline-white/60 [&[data-active='true']]:outline-offset-4"
         );
-        el.style.backgroundColor = "#635bff";
+        el.style.backgroundColor = "#0aa39f";
         el.style.color = "#f2f2f2";
 
         const icon = document.createElement("div");
@@ -144,6 +171,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimer);
       markersRef.current.forEach((marker) => marker.remove());
       map.remove();
       mapRef.current = null;
@@ -167,7 +195,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
         cornerColor={curveCornerColor ?? "#ffffff"}
         corner="right"
         className="h-[100px] sm:h-[160px] lg:h-[240px]"
-        contentClassName="items-start pt-6 sm:pt-8"
+        contentClassName="items-start pt-14 sm:pt-16"
       >
         <h2
           className={cn(
@@ -191,7 +219,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
               {t("foundLocations", { count: offices.length })}
             </p>
 
-            <div className="flex flex-row lg:flex-col gap-4 sm:gap-5 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
+            <div className="flex flex-row lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
               {offices.map((office, index) => (
                 <div
                   key={office.id}
@@ -209,13 +237,13 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
                   }}
                   data-active={activeId === office.id}
                   className={cn(
-                    "flex w-[20rem] lg:w-full shrink-0 flex-col items-start gap-2 rounded-xl border px-6 py-8 cursor-pointer transition-colors duration-200",
+                    "flex w-[20rem] lg:w-full shrink-0 flex-col items-start gap-1.5 rounded-xl border px-5 py-4 cursor-pointer transition-colors duration-200",
                     isDark
                       ? "border-white/15 [&[data-active='true']]:border-white/50"
                       : "border-[#240824]/15 [&[data-active='true']]:border-[#240824]/50"
                   )}
                 >
-                  <p className={cn("text-xs font-medium uppercase tracking-wide", "text-[#635bff]")}>
+                  <p className={cn("text-xs font-medium uppercase tracking-wide", "text-[#0aa39f]")}>
                     {office.city}
                   </p>
                   <h3
@@ -238,7 +266,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
                       target="_blank"
                       rel="noreferrer"
                       className={cn(
-                        "mt-4 rounded px-3 py-2 text-sm font-medium no-underline",
+                        "mt-2 rounded px-3 py-1.5 text-sm font-medium no-underline",
                         isDark ? "bg-white/10 text-white" : "bg-[#240824]/5 text-[#240824]"
                       )}
                     >

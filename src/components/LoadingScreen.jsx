@@ -1,25 +1,30 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function LoadingScreen() {
+export default function LoadingScreen({ isHiding = false }) {
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setProgress((prev) => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    return 100;
-                }
-                return prev + 1;
+                // Rush to 85% quickly, then hold and wait for real load signal
+                if (prev >= 85) { clearInterval(interval); return 85; }
+                return prev + 2;
             });
-        }, 18);
-
+        }, 16);
         return () => clearInterval(interval);
     }, []);
 
+    // When hiding signal comes in, jump to 100%
+    useEffect(() => {
+        if (isHiding) setProgress(100);
+    }, [isHiding]);
+
     return (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-[#240824]">
+        <div
+            className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-[#240824]"
+            style={isHiding ? { animation: "heroFadeOut 0.55s ease forwards" } : undefined}
+        >
             <img
                 src="/assets/home/hero-vector.svg"
                 alt=""
@@ -48,8 +53,11 @@ export default function LoadingScreen() {
                 <div className="flex flex-col items-center gap-3 sm:gap-4">
                     <div className="h-[1.5px] w-56 overflow-hidden bg-white/20 sm:w-72">
                         <div
-                            className="h-full bg-white transition-[width] duration-100 ease-linear"
-                            style={{ width: `${progress}%` }}
+                            className="h-full bg-white ease-linear"
+                            style={{
+                                width: `${progress}%`,
+                                transition: isHiding ? "width 0.2s ease" : "width 0.1s linear",
+                            }}
                         />
                     </div>
                     <p className="font-inter text-xs font-medium tabular-nums tracking-tight text-white/50 sm:text-sm">
@@ -57,19 +65,6 @@ export default function LoadingScreen() {
                     </p>
                 </div>
             </div>
-
-            <style jsx>{`
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                        transform: translateY(8px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-            `}</style>
         </div>
     );
 }

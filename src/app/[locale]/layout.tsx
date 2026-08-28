@@ -3,12 +3,14 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import "../globals.css";
+import "mapbox-gl/dist/mapbox-gl.css";
+import "aos/dist/aos.css";
 import { LoadingProvider } from "./context/LoadingContext";
 import Script from "next/script";
 import AOSInit from "@/components/AOSInit";
 import LenisProvider from "@/components/LenisProvider";
 import JsonLd from "@/components/JsonLd";
-import { manrope, inter } from "@/lib/fonts";
+import { manrope, arial } from "@/lib/fonts";
 import { routing, type Locale } from "@/i18n/routing";
 import { localizedAlternates } from "@/lib/seo";
 
@@ -37,7 +39,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path, canonical, languages } = localizedAlternates("/", locale);
 
   const title = isSpanish ? DEFAULT_TITLE.es : DEFAULT_TITLE.en;
@@ -110,11 +112,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   return (
-    <html lang={locale} className={`${manrope.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${manrope.variable} ${arial.variable}`}>
       <head>
         <JsonLd />
       </head>
-      <body className="antialiased font-sans">
+      <body className="antialiased font-sans" suppressHydrationWarning>
         <NextIntlClientProvider>
           <LoadingProvider>
             <LenisProvider />

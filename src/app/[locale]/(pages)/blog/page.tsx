@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
 import { BlogListing } from "@/components/sections/blog/blog-listing";
 import { getPosts, getCategories } from "@/lib/wordpress";
-import { routing, type Locale } from "@/i18n/routing";
+import { type Locale } from "@/i18n/routing";
 import { localizedAlternates } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
@@ -26,7 +26,7 @@ const DESCRIPTION = {
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path, canonical, languages } = localizedAlternates("/blog", locale);
 
   return {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path } = localizedAlternates("/blog", locale);
   const t = await getTranslations("blog");
 

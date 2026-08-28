@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { routing } from "@/i18n/routing";
 import { localizedAlternates } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
@@ -19,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path, canonical, languages } = localizedAlternates("/our-team", locale);
 
   return {
@@ -38,7 +37,7 @@ export default async function OurTeamLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isSpanish = locale === routing.defaultLocale;
+  const isSpanish = locale === "es";
   const { path } = localizedAlternates("/our-team", locale);
 
   return (

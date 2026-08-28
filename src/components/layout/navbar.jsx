@@ -91,7 +91,7 @@ const Navbar = ({ variant = "default" }) => {
                 width="179"
                 height="28"
                 className={cn(
-                  "h-auto w-[110px] sm:w-[125px] lg:w-[140px] transition-[filter] duration-300",
+                  "h-auto w-[143px] sm:w-[163px] lg:w-[182px] transition-[filter] duration-300",
                   isLight ? "brightness-0 invert" : ""
                 )}
                 aria-label="GM Attorneys logo"
@@ -103,12 +103,7 @@ const Navbar = ({ variant = "default" }) => {
             <Link
               href={pathname}
               locale={nextLocale}
-              className={cn(
-                "flex items-center justify-center rounded-full border size-7 sm:size-8 text-[10px] sm:text-[11px] font-semibold uppercase transition-colors duration-300",
-                isLight
-                  ? "border-white/40 text-white hover:border-white hover:bg-white/10"
-                  : "border-black/20 text-black hover:border-black/40 hover:bg-black/5"
-              )}
+              className="flex items-center justify-center rounded-full size-7 sm:size-8 text-[10px] sm:text-[11px] font-bold uppercase transition-all duration-300 text-white bg-[#0aa39f]/70 backdrop-blur-md hover:bg-[#0aa39f] shadow-[0_0_12px_rgba(10,163,159,0.4)] hover:shadow-[0_0_18px_rgba(10,163,159,0.6)]"
               aria-label="Switch language"
             >
               {nextLocale.toUpperCase()}
@@ -203,7 +198,7 @@ const Navbar = ({ variant = "default" }) => {
             href={pathname}
             locale={nextLocale}
             onClick={toggleMenu}
-            className="mt-auto mb-6 flex w-fit items-center rounded-full border border-black/20 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-black transition-colors duration-300 hover:border-black/40 hover:bg-black/5"
+            className="mt-auto mb-6 flex w-fit items-center rounded-full px-4 py-2 text-sm font-bold uppercase tracking-widest text-white bg-[#0aa39f]/70 backdrop-blur-md transition-all duration-300 hover:bg-[#0aa39f] shadow-[0_0_12px_rgba(10,163,159,0.4)]"
             aria-label="Switch language"
           >
             {nextLocale.toUpperCase()}

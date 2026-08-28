@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/section";
 import { Curve } from "@/components/ui/curve";
+import { GradientWaveText } from "@/components/ui/gradient-wave-text";
 
 const values = [
   { key: "commitment" },
@@ -35,18 +36,18 @@ export function WhatSetsUsApart() {
         <div className="relative flex flex-col gap-16 sm:gap-24 lg:gap-[100px]">
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold uppercase tracking-tight leading-tight">
             <span className="text-white">{t("apartIntro")} </span>
-            <span className="text-white/50">{t("apartHighlight")}</span>
+            <GradientWaveText text={t("apartHighlight")} />
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-[#00a6a0]/40">
+          <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-white/20">
             {values.map((value, index) => (
               <div
                 key={value.key}
                 className={`flex flex-col justify-between gap-10 lg:gap-0 min-h-[260px] lg:min-h-[466px] py-6 px-0 lg:px-6 ${
                   index > 0 ? "lg:border-l" : ""
-                } border-[#00a6a0]/40`}
+                } border-white/20`}
               >
-                <p className="text-base sm:text-lg font-bold uppercase tracking-wide text-[#00a6a0]">
+                <p className="text-base sm:text-lg font-bold uppercase tracking-wide text-white">
                   {tAbout(`values.${value.key}.title`)}
                 </p>
                 <p className="text-sm sm:text-base font-medium max-w-md text-white">

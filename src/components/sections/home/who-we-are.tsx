@@ -21,11 +21,15 @@ export function WhoWeAre() {
         className="pointer-events-none absolute -left-[3%] top-[16%] hidden w-[56%] -rotate-[8deg] lg:block"
       />
 
-      <h2 className="font-inter relative max-w-4xl text-2xl sm:text-3xl lg:absolute lg:left-[1.7%] lg:top-[6%] lg:max-w-none lg:w-[96.7%] lg:text-5xl font-medium uppercase tracking-tight leading-tight text-black indent-[38%] sm:indent-[45%] lg:indent-[52%]">
+      <h2 className="font-arial relative max-w-4xl text-2xl sm:text-3xl lg:absolute lg:left-[1.7%] lg:top-[6%] lg:max-w-none lg:w-[96.7%] lg:text-5xl font-medium uppercase tracking-tight leading-tight text-black indent-[38%] sm:indent-[45%] lg:indent-[52%]">
         {t("whoWeAreTitle")}
       </h2>
 
-      <p className="relative mt-16 max-w-sm text-sm sm:mt-24 sm:text-base lg:absolute lg:right-[3.3%] lg:top-[62%] lg:mt-0 lg:max-w-[18.5%] font-medium text-black/70 tracking-tight">
+      <p
+        data-aos="fade-up"
+        data-aos-delay="100"
+        className="relative mt-16 max-w-md text-sm sm:mt-24 sm:text-base lg:absolute lg:right-[3.3%] lg:top-[62%] lg:mt-0 lg:max-w-[22%] font-medium text-black/70 tracking-tight"
+      >
         {t("whoWeAreText")}
       </p>
 

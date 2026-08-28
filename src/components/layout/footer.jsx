@@ -6,9 +6,10 @@ import { cn } from "@/lib/utils";
 
 const shopLinks = [
   { key: "about", href: "/about-us" },
-  { key: "testimonials", href: "/#testimonials" },
   { key: "services", href: "/practice-areas" },
+  { key: "blog", href: "/blog" },
   { key: "faq", href: "/#faq" },
+  { key: "testimonials", href: "/#testimonials" },
   { key: "team", href: "/our-team" },
 ];
 
@@ -57,9 +58,17 @@ export function Footer({ variant = "dark" }) {
 
       <Section className={cn("relative z-10 -mt-1 pt-8 sm:pt-10 pb-10 sm:pb-16", bg)}>
         <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left lg:justify-between gap-10 lg:gap-16">
-          <p className={cn("text-sm sm:text-base lg:text-lg font-normal max-w-[766px]", textMuted)}>
-            {t("description")}
-          </p>
+          <div className="flex flex-col items-center lg:items-start gap-6 max-w-[766px]">
+            <p className={cn("text-sm sm:text-base lg:text-lg font-normal", textMuted)}>
+              {t("description")}
+            </p>
+            <Link
+              href="/contact-us"
+              className="flex items-center gap-2 rounded bg-[#0aa39f] px-5 py-2.5 text-sm sm:text-base font-medium text-white transition-opacity duration-300 hover:opacity-90 whitespace-nowrap"
+            >
+              {t("getInTouch")}
+            </Link>
+          </div>
 
           <div className="flex flex-col items-center sm:flex-row sm:items-start gap-10 sm:gap-16 lg:gap-[120px]">
             <div className="flex flex-col items-center lg:items-start gap-4 sm:gap-6">
@@ -116,7 +125,7 @@ export function Footer({ variant = "dark" }) {
           >
             <span
               className={cn(
-                "text-xs sm:text-sm font-medium uppercase tracking-widest transition-colors duration-200",
+                "text-[10px] font-medium uppercase tracking-widest transition-colors duration-200",
                 isDark ? "text-white/40 group-hover:text-white/80" : "text-[#240824]/40 group-hover:text-[#240824]/80"
               )}
             >
@@ -124,7 +133,7 @@ export function Footer({ variant = "dark" }) {
             </span>
             <em
               className={cn(
-                "not-italic text-sm sm:text-base font-semibold transition-colors duration-200",
+                "not-italic text-xs font-semibold transition-colors duration-200",
                 isDark ? "text-white/60 group-hover:text-white" : "text-[#240824]/60 group-hover:text-[#240824]"
               )}
             >
@@ -136,7 +145,7 @@ export function Footer({ variant = "dark" }) {
               aria-hidden="true"
               loading="lazy"
               decoding="async"
-              className="h-6 w-6 rounded-full bg-[#240824] p-1 opacity-60 transition-opacity duration-200 group-hover:opacity-100"
+              className="h-4 w-4 rounded-full bg-[#240824] p-0.5 opacity-60 transition-opacity duration-200 group-hover:opacity-100"
             />
           </a>
           <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-4">
