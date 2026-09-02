@@ -29,8 +29,8 @@ const DEFAULT_TITLE = {
 };
 
 const DEFAULT_DESCRIPTION = {
-  es: "Despacho legal boutique en Costa Rica con más de 45 años de experiencia en bienes raíces, inversión extranjera, derecho corporativo e inmigración. Oficinas en San José, Flamingo, Tamarindo y Nosara.",
-  en: "Premium boutique law firm in Costa Rica with over 45 years of experience in real estate, foreign investment, corporate law, and immigration. Offices in San José, Flamingo, Tamarindo, and Nosara.",
+  es: "Despacho legal boutique en Costa Rica con más de 48 años de experiencia en bienes raíces, inversión extranjera, derecho corporativo e inmigración. Oficinas en San José, Flamingo, Tamarindo y Nosara.",
+  en: "Premium boutique law firm in Costa Rica with over 48 years of experience in real estate, foreign investment, corporate law, and immigration. Offices in San José, Flamingo, Tamarindo, and Nosara.",
 };
 
 export async function generateMetadata({

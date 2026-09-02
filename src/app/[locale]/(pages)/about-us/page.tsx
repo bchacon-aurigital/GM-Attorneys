@@ -16,8 +16,8 @@ const TITLE = {
 };
 
 const DESCRIPTION = {
-  es: "Conoce a GM Attorneys: más de 45 años de trayectoria como despacho legal boutique en Costa Rica, con presencia en San José, Flamingo, Tamarindo y Nosara.",
-  en: "Meet GM Attorneys: over 45 years of experience as a boutique law firm in Costa Rica, with offices in San José, Flamingo, Tamarindo, and Nosara.",
+  es: "Conoce a GM Attorneys: más de 48 años de trayectoria como despacho legal boutique en Costa Rica, con presencia en San José, Flamingo, Tamarindo y Nosara.",
+  en: "Meet GM Attorneys: over 48 years of experience as a boutique law firm in Costa Rica, with offices in San José, Flamingo, Tamarindo, and Nosara.",
 };
 
 export async function generateMetadata({
