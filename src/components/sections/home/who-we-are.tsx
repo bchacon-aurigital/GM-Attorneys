@@ -16,9 +16,9 @@ export function WhoWeAre() {
       />
 
       <img
-        src="/assets/home/low-angle-shot-tall-palm-tree-gleaming-blue-sky 2.webp"
+        src="/assets/home/mermaid.avif"
         alt=""
-        className="pointer-events-none absolute -left-[3%] top-[16%] hidden w-[56%] -rotate-[8deg] lg:block"
+        className="pointer-events-none absolute left-0 bottom-0 hidden w-[72%] lg:block"
       />
 
       <h2 className="font-arial relative max-w-4xl text-2xl sm:text-3xl lg:absolute lg:left-[1.7%] lg:top-[6%] lg:max-w-none lg:w-[96.7%] lg:text-5xl font-medium uppercase tracking-tight leading-tight text-black indent-[38%] sm:indent-[45%] lg:indent-[52%]">
@@ -28,7 +28,7 @@ export function WhoWeAre() {
       <p
         data-aos="fade-up"
         data-aos-delay="100"
-        className="relative mt-16 max-w-md text-sm sm:mt-24 sm:text-base lg:absolute lg:right-[3.3%] lg:top-[62%] lg:mt-0 lg:max-w-[22%] font-medium text-black/70 tracking-tight"
+        className="relative mt-16 max-w-md text-sm sm:mt-24 sm:text-base lg:absolute lg:right-[3.3%] lg:top-[52%] lg:mt-0 lg:max-w-[22%] font-medium text-black/70 tracking-tight"
       >
         {t("whoWeAreText")}
       </p>

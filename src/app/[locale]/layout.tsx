@@ -73,7 +73,7 @@ export async function generateMetadata({
       description,
       images: [
         {
-          url: "/og-image.jpg",
+          url: "/assets/og-image.jpg",
           width: 1200,
           height: 630,
           alt: "GM Attorneys",
@@ -84,7 +84,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-image.jpg"],
+      images: ["/assets/og-image.jpg"],
     },
     robots: {
       index: true,
