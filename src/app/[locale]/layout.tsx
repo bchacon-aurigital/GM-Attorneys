@@ -62,7 +62,11 @@ export async function generateMetadata({
     authors: [{ name: "GM Attorneys", url: "https://gmattorneyscr.com" }],
     creator: "GM Attorneys",
     publisher: "GM Attorneys",
-    metadataBase: new URL("https://gmattorneyscr.com"),
+    metadataBase: new URL(
+      process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "https://gmattorneyscr.com"
+    ),
     alternates: { canonical, languages },
     openGraph: {
       type: "website",
