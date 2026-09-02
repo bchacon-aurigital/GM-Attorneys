@@ -8,7 +8,7 @@ const complementKeys = [
   "disputeResolution",
   "intellectualProperty",
   "foreignInvestments",
-] as const; 
+] as const;  
   
 export function Complements() {
   const t = useTranslations("home");
