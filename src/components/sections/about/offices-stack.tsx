@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { officesHistory } from "@/data/offices-history";
-
+ 
 function clamp01(v: number) { return Math.min(1, Math.max(0, v)); }
 function mapRange(v: number, lo: number, hi: number) { return clamp01((v - lo) / (hi - lo)); }
 function easeOut3(t: number) { return 1 - Math.pow(1 - t, 3); }
