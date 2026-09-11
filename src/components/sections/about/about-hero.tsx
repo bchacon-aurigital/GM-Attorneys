@@ -1,9 +1,18 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Curve } from "@/components/ui/curve";
 
 export function AboutHero() {
   const t = useTranslations("about");
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => requestAnimationFrame(() => setRevealed(true)));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   const heroText = (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0 w-full">
@@ -27,15 +36,23 @@ export function AboutHero() {
   );
 
   return (
-    <section className="relative w-full h-[90vh] sm:h-screen min-h-[560px] overflow-hidden">
-      <Image
-        src="/assets/about-us/hero.avif"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-bottom"
-      />
+    <section className="relative w-full aspect-square sm:aspect-auto sm:h-screen sm:min-h-[560px] overflow-hidden">
+      <div
+        className="absolute inset-0"
+        style={{
+          clipPath: revealed ? "inset(0% 0% 0% 0%)" : "inset(0% 50% 0% 50%)",
+          transition: "clip-path 1.4s cubic-bezier(0.76, 0, 0.24, 1)",
+        }}
+      >
+        <Image
+          src="/assets/about-us/hero.avif"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_25%] max-sm:scale-[1.35] max-sm:origin-[center_top]"
+        />
+      </div>
 
       <Curve
         curveColor="#ffffff"

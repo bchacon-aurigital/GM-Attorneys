@@ -7,9 +7,10 @@ interface ServiceRowProps {
   serviceKey: string;
   isDark: boolean;
   variant?: "main" | "complementary";
+  image?: string;
 }
 
-export function ServiceRow({ serviceKey, isDark, variant = "main" }: ServiceRowProps) {
+export function ServiceRow({ serviceKey, isDark, variant = "main", image }: ServiceRowProps) {
   const t = useTranslations("services");
   const title = t(`list.${serviceKey}.title`);
   const heading = t(`list.${serviceKey}.heading`);
@@ -53,7 +54,7 @@ export function ServiceRow({ serviceKey, isDark, variant = "main" }: ServiceRowP
         </div>
 
         {/* Column 2: image */}
-        <AnimatedImage className={cn("h-[240px] md:h-full min-h-[280px]", imagePlaceholder)} />
+        <AnimatedImage className={cn("h-[300px] md:h-full min-h-[350px]", !image && imagePlaceholder)} src={image} />
 
         {/* Column 3: heading + description */}
         <div className="flex flex-col gap-4">
@@ -114,7 +115,7 @@ export function ServiceRow({ serviceKey, isDark, variant = "main" }: ServiceRowP
             </p>
           )}
         </div>
-        <AnimatedImage className={cn("h-[240px] sm:h-[400px] lg:h-[560px]", imagePlaceholder)} />
+        <AnimatedImage className={cn("h-[300px] sm:h-[500px] lg:h-[700px]", !image && imagePlaceholder)} src={image} />
       </div>
     </div>
   );

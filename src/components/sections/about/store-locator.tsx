@@ -209,7 +209,13 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
 
       <div className="px-4 sm:px-6 lg:px-10 pb-16 md:pb-20">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 h-auto lg:h-[46rem]">
-          <div className="flex w-full lg:max-w-md flex-col gap-6 overflow-visible lg:overflow-y-auto">
+          <div className={cn(
+            "flex w-full lg:max-w-md flex-col gap-6 overflow-visible lg:overflow-y-auto",
+            "lg:[&::-webkit-scrollbar]:w-1.5",
+            isDark
+              ? "lg:[&::-webkit-scrollbar-track]:bg-[#1d0120] lg:[&::-webkit-scrollbar-thumb]:bg-white/20 lg:[&::-webkit-scrollbar-thumb]:rounded-full"
+              : "lg:[&::-webkit-scrollbar-track]:bg-white lg:[&::-webkit-scrollbar-thumb]:bg-[#240824]/20 lg:[&::-webkit-scrollbar-thumb]:rounded-full"
+          )}>
             <p
               className={cn(
                 "text-lg sm:text-xl font-semibold",
@@ -243,9 +249,6 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
                       : "border-[#240824]/15 [&[data-active='true']]:border-[#240824]/50"
                   )}
                 >
-                  <p className={cn("text-xs font-medium uppercase tracking-wide", "text-[#0aa39f]")}>
-                    {office.city}
-                  </p>
                   <h3
                     className={cn(
                       "text-xl font-medium tracking-tight",
@@ -260,19 +263,29 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
                     </span>
                     <p className="text-sm">{office.address}</p>
                   </div>
-                  {office.website && (
+                  <div className="mt-2 flex flex-wrap gap-2">
                     <a
-                      href={office.website}
+                      href={office.mapsUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className={cn(
-                        "mt-2 rounded px-3 py-1.5 text-sm font-medium no-underline",
-                        isDark ? "bg-white/10 text-white" : "bg-[#240824]/5 text-[#240824]"
-                      )}
+                      className="rounded px-3 py-1.5 text-sm font-medium no-underline bg-[#0aa39f] text-white"
                     >
-                      {t("viewWebsite")} →
+                      {t("goToMaps")} →
                     </a>
-                  )}
+                    {office.website && (
+                      <a
+                        href={office.website}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={cn(
+                          "rounded px-3 py-1.5 text-sm font-medium no-underline",
+                          isDark ? "bg-white/10 text-white" : "bg-[#240824]/5 text-[#240824]"
+                        )}
+                      >
+                        {t("viewWebsite")} →
+                      </a>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -280,7 +293,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
 
           <div
             className={cn(
-              "relative flex-1 overflow-hidden rounded-2xl aspect-[3/2] lg:aspect-auto",
+              "relative flex-1 overflow-hidden rounded-2xl aspect-[3/2] lg:aspect-auto lg:h-[90vh]",
               isDark ? "bg-[#2a0a2c]" : "bg-[#f6f9fc]"
             )}
           >

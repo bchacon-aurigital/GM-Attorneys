@@ -12,8 +12,10 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
+    minimumCacheTTL: process.env.NODE_ENV === 'development' ? 0 : 60,
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development';
     return [
       {
         // Applies to every route. The old WordPress site's .htaccess set
@@ -27,10 +29,24 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         ],
       },
+      // In dev, prevent the browser from caching static assets so replaced
+      // image files are picked up immediately without a hard refresh.
+      ...(isDev ? [{
+        source: "/assets/:path*",
+        headers: [
+          { key: "Cache-Control", value: "no-store" },
+        ],
+      }] : []),
     ];
   },
   async redirects() {
     return [
+      // iOS requests this legacy variant; serve the same icon to avoid 404s.
+      {
+        source: "/apple-touch-icon-precomposed.png",
+        destination: "/apple-touch-icon.png",
+        permanent: true,
+      },
       // Old WordPress blog permalinks used /YYYY/MM/DD/slug/. The new site
       // keeps the slug-only /blog/[slug] structure going forward, so every
       // old post URL 301s to its new home instead of matching the route

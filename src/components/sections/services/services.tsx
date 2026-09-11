@@ -43,7 +43,7 @@ export function Services() {
       <Section className="bg-[#0aa39f] pt-0 pb-16 sm:pb-24 lg:pb-[120px]">
         <div className="flex flex-col">
           {mainServices.map((service) => (
-            <ServiceRow key={service.key} serviceKey={service.key} isDark />
+            <ServiceRow key={service.key} serviceKey={service.key} isDark image={service.image} />
           ))}
         </div>
       </Section>
@@ -65,7 +65,7 @@ export function Services() {
         <div className="flex flex-col gap-6 sm:gap-10 pt-8 sm:pt-12 lg:pt-16">
           <div className="flex flex-col">
             {complementaryServices.map((service) => (
-              <ServiceRow key={service.key} serviceKey={service.key} isDark={false} variant="complementary" />
+              <ServiceRow key={service.key} serviceKey={service.key} isDark={false} variant="complementary" image={service.image} />
             ))}
           </div>
         </div>

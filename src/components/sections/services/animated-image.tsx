@@ -8,9 +8,10 @@ function easeOut3(t: number) { return 1 - Math.pow(1 - t, 3); }
 
 interface AnimatedImageProps {
   className?: string;
+  src?: string;
 }
 
-export function AnimatedImage({ className }: AnimatedImageProps) {
+export function AnimatedImage({ className, src }: AnimatedImageProps) {
   const elRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -36,8 +37,16 @@ export function AnimatedImage({ className }: AnimatedImageProps) {
   return (
     <div
       ref={elRef}
-      className={cn("w-full rounded", className)}
+      className={cn("relative w-full overflow-hidden rounded", className)}
       style={{ clipPath: "inset(0% 50% 0% 50%)" }}
-    />
+    >
+      {src && (
+        <img
+          src={src}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      )}
+    </div>
   );
 }

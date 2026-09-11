@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { FaArrowUp } from "react-icons/fa6";
-import { Link } from "@/i18n/navigation";
 import { servicesSlides } from "@/data/services-slider";
 import { ServicesProgressContainer } from "./services-progress-container";
+import { useContactDrawer } from "@/app/[locale]/context/ContactDrawerContext";
 
 function clamp01(v: number) { return Math.min(1, Math.max(0, v)); }
 function mapRange(v: number, lo: number, hi: number) { return clamp01((v - lo) / (hi - lo)); }
@@ -15,6 +15,7 @@ const SLIDE_VH = 270;
 
 export function ServicesSlider() {
   const t = useTranslations("services");
+  const { open } = useContactDrawer();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -194,13 +195,14 @@ export function ServicesSlider() {
                       ref={(el) => { ctaRefs.current[index] = el; }}
                       style={{ opacity: 0, willChange: "transform, opacity" }}
                     >
-                      <Link
-                        href="/contact-us"
+                      <button
+                        type="button"
+                        onClick={open}
                         className="font-manrope flex w-fit items-center gap-3 border-b-[1.5px] border-white/20 py-3 text-base font-semibold text-white transition-opacity duration-300 hover:opacity-70"
                       >
                         <span>{t("getInTouch")}</span>
                         <FaArrowUp className="shrink-0 rotate-90" size={12} aria-hidden="true" />
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -226,7 +228,7 @@ export function ServicesSlider() {
                   {/* Foreground — in front of square (z-index: 2), slides up */}
                   <div
                     ref={(el) => { fgRefs.current[index] = el; }}
-                    className={`pointer-events-none absolute -bottom-10 left-1/2 w-full ${index === 2 ? "h-[90%] sm:h-[126%] xl:h-[90%]" : "h-[75%] sm:h-[105%] xl:h-[75%]"}`}
+                    className={`pointer-events-none absolute -bottom-10 left-1/2 w-full ${index === 2 ? "h-[72%] sm:h-[101%] xl:h-[72%]" : "h-[75%] sm:h-[105%] xl:h-[75%]"}`}
                     style={{
                       transform: "translateX(-50%) translateY(72px)",
                       opacity: 0,

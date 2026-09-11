@@ -74,7 +74,10 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
               </button>
 
               {isSortOpen && (
-                <div className="absolute left-0 right-0 top-full z-10 mt-2 overflow-hidden rounded border-[1.5px] border-black/20 bg-white max-h-64 overflow-y-auto">
+                <div
+                  className="absolute left-0 right-0 top-full z-10 mt-2 rounded border-[1.5px] border-black/20 bg-white max-h-64 overflow-y-auto"
+                  onMouseDown={(e) => e.stopPropagation()}
+                >
                   {faqCategories.map((categoryKey) => (
                     <button
                       key={categoryKey}
@@ -136,7 +139,7 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
                     )}
                   >
                     <div className="overflow-hidden">
-                      <p className="max-w-3xl text-sm sm:text-base font-medium text-[#240824]/70 whitespace-pre-line">
+                      <p className="w-full text-sm sm:text-base font-medium text-[#240824]/70 whitespace-pre-line">
                         {item.answer[locale]}
                       </p>
                     </div>

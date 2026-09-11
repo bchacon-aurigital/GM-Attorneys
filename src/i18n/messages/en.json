@@ -1,6 +1,6 @@
 {
   "home": {
-    "heroTitle": "Your Roots, Legally Secured",
+    "heroTitle": "Clarity, Transparency, Legal Certainty",
     "heroSubtitle": "Premium boutique legal services in real estate, foreign investment, corporate and immigration.",
     "areYouProtected": "Are you protected?",
     "getInTouch": "Get in touch",
@@ -16,6 +16,7 @@
     "servicesLabel": "Services"
   },
   "nav": {
+    "home": "Home",
     "about": "About",
     "services": "Services",
     "team": "Team",
@@ -46,7 +47,7 @@
     "privacyPolicy": "Privacy Policy"
   },
   "team": {
-    "title": "The team",
+    "title": "Team",
     "sortBy": "Sort by",
     "sortAll": "All",
     "getInTouch": "Get in touch",
@@ -126,7 +127,9 @@
       },
       "taxLaw": {
         "title": "Tax Law",
-        "heading": "Strategic planning and compliance, both corporate and individual."
+        "heading": "Strategic planning and compliance, both corporate and individual.",
+        "description": "We advise individuals and businesses on tax planning, compliance, and dispute resolution in Costa Rica. Our team helps clients structure their investments and operations efficiently, ensuring full compliance with local tax regulations while minimizing exposure and avoiding unnecessary risks.",
+        "bullets": ["Corporate Tax Planning", "Individual Tax Compliance", "Tax Audits & Disputes", "Investment Structuring"]
       },
       "familyEstate": {
         "title": "Family & Estate\nPlanning",
@@ -161,7 +164,7 @@
     }
   },
   "blog": {
-    "title": "The blog",
+    "title": "Blog",
     "sortBy": "Sort by",
     "sortAll": "All",
     "search": "Search",
@@ -191,12 +194,13 @@
         "quote": "“One of the greatest advantages of working with GM Attorneys is their strong local presence. Their team is accessible, engaged, and genuinely connected to the communities they serve. Clients can meet with them personally, fostering trust and confidence while benefiting from legal counsel that combines local insight with extensive experience.”"
       }
     },
-    "impactTitle": "Our Impact"
+    "impactTitle": "Impact"
   },
   "locator": {
     "title": "Where to find us",
     "foundLocations": "We found {count} locations near you:",
     "viewWebsite": "View website",
+    "goToMaps": "Go to Maps",
     "show": "Show",
     "mapUnavailable": "Map unavailable"
   },
@@ -225,7 +229,15 @@
       "subjectPlaceholder": "General Information",
       "details": "Details",
       "captcha": "I am human",
-      "submit": "Send request"
+      "submit": "Send request",
+      "sending": "Sending...",
+      "successTitle": "Message sent!",
+      "successBody": "We'll get back to you as soon as possible.",
+      "errorTitle": "Something went wrong.",
+      "errorBody": "Please try again or email us directly at info@gmattorneyscr.com.",
+      "sendAnother": "Send another message",
+      "errorCaptcha": "Please confirm you are human.",
+      "errorRequired": "Please fill in all required fields."
     }
   },
   "officesHistory": {

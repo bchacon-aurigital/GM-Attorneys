@@ -29,8 +29,8 @@ export const faqItems: FaqItem[] = [
       es: "¿Qué son las tarifas CAF y RAF, y en qué se diferencian del Impuesto sobre la Renta Corporativa?",
     },
     answer: {
-      en: "CAF (Corporate Annual Fee) refers to GM Attorneys' annual corporate compliance and administration service, formerly known as the Resident Agent Fee (RAF). This service provides support with ongoing corporate compliance obligations. As part of this service, GM Attorneys assists clients in complying with current legal requirements, including the registration and maintenance of the corporation's official email address for administrative and judicial notifications before the National Registry, pursuant to Law No. 10.597. This email address serves as the official means for receiving legal notifications from government authorities and courts and must remain valid and actively monitored. The CAF also helps clients stay up to date with other corporate compliance matters and regulatory changes that may affect their corporation. GM Attorneys' current CAF is US$339 plus VAT per year. This fee is separate from the Annual Corporate Tax, which is a government tax paid directly to the Costa Rican Tax Administration and varies depending on whether the corporation is active or inactive, with the amount adjusted annually.",
-      es: "El CAF (Cuota Anual Corporativa) es el servicio anual de cumplimiento y administración corporativa de GM Attorneys, antes conocido como la Cuota de Agente Residente (RAF). Este servicio brinda apoyo con las obligaciones de cumplimiento corporativo continuo. Como parte de este servicio, GM Attorneys ayuda a los clientes a cumplir con los requisitos legales vigentes, incluyendo el registro y mantenimiento del correo electrónico oficial de la sociedad para notificaciones administrativas y judiciales ante el Registro Nacional, conforme a la Ley N.° 10.597. Este correo electrónico es el medio oficial para recibir notificaciones legales de autoridades gubernamentales y tribunales, y debe mantenerse válido y monitoreado activamente. El CAF también ayuda a los clientes a mantenerse al día con otros asuntos de cumplimiento corporativo y cambios regulatorios que puedan afectar a su sociedad. El CAF actual de GM Attorneys es de US$339 más IVA por año. Esta tarifa es independiente del Impuesto Corporativo Anual, que es un impuesto estatal pagado directamente a la Administración Tributaria de Costa Rica y varía según si la sociedad está activa o inactiva, con el monto ajustado anualmente.",
+      en: "CAF (Corporate Annual Fee) refers to GM Attorneys' annual corporate compliance and administration service, formerly known as the Resident Agent Fee (RAF). This service provides support with ongoing corporate compliance obligations. As part of this service, GM Attorneys assists clients in complying with current legal requirements, including the registration and maintenance of the corporation's official email address for administrative and judicial notifications before the National Registry, pursuant to Law No. 10.597. This email address serves as the official means for receiving legal notifications from government authorities and courts and must remain valid and actively monitored. This fee is separate from the Annual Corporate Tax, which is a government tax paid directly to the Costa Rican Tax Administration and varies depending on whether the corporation is active or inactive, with the amount adjusted annually.",
+      es: "El CAF (Cuota Anual Corporativa) es el servicio anual de cumplimiento y administración corporativa de GM Attorneys, antes conocido como la Cuota de Agente Residente (RAF). Este servicio brinda apoyo con las obligaciones de cumplimiento corporativo continuo. Como parte de este servicio, GM Attorneys ayuda a los clientes a cumplir con los requisitos legales vigentes, incluyendo el registro y mantenimiento del correo electrónico oficial de la sociedad para notificaciones administrativas y judiciales ante el Registro Nacional, conforme a la Ley N.° 10.597. Este correo electrónico es el medio oficial para recibir notificaciones legales de autoridades gubernamentales y tribunales, y debe mantenerse válido y monitoreado activamente. Esta tarifa es independiente del Impuesto Corporativo Anual, que es un impuesto estatal pagado directamente a la Administración Tributaria de Costa Rica y varía según si la sociedad está activa o inactiva, con el monto ajustado anualmente.",
     },
   },
   {
@@ -41,20 +41,8 @@ export const faqItems: FaqItem[] = [
       es: "¿Cómo puedo pagar mis impuestos y obligaciones corporativas en Costa Rica?",
     },
     answer: {
-      en: "Corporate obligations can generally be paid through:\nProperty Manager\nSTL Post Closing Services\nCosta Rican online banking platforms.\nYour accountant acting on your behalf.\nGM Attorneys' administrative support services when applicable.",
-      es: "Las obligaciones corporativas generalmente pueden pagarse mediante:\nProperty Manager\nSTL Post Closing Services\nPlataformas de banca en línea costarricenses.\nSu contador actuando en su representación.\nLos servicios de apoyo administrativo de GM Attorneys, cuando aplique.",
-    },
-  },
-  {
-    slug: "annual-maintenance-costs",
-    categoryKey: "corporateTax",
-    question: {
-      en: "What annual maintenance costs and government fees apply to my corporation?",
-      es: "¿Qué costos anuales de mantenimiento y tarifas gubernamentales aplican a mi sociedad?",
-    },
-    answer: {
-      en: "Typical annual expenses include:\nCAF (Corporate Annual Fee): US$300 + VAT\nBCCR Ownership Declaration (RTBF): US$200 + VAT\nCorporate Tax: Approximately US$120 to US$380, depending on the corporation's status and annual adjustments\nD-101 or D-195 tax filings: Accounting fees vary by professional, with an estimated reference cost of US$200",
-      es: "Los gastos anuales típicos incluyen:\nCAF (Cuota Anual Corporativa): US$300 + IVA\nDeclaración de Beneficiarios Finales ante el BCCR (RTBF): US$200 + IVA\nImpuesto Corporativo: Aproximadamente US$120 a US$380, según el estado de la sociedad y ajustes anuales\nDeclaraciones D-101 o D-195: Los honorarios contables varían según el profesional, con un costo de referencia estimado de US$200",
+      en: "Corporate obligations can generally be paid through:\nProperty Manager\nSTLA Post Closing Services\nCosta Rican online banking platforms.\nYour accountant acting on your behalf.",
+      es: "Las obligaciones corporativas generalmente pueden pagarse mediante:\nProperty Manager\nSTLA Post Closing Services\nPlataformas de banca en línea costarricenses.\nSu contador actuando en su representación.",
     },
   },
   {
@@ -89,8 +77,8 @@ export const faqItems: FaqItem[] = [
       es: "Si no tengo una cuenta bancaria en Costa Rica, ¿cómo puedo pagar mis impuestos y otras obligaciones corporativas?",
     },
     answer: {
-      en: "Corporate obligations can generally be paid through:\nProperty Manager.\nSTLA Post Closing Services.\nYour accountant acting on your behalf.\nGM Attorneys' administrative support services when applicable.",
-      es: "Las obligaciones corporativas generalmente pueden pagarse mediante:\nProperty Manager.\nSTLA Post Closing Services.\nSu contador actuando en su representación.\nLos servicios de apoyo administrativo de GM Attorneys, cuando aplique.",
+      en: "Corporate obligations can generally be paid through:\nProperty Manager.\nSTLA Post Closing Services.\nYour accountant acting on your behalf.",
+      es: "Las obligaciones corporativas generalmente pueden pagarse mediante:\nProperty Manager.\nSTLA Post Closing Services.\nSu contador actuando en su representación.",
     },
   },
   {
@@ -197,8 +185,8 @@ export const faqItems: FaqItem[] = [
       es: "¿Cuál oficina está más cerca de mí, y cómo puedo contactarla?",
     },
     answer: {
-      en: "GM Attorneys currently has offices in:\nSan José (Los Yoses)\nFlamingo, Guanacaste\nTamarindo, Guanacaste\nNosara, Guanacaste\n\nFor assistance determining the most convenient office, contact info@gmattorneyscr.com or call (+506) 2653-2155.",
-      es: "GM Attorneys actualmente cuenta con oficinas en:\nSan José (Los Yoses)\nFlamingo, Guanacaste\nTamarindo, Guanacaste\nNosara, Guanacaste\n\nPara ayuda determinando la oficina más conveniente, contáctenos en info@gmattorneyscr.com o llame al (+506) 2653-2155.",
+      en: "GM Attorneys currently has offices in:\nFlamingo, Guanacaste\nTamarindo, Guanacaste\nNosara, Guanacaste\nLos Yoses, San José\n\nFor assistance determining the most convenient office, contact info@gmattorneyscr.com or call (+506) 4108-4070.",
+      es: "GM Attorneys actualmente cuenta con oficinas en:\nFlamingo, Guanacaste\nTamarindo, Guanacaste\nNosara, Guanacaste\nLos Yoses, San José\n\nPara ayuda determinando la oficina más conveniente, contáctenos en info@gmattorneyscr.com o llame al (+506) 4108-4070.",
     },
   },
 ];

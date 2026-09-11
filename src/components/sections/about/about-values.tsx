@@ -27,14 +27,17 @@ export function AboutValues() {
           {values.map((value, index) => (
             <div
               key={value.key}
-              className={`flex flex-col justify-between gap-10 lg:gap-0 min-h-[260px] lg:min-h-[466px] py-6 px-0 lg:px-6 ${
+              className={`flex flex-col gap-8 lg:gap-12 py-6 px-0 lg:px-6 ${
                 index > 0 ? "lg:border-l" : ""
               } border-black/20`}
             >
               <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide">
                 {t(`values.${value.key}.title`)}
               </h3>
-              <p className="text-sm sm:text-base font-medium max-w-md">
+              <p
+                className="text-sm sm:text-base font-medium max-w-md"
+                data-aos="fade-up"
+              >
                 {t(`values.${value.key}.quote`)}
               </p>
             </div>

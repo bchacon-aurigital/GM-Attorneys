@@ -34,7 +34,7 @@ export default function JsonLd() {
     sameAs: [
       "https://www.instagram.com/gm_attorneys/",
       "https://www.facebook.com/gmattorneyscr?fref=ts",
-      "https://www.linkedin.com/company/gm-attorneys",
+      "https://cr.linkedin.com/company/gm-attorneys",
     ],
   };
 

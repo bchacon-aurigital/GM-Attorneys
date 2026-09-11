@@ -43,14 +43,17 @@ export function WhatSetsUsApart() {
             {values.map((value, index) => (
               <div
                 key={value.key}
-                className={`flex flex-col justify-between gap-10 lg:gap-0 min-h-[260px] lg:min-h-[466px] py-6 px-0 lg:px-6 ${
+                className={`flex flex-col gap-8 lg:gap-12 py-6 px-0 lg:px-6 ${
                   index > 0 ? "lg:border-l" : ""
                 } border-white/20`}
               >
                 <p className="text-base sm:text-lg font-bold uppercase tracking-wide text-white">
                   {tAbout(`values.${value.key}.title`)}
                 </p>
-                <p className="text-sm sm:text-base font-medium max-w-md text-white">
+                <p
+                  className="text-sm sm:text-base font-medium max-w-md text-white"
+                  data-aos="fade-up"
+                >
                   {tAbout(`values.${value.key}.quote`)}
                 </p>
               </div>

@@ -1,6 +1,6 @@
 {
   "home": {
-    "heroTitle": "Tus Raíces, Legalmente Seguras",
+    "heroTitle": "Claridad, Transparencia, Certeza Legal",
     "heroSubtitle": "Servicios legales boutique premium en bienes raíces, inversión extranjera, derecho corporativo e inmigración.",
     "areYouProtected": "¿Estás protegido?",
     "getInTouch": "Contáctanos",
@@ -16,6 +16,7 @@
     "servicesLabel": "Servicios"
   },
   "nav": {
+    "home": "Inicio",
     "about": "Nosotros",
     "services": "Servicios",
     "team": "Equipo",
@@ -46,7 +47,7 @@
     "privacyPolicy": "Política de Privacidad"
   },
   "team": {
-    "title": "El equipo",
+    "title": "Equipo",
     "sortBy": "Ordenar por",
     "sortAll": "Todos",
     "getInTouch": "Contáctanos",
@@ -126,7 +127,9 @@
       },
       "taxLaw": {
         "title": "Derecho Tributario",
-        "heading": "Planificación estratégica y cumplimiento, tanto corporativo como individual."
+        "heading": "Planificación estratégica y cumplimiento, tanto corporativo como individual.",
+        "description": "Asesoramos a personas físicas y jurídicas en materia de planificación fiscal, cumplimiento tributario y resolución de disputas en Costa Rica. Nuestro equipo ayuda a los clientes a estructurar sus inversiones y operaciones de manera eficiente, garantizando el cumplimiento de la normativa tributaria local y minimizando riesgos innecesarios.",
+        "bullets": ["Planificación Tributaria Corporativa", "Cumplimiento Fiscal Individual", "Auditorías y Disputas Fiscales", "Estructuración de Inversiones"]
       },
       "familyEstate": {
         "title": "Familia y\nPlanificación Patrimonial",
@@ -161,7 +164,7 @@
     }
   },
   "blog": {
-    "title": "El blog",
+    "title": "Blog",
     "sortBy": "Ordenar por",
     "sortAll": "Todos",
     "search": "Buscar",
@@ -191,12 +194,13 @@
         "quote": "“Una de las mayores ventajas de trabajar con GM Attorneys es su fuerte presencia local. Su equipo es accesible, cercano y genuinamente conectado con las comunidades a las que sirve. Los clientes pueden reunirse con ellos personalmente, fomentando confianza y seguridad, mientras se benefician de una asesoría legal que combina el conocimiento local con amplia experiencia.”"
       }
     },
-    "impactTitle": "Nuestro Impacto"
+    "impactTitle": "Impacto"
   },
   "locator": {
     "title": "Dónde encontrarnos",
     "foundLocations": "Encontramos {count} ubicaciones cerca de ti:",
     "viewWebsite": "Ver sitio web",
+    "goToMaps": "Ir al mapa",
     "show": "Mostrar",
     "mapUnavailable": "Mapa no disponible"
   },
@@ -225,7 +229,15 @@
       "subjectPlaceholder": "Información general",
       "details": "Detalles",
       "captcha": "No soy un robot",
-      "submit": "Enviar solicitud"
+      "submit": "Enviar solicitud",
+      "sending": "Enviando...",
+      "successTitle": "¡Mensaje enviado!",
+      "successBody": "Nos pondremos en contacto con usted a la brevedad.",
+      "errorTitle": "Algo salió mal.",
+      "errorBody": "Por favor intente de nuevo o escríbanos a info@gmattorneyscr.com.",
+      "sendAnother": "Enviar otro mensaje",
+      "errorCaptcha": "Por favor confirme que no es un robot.",
+      "errorRequired": "Por favor complete todos los campos requeridos."
     }
   },
   "officesHistory": {

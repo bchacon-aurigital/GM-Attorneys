@@ -2,8 +2,7 @@
 
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
-import { FaInstagram, FaFacebookF, FaWhatsapp, FaArrowUp } from "react-icons/fa6";
-import { Link } from "@/i18n/navigation";
+import { FaInstagram, FaFacebookF, FaWhatsapp, FaLinkedinIn } from "react-icons/fa6";
 import { Curve } from "@/components/ui/curve";
 import { useLenis } from "lenis/react";
 import { useLoading } from "@/app/[locale]/context/LoadingContext";
@@ -11,6 +10,7 @@ import { useLoading } from "@/app/[locale]/context/LoadingContext";
 const socialLinks = [
   { key: "instagram", href: "https://www.instagram.com/gm_attorneys/", Icon: FaInstagram },
   { key: "facebook", href: "https://www.facebook.com/gmattorneyscr?fref=ts", Icon: FaFacebookF },
+  { key: "linkedin", href: "https://cr.linkedin.com/company/gm-attorneys", Icon: FaLinkedinIn },
   { key: "whatsapp", href: "https://wa.me/50626532155", Icon: FaWhatsapp },
 ];
 
@@ -64,7 +64,8 @@ export function HomeHero() {
           >
             {(() => {
               const title = t("heroTitle");
-              const idx = title.indexOf(",");
+              const first = title.indexOf(",");
+              const idx = first >= 0 ? title.indexOf(",", first + 1) : -1;
               if (idx < 0) return title;
               return (
                 <>
@@ -88,7 +89,7 @@ export function HomeHero() {
 
       {/* Social icons */}
       <div
-        className="absolute left-4 sm:left-6 lg:left-10 bottom-[84px] sm:bottom-[134px] lg:bottom-[184px] flex items-center gap-2"
+        className="absolute left-1/2 -translate-x-1/2 top-20 sm:translate-x-0 sm:left-6 sm:top-auto sm:bottom-[134px] lg:left-10 lg:bottom-[184px] flex items-center gap-2"
         style={isReady ? anim("heroFadeIn", "0.8s", "0.5s") : { opacity: 0 }}
       >
         {socialLinks.map(({ key, href, Icon }) => (
@@ -105,28 +106,7 @@ export function HomeHero() {
         ))}
       </div>
 
-      {/* CTA buttons */}
-      <div
-        className="fixed bottom-6 sm:bottom-8 right-4 sm:right-6 lg:right-10 z-50 flex items-center gap-2 sm:gap-3"
-        style={isReady ? anim("heroFadeUp", "0.8s", "0.35s") : { opacity: 0 }}
-      >
-        <Link
-          href="/newslettersubs"
-          className="flex items-center gap-2 sm:gap-3 rounded bg-black/35 backdrop-blur-md border border-white/40 px-3 sm:px-5 py-2 sm:py-3 text-xs sm:text-base font-medium text-white transition-colors duration-300 hover:bg-black/50"
-        >
-          <span className="whitespace-nowrap">{t("areYouProtected")}</span>
-          <FaArrowUp className="shrink-0 rotate-90 text-white" size={12} aria-hidden="true" />
-        </Link>
-        <Link
-          href="/contact-us"
-          className="flex items-center gap-2 sm:gap-3 rounded bg-white px-3 sm:px-5 py-2 sm:py-3 text-xs sm:text-base font-medium text-black shadow-sm transition-opacity duration-300 hover:opacity-90"
-        >
-          <span className="whitespace-nowrap">{t("getInTouch")}</span>
-          <FaArrowUp className="shrink-0 rotate-90 text-black" size={12} aria-hidden="true" />
-        </Link>
-      </div>
-
-      <div style={isReady ? anim("heroFadeIn", "0.8s", "0.6s") : { opacity: 0 }}>
+<div style={isReady ? anim("heroFadeIn", "0.8s", "0.6s") : { opacity: 0 }}>
         <Curve
           curveColor="#ffffff"
           cornerColor="transparent"

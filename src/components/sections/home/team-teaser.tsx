@@ -30,11 +30,13 @@ export function TeamTeaser() {
   }
 
   function stepPx() {
-    if (!containerRef.current) return 0;
-    const n = cpv();
-    if (n === 1) return containerRef.current.offsetWidth;
-    const gap = n >= 3 ? 12 : 24; // lg:gap-3=12px, gap-6=24px
-    return (containerRef.current.offsetWidth + gap) / n;
+    const flexDiv = containerRef.current?.firstElementChild as HTMLElement | null;
+    if (!flexDiv || flexDiv.children.length < 2) {
+      return containerRef.current?.offsetWidth ?? 0;
+    }
+    const first = flexDiv.children[0] as HTMLElement;
+    const second = flexDiv.children[1] as HTMLElement;
+    return second.offsetLeft - first.offsetLeft;
   }
 
   function startInterval() {

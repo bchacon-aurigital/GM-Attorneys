@@ -5,9 +5,9 @@ import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
 import { offices } from "@/data/offices";
-import { mainServices, complementaryServices } from "@/data/services";
 import { localizedAlternates } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
+import { ContactForm } from "@/components/sections/contact/contact-form";
 
 const TITLE = {
   es: "Contáctanos",
@@ -45,8 +45,6 @@ export default async function ContactPage({
   const isSpanish = locale === "es";
   const { path } = localizedAlternates("/contact-us", locale);
   const t = await getTranslations("contact");
-  const tServices = await getTranslations("services");
-  const allServices = [...mainServices, ...complementaryServices];
 
   return (
     <>
@@ -127,101 +125,7 @@ export default async function ContactPage({
             </div>
 
             <div className="w-full lg:w-3/5">
-              <form className="flex flex-col gap-5 sm:gap-6">
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-name" className="text-sm font-semibold text-[#240824]">
-                      {t("form.name")} *
-                    </label>
-                    <input
-                      id="contact-name"
-                      type="text"
-                      placeholder={t("form.namePlaceholder")}
-                      className="rounded border border-[#240824]/15 bg-white px-4 py-3 text-sm text-[#240824] placeholder:text-[#240824]/35 focus:border-[#240824]/40 focus:outline-none"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-phone" className="text-sm font-semibold text-[#240824]">
-                      {t("form.phone")} *
-                    </label>
-                    <input
-                      id="contact-phone"
-                      type="tel"
-                      placeholder={t("form.phonePlaceholder")}
-                      className="rounded border border-[#240824]/15 bg-white px-4 py-3 text-sm text-[#240824] placeholder:text-[#240824]/35 focus:border-[#240824]/40 focus:outline-none"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-email" className="text-sm font-semibold text-[#240824]">
-                      {t("form.email")} *
-                    </label>
-                    <input
-                      id="contact-email"
-                      type="email"
-                      placeholder={t("form.emailPlaceholder")}
-                      className="rounded border border-[#240824]/15 bg-white px-4 py-3 text-sm text-[#240824] placeholder:text-[#240824]/35 focus:border-[#240824]/40 focus:outline-none"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-service" className="text-sm font-semibold text-[#240824]">
-                      {t("form.service")} *
-                    </label>
-                    <select
-                      id="contact-service"
-                      defaultValue=""
-                      className="rounded border border-[#240824]/15 bg-white px-4 py-3 text-sm text-[#240824] focus:border-[#240824]/40 focus:outline-none"
-                    >
-                      <option value="" disabled>
-                        —
-                      </option>
-                      {allServices.map((service) => (
-                        <option key={service.key} value={service.key}>
-                          {tServices(`list.${service.titleKey}.title`).replace(/\n/g, " ")}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="contact-subject" className="text-sm font-semibold text-[#240824]">
-                    {t("form.subject")}
-                  </label>
-                  <input
-                    id="contact-subject"
-                    type="text"
-                    placeholder={t("form.subjectPlaceholder")}
-                    className="rounded border border-[#240824]/15 bg-white px-4 py-3 text-sm text-[#240824] placeholder:text-[#240824]/35 focus:border-[#240824]/40 focus:outline-none"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="contact-details" className="text-sm font-semibold text-[#240824]">
-                    {t("form.details")} *
-                  </label>
-                  <textarea
-                    id="contact-details"
-                    rows={6}
-                    className="resize-none rounded border border-[#240824]/15 bg-white px-4 py-3 text-sm text-[#240824] placeholder:text-[#240824]/35 focus:border-[#240824]/40 focus:outline-none"
-                  />
-                </div>
-
-                <label className="flex w-fit cursor-pointer items-center gap-3 rounded border border-[#240824]/15 px-4 py-3 text-sm text-[#240824]">
-                  <input type="checkbox" className="size-4 accent-[#240824]" />
-                  {t("form.captcha")}
-                </label>
-
-                <button
-                  type="submit"
-                  disabled
-                  className="rounded bg-[#240824] px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-opacity duration-300 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
-                >
-                  {t("form.submit")}
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </Section>
