@@ -4,7 +4,6 @@ import { Section } from "@/components/ui/section";
 import { Curve } from "@/components/ui/curve";
 import { cn } from "@/lib/utils";
 
-
 const shopLinks = [
   { key: "about", href: "/about-us" },
   { key: "services", href: "/practice-areas" },
