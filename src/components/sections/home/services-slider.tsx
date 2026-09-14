@@ -228,7 +228,7 @@ export function ServicesSlider() {
                   {/* Foreground — in front of square (z-index: 2), slides up */}
                   <div
                     ref={(el) => { fgRefs.current[index] = el; }}
-                    className={`pointer-events-none absolute -bottom-10 left-1/2 w-full ${index === 2 ? "h-[72%] sm:h-[101%] xl:h-[72%]" : "h-[75%] sm:h-[105%] xl:h-[75%]"}`}
+                    className={`pointer-events-none absolute -bottom-10 left-1/2 w-full ${index === 1 ? "h-[88%] sm:h-[118%] xl:h-[88%]" : index === 2 ? "h-[72%] sm:h-[101%] xl:h-[72%]" : "h-[75%] sm:h-[105%] xl:h-[75%]"}`}
                     style={{
                       transform: "translateX(-50%) translateY(72px)",
                       opacity: 0,
