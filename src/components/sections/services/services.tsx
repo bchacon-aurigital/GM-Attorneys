@@ -28,7 +28,7 @@ export function Services() {
       </Section>
 
       <Curve
-        curveColor="#0aa39f"
+        curveColor="#27102b"
         cornerColor="#ffffff"
         corner="left"
         contentClassName="items-start pt-6 sm:pt-8"
@@ -40,8 +40,14 @@ export function Services() {
         </div>
       </Curve>
 
-      <Section className="bg-[#0aa39f] pt-0 pb-16 sm:pb-24 lg:pb-[120px]">
-        <div className="flex flex-col">
+      <Section className="bg-[#27102b] pt-0 pb-16 sm:pb-24 lg:pb-[120px] relative overflow-hidden">
+        <img
+          src="/assets/home/hero-vector.svg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute right-0 top-1/2 h-[90%] w-auto -translate-y-1/2 opacity-40"
+        />
+        <div className="relative flex flex-col">
           {mainServices.map((service) => (
             <ServiceRow key={service.key} serviceKey={service.key} isDark image={service.image} />
           ))}
@@ -50,7 +56,7 @@ export function Services() {
 
       <Curve
         curveColor="#ffffff"
-        cornerColor="#0aa39f"
+        cornerColor="#27102b"
         corner="left"
         contentClassName="items-start pt-6 sm:pt-8"
         className="h-[100px] sm:h-[140px] lg:h-[164px]"

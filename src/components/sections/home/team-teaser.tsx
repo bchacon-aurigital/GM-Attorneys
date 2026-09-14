@@ -5,13 +5,13 @@ import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/section";
 import { TeamCard } from "@/components/ui/team-card";
 import { GradientWaveText } from "@/components/ui/gradient-wave-text";
-import { team } from "@/data/team";
+import { visibleTeam } from "@/data/team";
 
 const CARDS_SHOWN = 16;
 
 export function TeamTeaser() {
   const t = useTranslations("home");
-  const [members] = useState(() => team.slice(0, CARDS_SHOWN));
+  const [members] = useState(() => visibleTeam.slice(0, CARDS_SHOWN));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dragging, setDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);

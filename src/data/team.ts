@@ -6,6 +6,7 @@ export interface TeamMember {
   tagKeys: string[];
   image: string;
   bio: string[];
+  hidden?: boolean;
 }
 
 export const team: TeamMember[] = [
@@ -15,7 +16,7 @@ export const team: TeamMember[] = [
     name: "Jorge Granados",
     roleKey: "partner",
     titleTag: "Founding Partner",
-    tagKeys: ["experience40", "founder"],
+    tagKeys: ["experience40", "pathmaker"],
     image: "/assets/team/Jorge.avif",
     bio: [
       "With over 40 years of professional experience, I am the founder of GM Attorneys and have guided clients through complex criminal matters in Costa Rica and beyond — from financial crimes and corruption to high-stakes litigation before national and international courts.",
@@ -28,7 +29,7 @@ export const team: TeamMember[] = [
     name: "Iván Granados",
     roleKey: "partner",
     titleTag: "Managing Partner",
-    tagKeys: ["experience25", "managingPartner"],
+    tagKeys: ["experience25", "sharpThinker"],
     image: "/assets/team/Ivan.avif",
     bio: [
       "I am an attorney at law with over 25 years of experience. Graduated Summa Cum Laude and holding a dual Master's in Tax and Business Law.",
@@ -44,7 +45,7 @@ export const team: TeamMember[] = [
     name: "Adriana Cordero",
     roleKey: "attorney",
     titleTag: "Senior Associate",
-    tagKeys: ["experience25", "civilCommercialLaw"],
+    tagKeys: ["experience25", "clarifier"],
     image: "/assets/team/Adriana.avif",
     bio: [
       "I guide individuals, businesses, and communities through complex legal processes with a balance of firmness, empathy, and strategic vision. With over 25 years of experience in civil and commercial law, I focus on real estate and business transactions, estate and corporate law, and resolving condominium property disputes.",
@@ -57,7 +58,7 @@ export const team: TeamMember[] = [
     name: "Mariajosé Víquez",
     roleKey: "attorney",
     titleTag: "Senior Associate",
-    tagKeys: ["experience9", "attorneyNotary"],
+    tagKeys: ["experience9", "pragmatic"],
     image: "/assets/team/Maria.avif",
     bio: [
       "I have called Guanacaste home for over nine years, which means I understand first-hand what it takes to settle, invest, and build a life in Costa Rica. I work closely with foreign clients on real estate, immigration, and corporate matters, offering guidance that is practical, clear, and personal.",
@@ -70,7 +71,7 @@ export const team: TeamMember[] = [
     name: "Andrea Jara",
     roleKey: "attorney",
     titleTag: "Senior Associate",
-    tagKeys: ["experience10", "attorneyNotary"],
+    tagKeys: ["experience10", "negotiator"],
     image: "/assets/team/Andrea.avif",
     bio: [
       "I am a trusted legal advisor guiding companies and individuals through complex legal challenges with clarity, precision, and strategic insight. With over a decade of experience as an attorney and notary public, I offer thoughtful and effective cross-border legal solutions in Spanish and English that drive results and build lasting relationships with executive teams and clients alike.",
@@ -83,7 +84,7 @@ export const team: TeamMember[] = [
     name: "Brians Salazar",
     roleKey: "attorney",
     titleTag: "Associate",
-    tagKeys: ["experience5", "corporateRealEstateLaw"],
+    tagKeys: ["experience5", "strategist"],
     image: "/assets/team/Brians.avif",
     bio: [
       "With over five years in GM's corporate, real estate, and legal practice, and a background as a legislative advisor for major companies, I bring a balance of practical solutions and social commitment to my work.",
@@ -96,7 +97,7 @@ export const team: TeamMember[] = [
     name: "Harold Matarrita",
     roleKey: "attorney",
     titleTag: "Junior Associate",
-    tagKeys: ["sinceFirm2019", "corporateNotarialLaw"],
+    tagKeys: ["sinceFirm2019", "reliable"],
     image: "/assets/team/Harold.avif",
     bio: [
       "I have built my career at GM Attorneys, starting in 2019 in client service and coordination, later working as a legal assistant, and now practicing as an attorney specializing in corporate and notarial law.",
@@ -109,7 +110,7 @@ export const team: TeamMember[] = [
     name: "Gloriana Arrieta",
     roleKey: "attorney",
     titleTag: "Junior Associate",
-    tagKeys: ["humanRights", "civilLaborFamilyLaw"],
+    tagKeys: ["composed"],
     image: "/assets/team/Gloriana.avif",
     bio: [
       "I support clients throughout property purchase and sale processes, from due diligence to formal documentation, ensuring every transaction is legally secure and commercially successful.",
@@ -122,7 +123,7 @@ export const team: TeamMember[] = [
     name: "Valery Turcio",
     roleKey: "attorney",
     titleTag: "Junior Associate",
-    tagKeys: ["corporateLawSpecialty", "speaksSpanishEnglish"],
+    tagKeys: ["explorer"],
     image: "/assets/team/Valery.avif",
     bio: [
       "I focus my practice on corporate law, drafting contracts and deeds to formalize real estate transactions in high-demand markets.",
@@ -136,7 +137,7 @@ export const team: TeamMember[] = [
     name: "Jorge Granados",
     roleKey: "paralegals",
     titleTag: "Paralegal",
-    tagKeys: [],
+    tagKeys: ["versatile"],
     image: "/assets/team/placeholder.avif",
     bio: [],
   },
@@ -145,7 +146,7 @@ export const team: TeamMember[] = [
     name: "Santiago Batalla",
     roleKey: "paralegals",
     titleTag: "Paralegal",
-    tagKeys: ["experience3", "civilLitigation"],
+    tagKeys: ["experience3", "trustBuilder"],
     image: "/assets/team/Santiago.avif",
     bio: [
       "I am passionate about delivering legal services with a human-centered approach. To me, every client represents a unique set of goals, challenges, and aspirations—not just another legal matter. My objective is to provide thoughtful guidance, meticulous attention to detail, and practical solutions that help clients move forward with confidence.",
@@ -158,22 +159,9 @@ export const team: TeamMember[] = [
     name: "Francella Marchena",
     roleKey: "paralegals",
     titleTag: "Paralegal",
-    tagKeys: [],
+    tagKeys: ["precise"],
     image: "/assets/team/placeholder.avif",
     bio: [],
-  },
-  {
-    slug: "daniel-oses",
-    name: "Daniel Oses",
-    roleKey: "attorney",
-    titleTag: "Associate",
-    tagKeys: ["realEstateSpecialist"],
-    image: "/assets/team/Daniel.avif",
-    bio: [
-      "I specialize in real estate transactions and have had the privilege of working with both national and international clients, guiding them every step of the way to complete their investments in Costa Rica safely and efficiently.",
-      "I approach my work with a mix of proactivity, critical thinking, and openness to other perspectives. I enjoy taking on challenges, stepping up when needed, and finding solutions with an innovative, practical mindset that keeps the client's goals at the center.",
-      "Transparency, firmness, and empathy are the values that guide my practice. I am committed to continuous learning, always looking for ways to grow professionally and deliver better results.",
-    ],
   },
 
   // ── Business & Strategy Development – Client Experience ───────────────────
@@ -182,7 +170,7 @@ export const team: TeamMember[] = [
     name: "Diana Granados",
     roleKey: "businessDevelopment",
     titleTag: "Business Development & Client Experience",
-    tagKeys: ["strategicDevelopment", "clientExperienceConsultant"],
+    tagKeys: ["catalyst"],
     image: "/assets/team/Diana.avif",
     bio: [
       "I lead strategic development and client experience initiatives at GM Attorneys, ensuring that every legal solution meets the highest standards while feeling seamless and personal. My role is to bridge strategic planning, operational excellence, and client relationships, so that results are achieved without compromising the human connection.",
@@ -195,7 +183,7 @@ export const team: TeamMember[] = [
     name: "Manfred Peters",
     roleKey: "businessDevelopment",
     titleTag: "Business Development & Client Experience",
-    tagKeys: ["since2018", "strategicDevelopment"],
+    tagKeys: ["since2018", "connector"],
     image: "/assets/team/Manfred.avif",
     bio: [
       "Since joining GM Attorneys in 2018, I have focused on business development and strategic relationship management, connecting the firm with international clients and key players in the luxury real estate sector.",
@@ -208,7 +196,7 @@ export const team: TeamMember[] = [
     name: "Efraín Hidalgo",
     roleKey: "businessDevelopment",
     titleTag: "Legal & Innovation Lead",
-    tagKeys: ["experience10"],
+    tagKeys: ["experience10", "solutionOriented"],
     image: "/assets/team/Efrain.avif",
     bio: [
       "I am a legal assistant with over a decade of experience providing legal support across a variety of matters. My focus is on delivering work that is accurate, timely, and aligned with the highest professional standards.",
@@ -221,7 +209,7 @@ export const team: TeamMember[] = [
     name: "Alina Guzmán",
     roleKey: "businessDevelopment",
     titleTag: "Real Estate Specialist & Project Coordinator",
-    tagKeys: ["experience6", "realEstateSpecialist"],
+    tagKeys: ["experience6", "orchestrator"],
     image: "/assets/team/Alina.avif",
     bio: [
       "With over six years as a paralegal at GM Attorneys, I combine technical knowledge, legal precision, and interpersonal skills to support complex real estate, commercial, and due diligence matters.",
@@ -236,7 +224,7 @@ export const team: TeamMember[] = [
     name: "Carmen Julia Rodríguez",
     roleKey: "assistants",
     titleTag: "Senior Administrative Officer",
-    tagKeys: ["years16", "seniorAdminOfficer"],
+    tagKeys: ["years16", "backbone"],
     image: "/assets/team/Carmen.avif",
     bio: [
       "I have been part of the GM family for the past 16 years, serving with commitment and excellence as an Administrative Assistant.",
@@ -250,7 +238,7 @@ export const team: TeamMember[] = [
     name: "Fiorella Rodríguez",
     roleKey: "assistants",
     titleTag: "Office Manager",
-    tagKeys: ["officeManager"],
+    tagKeys: ["forwardThinking"],
     image: "/assets/team/Fiorella.avif",
     bio: [],
   },
@@ -259,7 +247,7 @@ export const team: TeamMember[] = [
     name: "Valeria Ramírez",
     roleKey: "assistants",
     titleTag: "Accountant Department",
-    tagKeys: [],
+    tagKeys: ["collaborative"],
     image: "/assets/team/Valeria.avif",
     bio: [],
   },
@@ -268,7 +256,7 @@ export const team: TeamMember[] = [
     name: "Isabela Juárez",
     roleKey: "assistants",
     titleTag: "Administrative Assistant",
-    tagKeys: [],
+    tagKeys: ["consistent"],
     image: "/assets/team/placeholder.avif",
     bio: [],
   },
@@ -277,7 +265,7 @@ export const team: TeamMember[] = [
     name: "Allison Canales",
     roleKey: "assistants",
     titleTag: "Front Desk Executive",
-    tagKeys: [],
+    tagKeys: ["adaptable"],
     image: "/assets/team/Allison.avif",
     bio: [],
   },
@@ -286,7 +274,7 @@ export const team: TeamMember[] = [
     name: "Grettel Araya",
     roleKey: "assistants",
     titleTag: "Administrative Assistant",
-    tagKeys: [],
+    tagKeys: ["facilitator"],
     image: "/assets/team/placeholder.avif",
     bio: [],
   },
@@ -295,36 +283,17 @@ export const team: TeamMember[] = [
     name: "Valeska Ruiz",
     roleKey: "assistants",
     titleTag: "Administrative Assistant",
-    tagKeys: [],
+    tagKeys: ["steadfast"],
     image: "/assets/team/Valezka.avif",
     bio: [],
   },
 
-  // ── Other ─────────────────────────────────────────────────────────────────
-  {
-    slug: "julia-rodriguez",
-    name: "Julia Rodríguez",
-    roleKey: "businessDevelopment",
-    titleTag: "Senior Administrative Officer",
-    tagKeys: ["years16", "seniorAdminOfficer"],
-    image: "/assets/team/placeholder.avif",
-    bio: [],
-  },
   {
     slug: "marianne-zumbado",
     name: "Marianne Zumbado",
     roleKey: "assistants",
     titleTag: "Front Desk Executive",
-    tagKeys: [],
-    image: "/assets/team/placeholder.avif",
-    bio: [],
-  },
-  {
-    slug: "denis-lopez",
-    name: "Denis López",
-    roleKey: "assistants",
-    titleTag: "Front Desk Executive",
-    tagKeys: [],
+    tagKeys: ["harmonizer"],
     image: "/assets/team/placeholder.avif",
     bio: [],
   },
@@ -336,6 +305,7 @@ export const team: TeamMember[] = [
     roleKey: "seniorCounsel",
     titleTag: "Senior Counsel",
     tagKeys: ["formerSupremeCourtJustice", "litigator"],
+    hidden: true,
     image: "/assets/team/placeholder.avif",
     bio: [
       "Álvaro Fernández Silva is a well-known trial Attorney, legal advisor and former Supreme Court Judge, who speaks Spanish, Italian and is fluent reading in English, French and Portuguese.",
@@ -350,6 +320,7 @@ export const team: TeamMember[] = [
     roleKey: "seniorCounsel",
     titleTag: "Senior Counsel",
     tagKeys: ["publicNotary", "speaksSpanishItalianEnglish"],
+    hidden: true,
     image: "/assets/team/placeholder.avif",
     bio: [
       "Enrique Granados is an Attorney, Notary Public and also a well known Opera Singer, who speaks Spanish, Italian and English.",
@@ -359,3 +330,5 @@ export const team: TeamMember[] = [
     ],
   },
 ];
+
+export const visibleTeam = team.filter((m) => !m.hidden);

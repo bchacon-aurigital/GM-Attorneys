@@ -59,6 +59,9 @@ export function Footer({ variant = "dark" }) {
       <Section className={cn("relative z-10 -mt-1 pt-8 sm:pt-10 pb-10 sm:pb-16", bg)}>
         <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left lg:justify-between gap-10 lg:gap-16">
           <div className="flex flex-col items-center lg:items-start gap-6 max-w-[766px]">
+            <p className={cn("text-xl sm:text-2xl lg:text-3xl font-medium tracking-tight", textPrimary)}>
+              {t("slogan")}
+            </p>
             <p className={cn("text-sm sm:text-base lg:text-lg font-normal", textMuted)}>
               {t("description")}
             </p>

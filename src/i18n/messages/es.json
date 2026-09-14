@@ -25,6 +25,7 @@
     "contact": "Contacto"
   },
   "footer": {
+    "slogan": "Claridad, Transparencia, Certeza Legal",
     "description": "Somos un despacho legal boutique premium. Por más de cuatro décadas nos hemos enfocado en brindar servicios legales integrales en diversas áreas a personas, empresas y organizaciones, de manera integral y personalizada, satisfaciendo pronta y eficazmente todos sus requerimientos legales.",
     "shopTitle": "Navegación",
     "shopLinks": {
@@ -93,7 +94,36 @@
       "experience9": "9+ años en Guanacaste",
       "experience6": "6+ años de experiencia",
       "experience5": "5+ años de experiencia",
-      "experience3": "3+ años de experiencia"
+      "experience3": "3+ años de experiencia",
+      "pathmaker": "Creador de avenidas",
+      "connector": "Conector",
+      "sharpThinker": "Perspicaz",
+      "explorer": "Exploradora",
+      "adaptable": "Adaptable",
+      "forwardThinking": "Previsora",
+      "composed": "Serena",
+      "facilitator": "Facilitadora",
+      "clarifier": "Directa",
+      "strategist": "Estratega",
+      "precise": "Precisa",
+      "trustBuilder": "Generador de confianza",
+      "reliable": "Confiable",
+      "solutionOriented": "Resolutivo",
+      "pragmatic": "Pragmática",
+      "negotiator": "Negociadora",
+      "orchestrator": "Integradora",
+      "harmonizer": "Conciliadora",
+      "backbone": "Pilar",
+      "collaborative": "Colaborativa",
+      "steadfast": "Firme",
+      "catalyst": "Catalizadora",
+      "consistent": "Constante",
+      "versatile": "Versátil"
+    },
+    "sections": {
+      "legal": "Legal",
+      "businessDevelopment": "Business and Strategy Development · Experiencia del Cliente",
+      "operations": "Operaciones"
     }
   },
   "services": {
@@ -202,7 +232,9 @@
     "viewWebsite": "Ver sitio web",
     "goToMaps": "Ir al mapa",
     "show": "Mostrar",
-    "mapUnavailable": "Mapa no disponible"
+    "mapUnavailable": "Mapa no disponible",
+    "contactCardTitle": "Contáctanos",
+    "followUs": "Síguenos"
   },
   "notFound": {
     "eyebrow": "Error 404",
@@ -214,7 +246,7 @@
     "title": "Ponte en contacto con nosotros",
     "offices": "Oficinas",
     "contact": "Contacto",
-    "phoneNumbers": "Teléfonos",
+    "phoneNumbers": "Teléfono",
     "openHours": "Horario",
     "openHoursValue": "Lunes - Viernes: 9:00 am - 5:00 pm",
     "form": {

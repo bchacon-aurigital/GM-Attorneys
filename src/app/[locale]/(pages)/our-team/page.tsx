@@ -7,10 +7,16 @@ import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
 import { TeamCard } from "@/components/ui/team-card";
 import { ContactButton } from "@/components/ui/contact-button";
-import { team } from "@/data/team";
+import { visibleTeam } from "@/data/team";
 import { cn } from "@/lib/utils";
 
-const roleKeys = ["partner", "attorney", "businessDevelopment", "paralegals", "assistants", "seniorCounsel"];
+const roleKeys = ["partner", "attorney", "businessDevelopment", "paralegals", "assistants"];
+
+const sectionGroups = [
+  { key: "legal", roles: ["attorney", "paralegals"] },
+  { key: "businessDevelopment", roles: ["businessDevelopment"] },
+  { key: "operations", roles: ["assistants"] },
+] as const;
 
 export default function TeamPage() {
   const t = useTranslations("team");
@@ -28,7 +34,8 @@ export default function TeamPage() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const filteredTeam = selectedRole ? team.filter((member) => member.roleKey === selectedRole) : team;
+  const founders = visibleTeam.filter((m) => m.roleKey === "partner");
+  const filteredTeam = selectedRole ? visibleTeam.filter((m) => m.roleKey === selectedRole) : [];
 
   return (
     <>
@@ -126,11 +133,45 @@ export default function TeamPage() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-                {filteredTeam.map((member, index) => (
-                  <TeamCard key={member.slug} member={member} index={index} />
-                ))}
-              </div>
+              {!selectedRole ? (
+                <div className="flex flex-col gap-16 sm:gap-20">
+                  {/* Founders — 2-column row */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {founders.map((member, index) => (
+                      <TeamCard key={member.slug} member={member} index={index} />
+                    ))}
+                  </div>
+
+                  {/* Sectioned groups */}
+                  {sectionGroups.map((section) => {
+                    const members = visibleTeam.filter((m) =>
+                      (section.roles as readonly string[]).includes(m.roleKey)
+                    );
+                    if (members.length === 0) return null;
+                    return (
+                      <div key={section.key} className="flex flex-col gap-6 sm:gap-8">
+                        <div className="flex items-center gap-4">
+                          <p className="text-xs font-bold uppercase tracking-[0.15em] text-violet whitespace-nowrap">
+                            {t(`sections.${section.key}`)}
+                          </p>
+                          <div className="flex-1 h-px bg-violet/30" />
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                          {members.map((member, index) => (
+                            <TeamCard key={member.slug} member={member} index={index} />
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {filteredTeam.map((member, index) => (
+                    <TeamCard key={member.slug} member={member} index={index} />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </Section>

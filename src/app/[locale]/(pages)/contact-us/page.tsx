@@ -101,17 +101,12 @@ export default async function ContactPage({
                     <FaPhone className="size-3.5 shrink-0" aria-hidden="true" />
                     <p className="text-xs font-semibold uppercase tracking-wide">{t("phoneNumbers")}</p>
                   </div>
-                  <div className="flex flex-col gap-1">
-                    {offices.map((office) => (
-                      <a
-                        key={office.id}
-                        href="tel:+50641084070"
-                        className="text-sm text-[#240824] transition-opacity duration-300 hover:opacity-70"
-                      >
-                        (+506) 4108-4070 — {office.city}
-                      </a>
-                    ))}
-                  </div>
+                  <a
+                    href="tel:+50641084070"
+                    className="text-sm text-[#240824] transition-opacity duration-300 hover:opacity-70"
+                  >
+                    (+506) 4108-4070
+                  </a>
                 </div>
 
                 <div className="flex flex-col gap-3 border-t border-[#240824]/15 pt-4">

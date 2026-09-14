@@ -25,6 +25,7 @@
     "contact": "Contact"
   },
   "footer": {
+    "slogan": "Clarity, Transparency, Legal Certainty",
     "description": "We are a premium boutique Law Firm. For more than four decades, we have focused on providing comprehensive legal services across various fields to individuals, businesses, and organizations in an integral and personalized manner while satisfying promptly and effectively all their legal requirements.",
     "shopTitle": "Navigation",
     "shopLinks": {
@@ -93,7 +94,36 @@
       "experience9": "9+ years in Guanacaste",
       "experience6": "6+ years of experience",
       "experience5": "5+ years of experience",
-      "experience3": "3+ years of experience"
+      "experience3": "3+ years of experience",
+      "pathmaker": "Pathmaker",
+      "connector": "Connector",
+      "sharpThinker": "Sharp thinker",
+      "explorer": "Explorer",
+      "adaptable": "Adaptable",
+      "forwardThinking": "Forward-thinking",
+      "composed": "Composed",
+      "facilitator": "Facilitator",
+      "clarifier": "Clarifier",
+      "strategist": "Strategist",
+      "precise": "Precise",
+      "trustBuilder": "Trust builder",
+      "reliable": "Reliable",
+      "solutionOriented": "Solution-oriented",
+      "pragmatic": "Pragmatic",
+      "negotiator": "Negotiator",
+      "orchestrator": "Orchestrator",
+      "harmonizer": "Harmonizer",
+      "backbone": "Backbone",
+      "collaborative": "Collaborative",
+      "steadfast": "Steadfast",
+      "catalyst": "Catalyst",
+      "consistent": "Consistent",
+      "versatile": "Versatile"
+    },
+    "sections": {
+      "legal": "Legal",
+      "businessDevelopment": "Business and Strategy Development · Client Experience",
+      "operations": "Operations"
     }
   },
   "services": {
@@ -202,7 +232,9 @@
     "viewWebsite": "View website",
     "goToMaps": "Go to Maps",
     "show": "Show",
-    "mapUnavailable": "Map unavailable"
+    "mapUnavailable": "Map unavailable",
+    "contactCardTitle": "Get in Touch",
+    "followUs": "Follow us"
   },
   "notFound": {
     "eyebrow": "Error 404",
@@ -214,7 +246,7 @@
     "title": "Please get in contact with us",
     "offices": "Offices",
     "contact": "Contact",
-    "phoneNumbers": "Phone numbers",
+    "phoneNumbers": "Phone number",
     "openHours": "Open hours",
     "openHoursValue": "Monday - Friday: 9:00 am - 5:00 pm",
     "form": {

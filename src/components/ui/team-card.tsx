@@ -56,7 +56,9 @@ export function TeamCard({ member, index = 0 }: TeamCardProps) {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 border-t border-black/20 pt-4 sm:pt-6">
       <p className="text-xs sm:text-sm font-bold uppercase tracking-wide text-black">
-        {member.name} - {t(`roles.${member.roleKey}`)}
+        {member.roleKey === "partner"
+          ? `${member.name} — ${member.titleTag}`
+          : member.name}
       </p>
       <div
         data-aos="zoom-in"

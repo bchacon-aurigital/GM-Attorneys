@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import { useTranslations } from "next-intl";
+import { FaPhone, FaEnvelope, FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { Curve } from "@/components/ui/curve";
 import { offices } from "@/data/offices";
 import { cn } from "@/lib/utils";
@@ -209,7 +210,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
 
       <div className="px-4 sm:px-6 lg:px-10 pb-16 md:pb-20">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 h-auto lg:h-[46rem]">
-          <div className={cn(
+          <div data-lenis-prevent className={cn(
             "flex w-full lg:max-w-md flex-col gap-6 overflow-visible lg:overflow-y-auto",
             "lg:[&::-webkit-scrollbar]:w-1.5",
             isDark
@@ -288,6 +289,63 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
                   </div>
                 </div>
               ))}
+
+              {/* Contact card */}
+              <div className="flex w-[20rem] lg:w-full shrink-0 flex-col gap-4 rounded-xl px-5 py-5 bg-[#0aa39f]">
+                <h3 className="text-xl font-medium tracking-tight text-white">
+                  {t("contactCardTitle")}
+                </h3>
+
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="tel:+50641084070"
+                    className="flex items-center gap-2.5 text-sm font-medium text-white/90 hover:text-white transition-colors duration-200"
+                  >
+                    <FaPhone className="size-3.5 shrink-0" />
+                    (+506) 4108-4070
+                  </a>
+                  <a
+                    href="mailto:info@gmattorneyscr.com"
+                    className="flex items-center gap-2.5 text-sm font-medium text-white/90 hover:text-white transition-colors duration-200"
+                  >
+                    <FaEnvelope className="size-3.5 shrink-0" />
+                    info@gmattorneyscr.com
+                  </a>
+                  <a
+                    href="https://wa.me/50626532155"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2.5 text-sm font-medium text-white/90 hover:text-white transition-colors duration-200"
+                  >
+                    <FaWhatsapp className="size-3.5 shrink-0" />
+                    WhatsApp
+                  </a>
+                </div>
+
+                <div className="mt-1 border-t border-white/20 pt-3">
+                  <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-white/60">
+                    {t("followUs")}
+                  </p>
+                  <div className="flex items-center gap-2">
+                    {[
+                      { href: "https://www.instagram.com/gm_attorneys/", icon: FaInstagram, label: "Instagram" },
+                      { href: "https://www.facebook.com/gmattorneyscr?fref=ts", icon: FaFacebook, label: "Facebook" },
+                      { href: "https://www.linkedin.com/company/gm-attorneys", icon: FaLinkedin, label: "LinkedIn" },
+                    ].map(({ href, icon: Icon, label }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={label}
+                        className="flex size-8 items-center justify-center rounded-full bg-white/15 text-white hover:bg-white/30 transition-colors duration-200"
+                      >
+                        <Icon className="size-3.5" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
