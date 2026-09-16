@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { FaArrowLeft } from "react-icons/fa6";
 import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
@@ -9,7 +11,7 @@ import { BlogTableOfContents } from "@/components/sections/blog/blog-table-of-co
 import { BlogArticleBody } from "@/components/sections/blog/blog-article-body";
 import {
   getPostBySlug,
-  getAllPostSlugs,
+  getAllPostParams,
   getRelatedPosts,
   getFeaturedImageUrl,
   getAuthorName,
@@ -22,12 +24,20 @@ import { BlogPostCard } from "@/components/ui/blog-post-card";
 import type { Locale } from "@/i18n/routing";
 
 interface BlogPostPageProps {
-  params: Promise<{ locale: Locale; slug: string }>;
+  params: Promise<{ locale: Locale; year: string; month: string; day: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const slugs = await getAllPostSlugs();
-  return slugs.map((slug) => ({ slug }));
+  const posts = await getAllPostParams();
+  return posts.map(({ slug, date }) => {
+    const d = new Date(date);
+    return {
+      year: String(d.getUTCFullYear()),
+      month: String(d.getUTCMonth() + 1).padStart(2, "0"),
+      day: String(d.getUTCDate()).padStart(2, "0"),
+      slug,
+    };
+  });
 }
 
 export async function generateMetadata({
@@ -94,6 +104,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <Section className="!pt-16 sm:!pt-20">
           <div className="flex flex-col items-center gap-9">
             <div className="flex flex-col items-center gap-6 sm:gap-9">
+              <Link
+                href="/blog"
+                className="flex items-center gap-2 text-sm font-semibold text-[#2f3037]/50 hover:text-[#2f3037] transition-colors"
+              >
+                <FaArrowLeft className="text-xs" />
+                {t("backToBlog")}
+              </Link>
+
               <span className="rounded-lg border border-black/[0.12] px-6 sm:px-8 py-3 text-base sm:text-xl font-semibold text-black/50">
                 {getCategoryName(post)}
               </span>

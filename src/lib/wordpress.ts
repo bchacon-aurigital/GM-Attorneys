@@ -193,21 +193,34 @@ export async function getPostBySlug(slug: string): Promise<WPPost | null> {
   return data?.post ?? null;
 }
 
-export async function getAllPostSlugs(): Promise<string[]> {
+export interface PostParams {
+  slug: string;
+  date: string;
+}
+
+export async function getAllPostParams(): Promise<PostParams[]> {
   const query = `
-    query GetAllPostSlugs {
+    query GetAllPostParams {
       posts(first: 1000, where: { status: PUBLISH }) {
-        nodes { slug }
+        nodes { slug date }
       }
     }
   `;
 
-  const data = await fetchGraphQL<{ posts: { nodes: { slug: string }[] } }>(
+  const data = await fetchGraphQL<{ posts: { nodes: PostParams[] } }>(
     query,
     {},
     3600
   );
-  return data?.posts.nodes.map((n) => n.slug) ?? [];
+  return data?.posts.nodes ?? [];
+}
+
+export function getPostUrl(post: { slug: string; date: string }): string {
+  const d = new Date(post.date);
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  return `/${year}/${month}/${day}/${post.slug}`;
 }
 
 export async function getCategories(): Promise<WPCategory[]> {

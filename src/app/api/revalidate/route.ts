@@ -1,5 +1,6 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
+import { getPostBySlug, getPostUrl } from "@/lib/wordpress";
 
 // On-demand revalidation webhook. Configure WordPress (e.g. via a small
 // plugin or the WPGraphQL Gatsby/webhook helper) to POST here whenever a
@@ -36,7 +37,10 @@ export async function POST(request: NextRequest) {
   revalidateTag("wp-posts", { expire: 0 });
 
   if (slug) {
-    revalidatePath(`/[locale]/blog/${slug}`, "page");
+    const post = await getPostBySlug(slug);
+    if (post) {
+      revalidatePath(`/[locale]${getPostUrl(post)}`, "page");
+    }
     revalidateTag(`wp-post-${slug}`, { expire: 0 });
   }
 

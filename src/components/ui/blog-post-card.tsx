@@ -9,6 +9,7 @@ import {
   getAuthorName,
   getCategoryName,
   getFeaturedImageUrl,
+  getPostUrl,
   type WPPost,
 } from "@/lib/wordpress";
 import { cn } from "@/lib/utils";
@@ -32,7 +33,7 @@ export function BlogPostCard({ post, locale, variant = "light", className }: Blo
 
   return (
     <MotionLink
-      href={`/blog/${post.slug}`}
+      href={getPostUrl(post)}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "0px 0px -80px 0px" }}

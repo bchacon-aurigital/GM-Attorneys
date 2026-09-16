@@ -155,8 +155,8 @@ export const team: TeamMember[] = [
     ],
   },
   {
-    slug: "francella-marchena",
-    name: "Francella Marchena",
+    slug: "francelly-marchena",
+    name: "Francelly Marchena",
     roleKey: "paralegals",
     titleTag: "Paralegal",
     tagKeys: ["precise"],

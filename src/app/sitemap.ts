@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPostSlugs } from "@/lib/wordpress";
+import { getAllPostParams, getPostUrl } from "@/lib/wordpress";
 import { routing } from "@/i18n/routing";
 
 const BASE_URL = "https://gmattorneyscr.com";
@@ -30,10 +30,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   let blogEntries: MetadataRoute.Sitemap = [];
   try {
-    const slugs = await getAllPostSlugs();
+    const posts = await getAllPostParams();
     blogEntries = routing.locales.flatMap((locale) =>
-      slugs.map((slug) => ({
-        url: localizedPath(`/blog/${slug}`, locale),
+      posts.map((post) => ({
+        url: localizedPath(getPostUrl(post), locale),
         lastModified: now,
         changeFrequency: "weekly" as const,
         priority: 0.6,
