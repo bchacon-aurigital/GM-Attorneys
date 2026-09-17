@@ -312,5 +312,15 @@
       "rentalProperties": "Rental Properties and Investment Management",
       "officeLocations": "Office Locations and Contact Information"
     }
+  },
+  "newsletter": {
+    "eyebrow": "Free Download",
+    "title": "Are you legally protected?",
+    "subtitle": "Subscribe to our newsletter and get our free guide to know if you are legally protected in Costa Rica.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email address",
+    "submit": "Download my free guide",
+    "disclaimer": "No spam. Unsubscribe at any time."
   }
 }

@@ -312,5 +312,15 @@
       "rentalProperties": "Propiedades de Alquiler",
       "officeLocations": "Ubicación de Oficinas"
     }
+  },
+  "newsletter": {
+    "eyebrow": "Descarga Gratuita",
+    "title": "¿Estás protegido legalmente?",
+    "subtitle": "Suscríbete a nuestro boletín y descarga nuestra guía gratuita para saber si estás protegido legalmente en Costa Rica.",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo electrónico",
+    "submit": "Descargar mi guía gratuita",
+    "disclaimer": "Sin spam. Cancela cuando quieras."
   }
 }
