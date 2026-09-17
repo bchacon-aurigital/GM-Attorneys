@@ -59,7 +59,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col gap-4 rounded border border-[#240824]/15 p-8 sm:p-10">
-        <p className="text-lg font-semibold text-[#240824]">{t("form.successTitle")}</p>
+        <p className="text-lg font-semibold text-[#0aa39f]">{t("form.successTitle")}</p>
         <p className="text-sm text-[#240824]/70">{t("form.successBody")}</p>
         <button
           type="button"
