@@ -10,7 +10,7 @@ export function Services() {
 
   return (
     <>
-      <Section className="bg-white pb-0">
+      <Section className="bg-white pb-8 sm:pb-0">
         <div className="flex flex-col gap-10 sm:gap-16 lg:gap-[86px]">
           <h1 className="text-[#27102b] text-5xl sm:text-7xl lg:text-8xl xl:text-[128px] font-semibold uppercase tracking-tight leading-[0.95]">
             {t("heroTitle1")}

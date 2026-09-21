@@ -15,7 +15,7 @@ export const offices: Office[] = [
     id: "flamingo",
     city: "Flamingo",
     name: "GM Attorneys — Flamingo",
-    address: "Commercial Center Arenas, Office #3, Playa Flamingo, Guanacaste 50309, Costa Rica",
+    address: "Commercial Center Arenas, Office #3, Playa Flamingo, Guanacaste 50308, Costa Rica",
     email: "flamingo@gmattorneyscr.com",
     lat: 10.4313605,
     lng: -85.7824175,

@@ -120,7 +120,7 @@ export const team: TeamMember[] = [
   },
   {
     slug: "valery-turcio",
-    name: "Valery Turcio",
+    name: "Valery Turcios",
     roleKey: "attorney",
     titleTag: "Junior Associate",
     tagKeys: ["explorer"],
@@ -134,7 +134,7 @@ export const team: TeamMember[] = [
   // Paralegals
   {
     slug: "jorge-granados-paralegal",
-    name: "Jorge Granados",
+    name: "Jorge Arturo Granados",
     roleKey: "paralegals",
     titleTag: "Paralegal",
     tagKeys: ["versatile"],
