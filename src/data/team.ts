@@ -16,7 +16,7 @@ export const team: TeamMember[] = [
     name: "Jorge Granados",
     roleKey: "partner",
     titleTag: "Founding Partner",
-    tagKeys: ["experience40", "pathmaker"],
+    tagKeys: ["experience45", "pathmaker"],
     image: "/assets/team/Jorge.avif",
     bio: [
       "With over 40 years of professional experience, I am the founder of GM Attorneys and have guided clients through complex criminal matters in Costa Rica and beyond — from financial crimes and corruption to high-stakes litigation before national and international courts.",
@@ -58,7 +58,7 @@ export const team: TeamMember[] = [
     name: "Mariajosé Víquez",
     roleKey: "attorney",
     titleTag: "Senior Associate",
-    tagKeys: ["experience9", "pragmatic"],
+    tagKeys: ["experience14", "pragmatic"],
     image: "/assets/team/Maria.avif",
     bio: [
       "I have called Guanacaste home for over nine years, which means I understand first-hand what it takes to settle, invest, and build a life in Costa Rica. I work closely with foreign clients on real estate, immigration, and corporate matters, offering guidance that is practical, clear, and personal.",
@@ -71,7 +71,7 @@ export const team: TeamMember[] = [
     name: "Andrea Jara",
     roleKey: "attorney",
     titleTag: "Senior Associate",
-    tagKeys: ["experience10", "negotiator"],
+    tagKeys: ["experience15", "negotiator"],
     image: "/assets/team/Andrea.avif",
     bio: [
       "I am a trusted legal advisor guiding companies and individuals through complex legal challenges with clarity, precision, and strategic insight. With over a decade of experience as an attorney and notary public, I offer thoughtful and effective cross-border legal solutions in Spanish and English that drive results and build lasting relationships with executive teams and clients alike.",
@@ -84,7 +84,7 @@ export const team: TeamMember[] = [
     name: "Brians Salazar",
     roleKey: "attorney",
     titleTag: "Associate",
-    tagKeys: ["experience5", "strategist"],
+    tagKeys: ["experience10", "strategist"],
     image: "/assets/team/Brians.avif",
     bio: [
       "With over five years in GM's corporate, real estate, and legal practice, and a background as a legislative advisor for major companies, I bring a balance of practical solutions and social commitment to my work.",
@@ -97,7 +97,7 @@ export const team: TeamMember[] = [
     name: "Harold Matarrita",
     roleKey: "attorney",
     titleTag: "Junior Associate",
-    tagKeys: ["sinceFirm2019", "reliable"],
+    tagKeys: ["experience4", "reliable"],
     image: "/assets/team/Harold.avif",
     bio: [
       "I have built my career at GM Attorneys, starting in 2019 in client service and coordination, later working as a legal assistant, and now practicing as an attorney specializing in corporate and notarial law.",
@@ -110,7 +110,7 @@ export const team: TeamMember[] = [
     name: "Gloriana Arrieta",
     roleKey: "attorney",
     titleTag: "Junior Associate",
-    tagKeys: ["composed"],
+    tagKeys: ["experience4", "composed"],
     image: "/assets/team/Gloriana.avif",
     bio: [
       "I support clients throughout property purchase and sale processes, from due diligence to formal documentation, ensuring every transaction is legally secure and commercially successful.",
@@ -123,7 +123,7 @@ export const team: TeamMember[] = [
     name: "Valery Turcios",
     roleKey: "attorney",
     titleTag: "Junior Associate",
-    tagKeys: ["explorer"],
+    tagKeys: ["experience5", "explorer"],
     image: "/assets/team/Valery.avif",
     bio: [
       "I focus my practice on corporate law, drafting contracts and deeds to formalize real estate transactions in high-demand markets.",
@@ -183,7 +183,7 @@ export const team: TeamMember[] = [
     name: "Manfred Peters",
     roleKey: "businessDevelopment",
     titleTag: "Business Development & Client Experience",
-    tagKeys: ["since2018", "connector"],
+    tagKeys: ["connector"],
     image: "/assets/team/Manfred.avif",
     bio: [
       "Since joining GM Attorneys in 2018, I have focused on business development and strategic relationship management, connecting the firm with international clients and key players in the luxury real estate sector.",
@@ -196,7 +196,7 @@ export const team: TeamMember[] = [
     name: "Efraín Hidalgo",
     roleKey: "businessDevelopment",
     titleTag: "Legal & Innovation Lead",
-    tagKeys: ["experience10", "solutionOriented"],
+    tagKeys: ["solutionOriented"],
     image: "/assets/team/Efrain.avif",
     bio: [
       "I am a legal assistant with over a decade of experience providing legal support across a variety of matters. My focus is on delivering work that is accurate, timely, and aligned with the highest professional standards.",
@@ -209,7 +209,7 @@ export const team: TeamMember[] = [
     name: "Alina Guzmán",
     roleKey: "businessDevelopment",
     titleTag: "Real Estate Specialist & Project Coordinator",
-    tagKeys: ["experience6", "orchestrator"],
+    tagKeys: ["orchestrator"],
     image: "/assets/team/Alina.avif",
     bio: [
       "With over six years as a paralegal at GM Attorneys, I combine technical knowledge, legal precision, and interpersonal skills to support complex real estate, commercial, and due diligence matters.",
@@ -224,7 +224,7 @@ export const team: TeamMember[] = [
     name: "Carmen Julia Rodríguez",
     roleKey: "assistants",
     titleTag: "Senior Administrative Officer",
-    tagKeys: ["years16", "backbone"],
+    tagKeys: ["backbone"],
     image: "/assets/team/Carmen.avif",
     bio: [
       "I have been part of the GM family for the past 16 years, serving with commitment and excellence as an Administrative Assistant.",

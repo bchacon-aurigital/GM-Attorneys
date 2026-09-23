@@ -65,7 +65,11 @@
       "experience25": "25+ years of experience",
       "seniorPartner": "Senior Partner",
       "founder": "Founder",
+      "experience45": "45+ years of experience",
       "experience40": "40+ years of experience",
+      "experience15": "15+ years of experience",
+      "experience14": "14+ years of experience",
+      "experience4": "4+ years of experience",
       "seniorAdminOfficer": "Senior Administrative Officer",
       "years16": "16 years at the firm",
       "strategicDevelopment": "Strategic Development",
@@ -156,7 +160,7 @@
         "bullets": ["Residency Applications", "Investor Visas", "Family Reunification", "Work Permits"]
       },
       "taxLaw": {
-        "title": "Tax Law",
+        "title": "Tax Planning",
         "heading": "Strategic planning and compliance, both corporate and individual.",
         "description": "We advise individuals and businesses on tax planning, compliance, and dispute resolution in Costa Rica. Our team helps clients structure their investments and operations efficiently, ensuring full compliance with local tax regulations while minimizing exposure and avoiding unnecessary risks.",
         "bullets": ["Corporate Tax Planning", "Individual Tax Compliance", "Tax Audits & Disputes", "Investment Structuring"]

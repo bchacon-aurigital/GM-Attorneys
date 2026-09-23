@@ -65,7 +65,11 @@
       "experience25": "25+ años de experiencia",
       "seniorPartner": "Socio Senior",
       "founder": "Fundador",
+      "experience45": "45+ años de experiencia",
       "experience40": "40+ años de experiencia",
+      "experience15": "15+ años de experiencia",
+      "experience14": "14+ años de experiencia",
+      "experience4": "4+ años de experiencia",
       "seniorAdminOfficer": "Oficial Administrativo Senior",
       "years16": "16 años en la firma",
       "strategicDevelopment": "Desarrollo Estratégico",
@@ -156,7 +160,7 @@
         "bullets": ["Solicitudes de Residencia", "Visas de Inversionista", "Reunificación Familiar", "Permisos de Trabajo"]
       },
       "taxLaw": {
-        "title": "Derecho Tributario",
+        "title": "Asesoría Fiscal",
         "heading": "Planificación estratégica y cumplimiento, tanto corporativo como individual.",
         "description": "Asesoramos a personas físicas y jurídicas en materia de planificación fiscal, cumplimiento tributario y resolución de disputas en Costa Rica. Nuestro equipo ayuda a los clientes a estructurar sus inversiones y operaciones de manera eficiente, garantizando el cumplimiento de la normativa tributaria local y minimizando riesgos innecesarios.",
         "bullets": ["Planificación Tributaria Corporativa", "Cumplimiento Fiscal Individual", "Auditorías y Disputas Fiscales", "Estructuración de Inversiones"]
