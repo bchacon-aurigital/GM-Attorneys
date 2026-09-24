@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -9,8 +9,14 @@ interface Props {
   onClose: () => void;
 }
 
+const FREEBIE = {
+  es: { path: "/docs/Estas-legalmente-protegido.pdf", filename: "Estas-legalmente-protegido.pdf" },
+  en: { path: "/docs/Are-you-legally-protected.pdf",  filename: "Are-you-legally-protected.pdf"  },
+} as const;
+
 export function NewsletterModal({ isOpen, onClose }: Props) {
   const t = useTranslations("newsletter");
+  const locale = useLocale();
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -27,9 +33,10 @@ export function NewsletterModal({ isOpen, onClose }: Props) {
   }, [isOpen, onClose]);
 
   function handleSubmit() {
+    const freebie = locale === "es" ? FREEBIE.es : FREEBIE.en;
     const a = document.createElement("a");
-    a.href = "/docs/Are-you-legally-protected.pdf";
-    a.download = "Are-you-legally-protected.pdf";
+    a.href = freebie.path;
+    a.download = freebie.filename;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
