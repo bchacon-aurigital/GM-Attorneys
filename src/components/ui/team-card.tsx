@@ -82,7 +82,7 @@ export function TeamCard({ member, index = 0 }: TeamCardProps) {
           priority={isAboveFold}
         />
         {member.tagKeys.length > 0 && (
-          <div className="absolute inset-0 flex flex-wrap content-end items-end gap-2.5 p-3 sm:p-5">
+          <div className="absolute inset-0 flex flex-col justify-end items-start gap-2.5 p-3 sm:p-5">
             {member.tagKeys.map((tagKey) => (
               <span
                 key={tagKey}

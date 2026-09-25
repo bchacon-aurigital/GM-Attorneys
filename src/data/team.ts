@@ -160,7 +160,7 @@ export const team: TeamMember[] = [
     roleKey: "paralegals",
     titleTag: "Paralegal",
     tagKeys: ["precise"],
-    image: "/assets/team/placeholder.avif",
+    image: "/assets/team/Francelly.avif",
     bio: [],
   },
 
@@ -169,7 +169,7 @@ export const team: TeamMember[] = [
     slug: "diana-granados",
     name: "Diana Granados",
     roleKey: "businessDevelopment",
-    titleTag: "Business Development & Client Experience",
+    titleTag: "Strategic Development & CX",
     tagKeys: ["catalyst"],
     image: "/assets/team/Diana.avif",
     bio: [
@@ -212,9 +212,9 @@ export const team: TeamMember[] = [
     tagKeys: ["orchestrator"],
     image: "/assets/team/Alina.avif",
     bio: [
-      "With over six years as a paralegal at GM Attorneys, I combine technical knowledge, legal precision, and interpersonal skills to support complex real estate, commercial, and due diligence matters.",
-      "Holding a degree in Criminology and currently in my final year of law school, I bring both analytical rigor and practical understanding to my work. I thrive in multidisciplinary projects where collaboration and attention to detail are essential.",
-      "Passionate about professional growth, I focus on developing leadership, soft skills, and strategic legal advisory capabilities in the corporate and commercial law environment.",
+      "With more than seven years of experience as a paralegal at GM Attorneys, I provide strategic support in complex real estate, commercial, corporate, and due diligence matters. My work combines technical expertise, legal precision, and strong interpersonal skills to help drive successful outcomes for clients and multidisciplinary teams.",
+      "Holding degrees in Criminology and Law, I bring a strong analytical mindset and a practical understanding of legal and business challenges. I thrive in collaborative environments where attention to detail, organization, and effective communication are essential.",
+      "Committed to continuous professional development, I am passionate about strengthening my leadership abilities, enhancing soft skills, and expanding my expertise in corporate and commercial law. My goal is to contribute strategic legal insight while building long-term value for clients and organizations.",
     ],
   },
 
@@ -257,7 +257,7 @@ export const team: TeamMember[] = [
     roleKey: "assistants",
     titleTag: "Administrative Assistant",
     tagKeys: ["consistent"],
-    image: "/assets/team/placeholder.avif",
+    image: "/assets/team/Isabela.avif",
     bio: [],
   },
   {
@@ -275,7 +275,7 @@ export const team: TeamMember[] = [
     roleKey: "assistants",
     titleTag: "Administrative Assistant",
     tagKeys: ["facilitator"],
-    image: "/assets/team/placeholder.avif",
+    image: "/assets/team/Grettel.avif",
     bio: [],
   },
   {
@@ -294,7 +294,7 @@ export const team: TeamMember[] = [
     roleKey: "assistants",
     titleTag: "Front Desk Executive",
     tagKeys: ["harmonizer"],
-    image: "/assets/team/placeholder.avif",
+    image: "/assets/team/Marianne.avif",
     bio: [],
   },
 
