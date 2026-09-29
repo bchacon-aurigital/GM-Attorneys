@@ -14,7 +14,7 @@ export function WhatSetsUsApart() {
   const tAbout = useTranslations("about");
 
   return (
-    <section id="testimonials" className="relative w-full bg-[#240824] overflow-hidden scroll-mt-24">
+    <section className="relative w-full bg-[#240824] overflow-hidden">
       <Curve
         curveColor="#240824"
         cornerColor="#ffffff"
@@ -39,7 +39,10 @@ export function WhatSetsUsApart() {
             <GradientWaveText text={t("apartHighlight")} />
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-white/20">
+          <div
+            id="testimonials"
+            className="grid grid-cols-1 lg:grid-cols-3 border-t border-white/20 scroll-mt-24 lg:scroll-mt-[calc(50vh-11rem)]"
+          >
             {values.map((value, index) => (
               <div
                 key={value.key}

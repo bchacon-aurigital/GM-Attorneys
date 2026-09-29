@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface ServicesProgressContainerProps {
   className?: string;
+  activeIndex?: number;
 }
 
 // Purple band position within the Svg-container.svg canvas (777x654),
@@ -12,7 +13,7 @@ const BAND_TOP = 21.56;
 const BAND_HEIGHT = 56.881;
 const BAND_PADDING_X = 3.089;
 
-export function ServicesProgressContainer({ className }: ServicesProgressContainerProps) {
+export function ServicesProgressContainer({ className, activeIndex = -1 }: ServicesProgressContainerProps) {
   return (
     <div className={cn("relative w-full aspect-[777/654]", className)}>
       <img
@@ -32,7 +33,10 @@ export function ServicesProgressContainer({ className }: ServicesProgressContain
       >
         {servicesSlides.map((slide, index) => (
           <div key={slide.key} className="relative h-8 sm:h-10 lg:h-[46px] flex-1 border-t-[1.5px] border-white/20">
-            <div data-segment-fill={index} className="absolute top-0 left-0 h-[1.5px] w-0 bg-white" />
+            <div
+              className="absolute top-0 left-0 h-[1.5px] bg-white"
+              style={{ width: index <= activeIndex ? "100%" : "0%" }}
+            />
           </div>
         ))}
       </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { Section } from "@/components/ui/section";
 import { TeamCard } from "@/components/ui/team-card";
 import { GradientWaveText } from "@/components/ui/gradient-wave-text";
@@ -46,7 +47,19 @@ export function TeamTeaser() {
         const max = CARDS_SHOWN - cpv();
         return prev >= max ? 0 : prev + 1;
       });
-    }, 6000);
+    }, 12000);
+  }
+
+  function goPrev() {
+    const max = CARDS_SHOWN - cpv();
+    setCurrentIndex((prev) => (prev <= 0 ? max : prev - 1));
+    startInterval();
+  }
+
+  function goNext() {
+    const max = CARDS_SHOWN - cpv();
+    setCurrentIndex((prev) => (prev >= max ? 0 : prev + 1));
+    startInterval();
   }
 
   useEffect(() => {
@@ -100,32 +113,51 @@ export function TeamTeaser() {
           <span className="text-black">{t("teamHighlight")}</span>
         </h2>
 
-        <div
-          ref={containerRef}
-          className={`overflow-hidden select-none ${dragging ? "cursor-grabbing" : "cursor-grab"}`}
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onPointerLeave={onPointerUp}
-        >
+        <div className="relative">
           <div
-            className="flex gap-6 lg:gap-3"
-            style={{
-              transform: `translateX(${translatePx}px)`,
-              transition: dragging ? "none" : "transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-              willChange: "transform",
-            }}
+            ref={containerRef}
+            className={`overflow-hidden select-none ${dragging ? "cursor-grabbing" : "cursor-grab"}`}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={onPointerUp}
+            onPointerLeave={onPointerUp}
           >
-            {members.map((member, index) => (
-              <div
-                key={member.slug}
-                className="shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-9px)]"
-                style={{ pointerEvents: dragging ? "none" : "auto" }}
-              >
-                <TeamCard member={member} index={index} compact />
-              </div>
-            ))}
+            <div
+              className="flex gap-6 lg:gap-3"
+              style={{
+                transform: `translateX(${translatePx}px)`,
+                transition: dragging ? "none" : "transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                willChange: "transform",
+              }}
+            >
+              {members.map((member, index) => (
+                <div
+                  key={member.slug}
+                  className="shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-9px)]"
+                  style={{ pointerEvents: dragging ? "none" : "auto" }}
+                >
+                  <TeamCard member={member} index={index} compact />
+                </div>
+              ))}
+            </div>
           </div>
+
+          <button
+            type="button"
+            onClick={goPrev}
+            aria-label="Previous"
+            className="absolute left-2 sm:-left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-[#0aa39f] shadow-md hover:shadow-lg transition-all border border-black/5"
+          >
+            <FaChevronLeft className="text-sm sm:text-base" />
+          </button>
+          <button
+            type="button"
+            onClick={goNext}
+            aria-label="Next"
+            className="absolute right-2 sm:-right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-[#0aa39f] shadow-md hover:shadow-lg transition-all border border-black/5"
+          >
+            <FaChevronRight className="text-sm sm:text-base" />
+          </button>
         </div>
       </div>
     </Section>

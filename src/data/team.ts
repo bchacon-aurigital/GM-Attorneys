@@ -213,7 +213,14 @@ export const team: TeamMember[] = [
     titleTag: { en: "Paralegal", es: "Asistente Legal" },
     tagKeys: ["versatile"],
     image: "/assets/team/placeholder.avif",
-    bio: { en: [], es: [] },
+    bio: {
+      en: [
+        "Jorge Arturo guides GM Attorneys clients through every stage of their legal matters with a rare mix of rigor and warmth. Over more than four years in the legal field, he has become known for his service-driven approach, his humanistic outlook and his ease in adapting to each client's needs. His natural curiosity leads him to dig beyond the obvious and find the detail others miss, a habit clients appreciate. He completed his law studies at Universidad Autónoma de Centro América (UACA) and works fluently in English and Spanish.",
+      ],
+      es: [
+        "Jorge Arturo acompaña a los clientes de GM Attorneys en cada etapa de sus procesos, con una combinación poco común de rigor y cercanía. En más de cuatro años de experiencia en el ámbito legal se ha distinguido por su vocación de servicio, su mirada humanista y su facilidad para adaptarse a lo que cada cliente necesita. Su curiosidad natural lo lleva a investigar más allá de lo evidente y a encontrar el dato que otros pasan por alto, algo que sus clientes valoran. Egresado de la carrera de Derecho de la Universidad Autónoma de Centro América (UACA), trabaja con fluidez en español e inglés.",
+      ],
+    },
   },
   {
     slug: "santiago-batalla",
@@ -242,7 +249,20 @@ export const team: TeamMember[] = [
     titleTag: { en: "Paralegal", es: "Asistente Legal" },
     tagKeys: ["precise"],
     image: "/assets/team/Francelly.avif",
-    bio: { en: [], es: [] },
+    bio: {
+      en: [
+        "I am particularly drawn to legal work that involves research, analysis, and a detailed understanding of complex matters. I enjoy exploring each subject in depth, identifying the relevant elements, and understanding how they relate to one another in order to develop clear and well-grounded solutions. In my work, I place strong emphasis on accuracy and attention to detail, particularly when preparing and reviewing documents and following through on legal matters.",
+        "My experience in the legal environment has allowed me to work on corporate matters, real estate transactions, the preparation and review of legal documents, and the coordination of different legal processes. These experiences have strengthened my ability to work in an organized manner, analyze information from different perspectives, anticipate needs, and carefully follow each matter through.",
+        "I particularly enjoy work that requires research, judgment, attention to detail, and follow-through. I am motivated by the opportunity to continuously acquire knowledge, explore complex subjects, and turn that information into practical tools for legal work. As I build my career in law, I continue to develop these skills while pursuing a growing interest in corporate and transactional practice.",
+        "I speak Spanish and English.",
+      ],
+      es: [
+        "Me caracterizo por una fuerte inclinación hacia la investigación, el análisis y la comprensión detallada de los asuntos jurídicos. Me interesa profundizar en cada tema, identificar los elementos relevantes y entender cómo se relacionan entre sí para construir soluciones claras y bien fundamentadas. En mi trabajo, presto especial atención a los detalles y a la precisión, particularmente en la preparación y revisión de documentos y en el seguimiento de procesos legales.",
+        "Mi experiencia en el entorno jurídico me ha permitido involucrarme en asuntos corporativos, transacciones inmobiliarias, preparación y revisión de documentos y coordinación de distintos procesos legales. Estas experiencias han fortalecido mi capacidad para trabajar de manera organizada, analizar información desde diferentes perspectivas, anticipar necesidades y mantener un seguimiento cuidadoso de cada asunto.",
+        "Disfruto especialmente los trabajos que requieren investigación, criterio, atención al detalle y seguimiento. Me motiva la posibilidad de adquirir conocimiento, profundizar en temas complejos y transformar esa información en herramientas prácticas para el trabajo jurídico. Continúo desarrollando estas habilidades mientras construyo mi carrera en Derecho, con especial interés en seguir creciendo dentro del ámbito corporativo y transaccional.",
+        "Hablo español e inglés.",
+      ],
+    },
   },
 
   // ── Business & Strategy Development – Client Experience ───────────────────
