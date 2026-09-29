@@ -46,7 +46,7 @@ export function TeamTeaser() {
         const max = CARDS_SHOWN - cpv();
         return prev >= max ? 0 : prev + 1;
       });
-    }, 4000);
+    }, 6000);
   }
 
   useEffect(() => {
@@ -78,10 +78,12 @@ export function TeamTeaser() {
     const dx = dragOffsetRef.current;
     dragOffsetRef.current = 0;
     setDragOffset(0);
-    if (dx < -60) {
-      setCurrentIndex((prev) => Math.min(prev + 1, CARDS_SHOWN - cpv()));
-    } else if (dx > 60) {
-      setCurrentIndex((prev) => Math.max(prev - 1, 0));
+
+    const step = stepPx();
+    const max = CARDS_SHOWN - cpv();
+    if (step > 0) {
+      const slideDelta = Math.round(-dx / step);
+      setCurrentIndex((prev) => Math.max(0, Math.min(prev + slideDelta, max)));
     }
     startInterval();
   }
@@ -120,7 +122,7 @@ export function TeamTeaser() {
                 className="shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-9px)]"
                 style={{ pointerEvents: dragging ? "none" : "auto" }}
               >
-                <TeamCard member={member} index={index} />
+                <TeamCard member={member} index={index} compact />
               </div>
             ))}
           </div>

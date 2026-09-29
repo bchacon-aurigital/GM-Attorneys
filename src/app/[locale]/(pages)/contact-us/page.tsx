@@ -5,7 +5,7 @@ import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Section } from "@/components/ui/section";
 import { offices } from "@/data/offices";
-import { localizedAlternates } from "@/lib/seo";
+import { localizedAlternates, buildOpenGraph } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { ContactForm } from "@/components/sections/contact/contact-form";
 
@@ -32,7 +32,7 @@ export async function generateMetadata({
     title: isSpanish ? TITLE.es : TITLE.en,
     description: isSpanish ? DESCRIPTION.es : DESCRIPTION.en,
     alternates: { canonical, languages },
-    openGraph: { url: path },
+    openGraph: buildOpenGraph(path, locale),
   };
 }
 
@@ -119,7 +119,7 @@ export default async function ContactPage({
               </div>
             </div>
 
-            <div className="w-full lg:w-3/5">
+            <div className="w-full lg:w-[48%]">
               <ContactForm />
             </div>
           </div>

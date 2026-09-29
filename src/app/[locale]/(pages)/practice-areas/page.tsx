@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Services } from "@/components/sections/services/services";
-import { localizedAlternates } from "@/lib/seo";
+import { localizedAlternates, buildOpenGraph } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 const TITLE = {
@@ -28,7 +28,7 @@ export async function generateMetadata({
     title: isSpanish ? TITLE.es : TITLE.en,
     description: isSpanish ? DESCRIPTION.es : DESCRIPTION.en,
     alternates: { canonical, languages },
-    openGraph: { url: path },
+    openGraph: buildOpenGraph(path, locale),
   };
 }
 

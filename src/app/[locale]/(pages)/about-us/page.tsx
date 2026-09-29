@@ -7,7 +7,7 @@ import { AboutImpact } from "@/components/sections/about/about-impact";
 import { AboutFaq } from "@/components/sections/about/about-faq";
 import { StoreLocator } from "@/components/sections/about/store-locator";
 import { OfficesStack } from "@/components/sections/about/offices-stack";
-import { localizedAlternates } from "@/lib/seo";
+import { localizedAlternates, buildOpenGraph } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 const TITLE = {
@@ -33,7 +33,7 @@ export async function generateMetadata({
     title: isSpanish ? TITLE.es : TITLE.en,
     description: isSpanish ? DESCRIPTION.es : DESCRIPTION.en,
     alternates: { canonical, languages },
-    openGraph: { url: path },
+    openGraph: buildOpenGraph(path, locale),
   };
 }
 

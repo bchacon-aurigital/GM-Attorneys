@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { FaPhone, FaEnvelope, FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { Curve } from "@/components/ui/curve";
 import { offices } from "@/data/offices";
@@ -67,6 +67,7 @@ const PinIcon = () => (
 
 export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocatorProps) {
   const t = useTranslations("locator");
+  const locale = useLocale() as "es" | "en";
   const isDark = variant === "dark";
 
   const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -262,7 +263,7 @@ export function StoreLocator({ variant = "dark", curveCornerColor }: StoreLocato
                     <span className="w-4 shrink-0">
                       <PinIcon />
                     </span>
-                    <p className="text-sm">{office.address}</p>
+                    <p className="text-sm">{office.address[locale] ?? office.address.en}</p>
                   </div>
                   <div className="mt-2 flex flex-wrap gap-2">
                     <a

@@ -15,7 +15,7 @@ import { StickyCtaButtons } from "@/components/StickyCtaButtons";
 import { ContactDrawer } from "@/components/ContactDrawer";
 import { manrope, arial } from "@/lib/fonts";
 import { routing, type Locale } from "@/i18n/routing";
-import { localizedAlternates } from "@/lib/seo";
+import { localizedAlternates, SITE_URL, DEFAULT_OG_IMAGES } from "@/lib/seo";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -71,11 +71,7 @@ export async function generateMetadata({
     authors: [{ name: "GM Attorneys", url: "https://gmattorneyscr.com" }],
     creator: "GM Attorneys",
     publisher: "GM Attorneys",
-    metadataBase: new URL(
-      process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "https://gmattorneyscr.com"
-    ),
+    metadataBase: new URL(SITE_URL),
     alternates: { canonical, languages },
     openGraph: {
       type: "website",
@@ -84,20 +80,13 @@ export async function generateMetadata({
       siteName: "GM Attorneys",
       title,
       description,
-      images: [
-        {
-          url: "/assets/og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: "GM Attorneys",
-        },
-      ],
+      images: DEFAULT_OG_IMAGES,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/assets/og-image.jpg"],
+      images: DEFAULT_OG_IMAGES.map((img) => img.url),
     },
     robots: {
       index: true,

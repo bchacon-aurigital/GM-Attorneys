@@ -57,7 +57,7 @@ export default function JsonLd() {
     image: LOGO_URL,
     address: {
       "@type": "PostalAddress",
-      streetAddress: office.address,
+      streetAddress: office.address.en,
       addressLocality: office.city,
       addressCountry: "CR",
     },

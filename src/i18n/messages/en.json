@@ -138,8 +138,6 @@
     "complementaryLabel": "Complementaries",
     "sortBy": "Sort by",
     "sortAll": "All",
-    "bullets": ["Lorem Ipsum", "Simply dummy", "Printing industry"],
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.",
     "list": {
       "realEstate": {
         "title": "Residential and\nCommercial Real Estate",
@@ -211,7 +209,7 @@
   },
   "about": {
     "heroTitle": "We Are GM Attorneys",
-    "heroSubtitle": "We are a premium boutique Law Firm. Responsiveness without haste",
+    "heroSubtitle": "We are an exclusive boutique law firm. Clarity. Legal certainty.",
     "valuesIntro": "WE ARE the premier boutique legal firm specializing in Luxury Real Estate. Maintaining the highest standards of excellence and delivering",
     "valuesHighlight": "premium service to our valued clients, while contributing to the well-being and sustainability of our local environment.",
     "values": {

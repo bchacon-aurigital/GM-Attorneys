@@ -22,6 +22,7 @@ import {
 } from "@/lib/wordpress";
 import { BlogPostCard } from "@/components/ui/blog-post-card";
 import type { Locale } from "@/i18n/routing";
+import { DEFAULT_OG_IMAGES } from "@/lib/seo";
 
 interface BlogPostPageProps {
   params: Promise<{ locale: Locale; year: string; month: string; day: string; slug: string }>;
@@ -62,14 +63,14 @@ export async function generateMetadata({
     openGraph: {
       title: seo?.opengraphTitle || seo?.title || post.title,
       description: seo?.opengraphDescription || seo?.metaDesc || undefined,
-      images: imageUrl ? [{ url: imageUrl }] : undefined,
+      images: imageUrl ? [{ url: imageUrl }] : DEFAULT_OG_IMAGES,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: seo?.twitterTitle || seo?.title || post.title,
       description: seo?.twitterDescription || seo?.metaDesc || undefined,
-      images: seo?.twitterImage?.sourceUrl ? [seo.twitterImage.sourceUrl] : imageUrl ? [imageUrl] : undefined,
+      images: seo?.twitterImage?.sourceUrl ? [seo.twitterImage.sourceUrl] : imageUrl ? [imageUrl] : DEFAULT_OG_IMAGES.map((i) => i.url),
     },
   };
 }

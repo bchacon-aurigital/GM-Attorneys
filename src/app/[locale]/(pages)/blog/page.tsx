@@ -7,7 +7,7 @@ import { Section } from "@/components/ui/section";
 import { BlogListing } from "@/components/sections/blog/blog-listing";
 import { getPosts, getCategories } from "@/lib/wordpress";
 import { type Locale } from "@/i18n/routing";
-import { localizedAlternates } from "@/lib/seo";
+import { localizedAlternates, buildOpenGraph } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 interface BlogPageProps {
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     title: isSpanish ? TITLE.es : TITLE.en,
     description: isSpanish ? DESCRIPTION.es : DESCRIPTION.en,
     alternates: { canonical, languages },
-    openGraph: { url: path },
+    openGraph: buildOpenGraph(path, locale),
   };
 }
 

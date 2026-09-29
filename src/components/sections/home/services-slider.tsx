@@ -26,9 +26,7 @@ export function ServicesSlider() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
   const squareRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const fgRefs = useRef<(HTMLDivElement | null)[]>([]);
   const titleRefs = useRef<(HTMLDivElement | null)[]>([]);
   const bodyRefs = useRef<(HTMLDivElement | null)[]>([]);
   const ctaRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -107,31 +105,14 @@ export function ServicesSlider() {
             if (el) el.style.clipPath = `inset(${(1 - curtain) * 100}% 0% 0% 0%)`;
           }
 
-          // Layer animations start after curtain is partially open (ep > 0.2 for slides 1+).
+          // Text animations start after curtain is partially open (ep > 0.2 for slides 1+).
           const layerEp = index === 0 ? ep : clamp01((ep - 0.2) / 0.8);
 
-          // ── Background: parallax drift up ──────────────────────────────────
-          const bg = bgRefs.current[index];
-          if (bg) {
-            const bgY = (1 - easeOut3(mapRange(layerEp, 0, 0.9))) * 45;
-            bg.style.transform = `translateY(${bgY}px) scale(1.08)`;
-          }
-
-          // ── Purple square: point → line → square ──────────────────────────
+          // ── Purple square: parallax drift up as scroll advances ────────────
           const sq = squareRefs.current[index];
           if (sq) {
-            const sx = easeOut3(mapRange(layerEp, 0.04, 0.38));
-            const sy = easeOut3(mapRange(layerEp, 0.25, 0.56));
-            sq.style.transform = `scaleX(${Math.max(0.004, sx)}) scaleY(${Math.max(0.004, sy)})`;
-            sq.style.opacity = layerEp > 0.04 ? "1" : "0";
-          }
-
-          // ── Foreground: slides up and fades in ────────────────────────────
-          const fg = fgRefs.current[index];
-          if (fg) {
-            const fgP = easeOut3(mapRange(layerEp, 0.25, 0.88));
-            fg.style.transform = `translateX(-50%) translateY(${(1 - fgP) * 72}px)`;
-            fg.style.opacity = String(easeOut3(mapRange(layerEp, 0.18, 0.56)));
+            const parallaxY = -easeOut3(ep) * 90;
+            sq.style.transform = `translateY(${parallaxY}px)`;
           }
 
           // ── Text: staggered cascade ───────────────────────────────────────
@@ -231,12 +212,8 @@ export function ServicesSlider() {
                 clipPath: index === 0 ? "inset(0% 0% 0% 0%)" : "inset(100% 0% 0% 0%)",
               }}
             >
-              {/* Background — parallax layer */}
-              <div
-                ref={(el) => { bgRefs.current[index] = el; }}
-                className="absolute inset-0 h-full w-full blur-[3px]"
-                style={{ willChange: "transform" }}
-              >
+              {/* Background */}
+              <div className="absolute inset-0 h-full w-full blur-[3px]">
                 <img
                   src={slide.backgroundImage}
                   alt=""
@@ -289,11 +266,7 @@ export function ServicesSlider() {
                     <div
                       ref={(el) => { squareRefs.current[index] = el; }}
                       className="h-full"
-                      style={{
-                        opacity: 0,
-                        transformOrigin: "center center",
-                        willChange: "transform, opacity",
-                      }}
+                      style={{ willChange: "transform" }}
                     >
                       <ServicesProgressContainer className="h-full w-auto aspect-[777/654]" />
                     </div>
@@ -301,13 +274,10 @@ export function ServicesSlider() {
 
                   {/* Foreground */}
                   <div
-                    ref={(el) => { fgRefs.current[index] = el; }}
                     className={`pointer-events-none absolute -bottom-10 left-1/2 w-full ${index === 1 ? "h-[88%] sm:h-[118%] xl:h-[88%]" : index === 2 ? "h-[72%] sm:h-[101%] xl:h-[72%]" : "h-[75%] sm:h-[105%] xl:h-[75%]"}`}
                     style={{
-                      transform: "translateX(-50%) translateY(72px)",
-                      opacity: 0,
+                      transform: "translateX(-50%)",
                       zIndex: 2,
-                      willChange: "transform, opacity",
                     }}
                   >
                     <img

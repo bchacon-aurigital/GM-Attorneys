@@ -48,7 +48,7 @@
     "privacyPolicy": "Política de Privacidad"
   },
   "team": {
-    "title": "Team",
+    "title": "Equipo",
     "sortBy": "Ordenar por",
     "sortAll": "Todos",
     "getInTouch": "Contáctanos",
@@ -138,8 +138,6 @@
     "complementaryLabel": "Complementarios",
     "sortBy": "Ordenar por",
     "sortAll": "Todos",
-    "bullets": ["Lorem Ipsum", "Simply dummy", "Printing industry"],
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.",
     "list": {
       "realEstate": {
         "title": "Bienes Raíces\nResidenciales y Comerciales",
@@ -211,7 +209,7 @@
   },
   "about": {
     "heroTitle": "Somos GM Attorneys",
-    "heroSubtitle": "Somos un despacho boutique premium. Respuesta rápida, sin apuros.",
+    "heroSubtitle": "Somos una firma/despacho legal boutique exclusivo. Claridad. Certeza legal.",
     "valuesIntro": "SOMOS el despacho legal boutique líder especializado en Bienes Raíces de Lujo. Mantenemos los más altos estándares de excelencia y ofrecemos",
     "valuesHighlight": "un servicio premium a nuestros valiosos clientes, mientras contribuimos al bienestar y la sostenibilidad de nuestro entorno local.",
     "values": {

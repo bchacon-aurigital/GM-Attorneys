@@ -2,20 +2,24 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import type { TeamMember } from "@/data/team";
 import { cn } from "@/lib/utils";
 
 interface TeamCardProps {
   member: TeamMember;
   index?: number;
+  compact?: boolean;
 }
 
-export function TeamCard({ member, index = 0 }: TeamCardProps) {
+export function TeamCard({ member, index = 0, compact = false }: TeamCardProps) {
   const t = useTranslations("team");
+  const locale = useLocale() as "es" | "en";
+  const titleTag = member.titleTag[locale] ?? member.titleTag.en;
+  const bio = member.bio[locale] ?? member.bio.en;
   const delay = (index % 6) * 150;
   const [isHovered, setIsHovered] = useState(false);
-  const hasBio = member.bio.length > 0;
+  const hasBio = bio.length > 0;
   const isAboveFold = index < 4;
   const scrollRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number | null>(null);
@@ -55,10 +59,13 @@ export function TeamCard({ member, index = 0 }: TeamCardProps) {
 
   return (
     <div className="flex flex-col gap-4 sm:gap-6 border-t border-black/20 pt-4 sm:pt-6">
-      <p className="text-xs sm:text-sm font-bold uppercase tracking-wide text-black">
-        {member.roleKey === "partner"
-          ? `${member.name} — ${member.titleTag}`
-          : member.name}
+      <p
+        className={cn(
+          "font-bold uppercase tracking-wide text-black whitespace-nowrap overflow-hidden text-ellipsis",
+          compact ? "text-[10px] sm:text-xs" : "text-xs sm:text-sm"
+        )}
+      >
+        {member.name} — {titleTag}
       </p>
       <div
         data-aos="zoom-in"
@@ -111,7 +118,7 @@ export function TeamCard({ member, index = 0 }: TeamCardProps) {
             <div className="relative flex items-center gap-2 shrink-0">
               <span className="size-1.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
               <p className="text-sm sm:text-base font-semibold uppercase tracking-tight text-white">
-                {member.titleTag}
+                {titleTag}
               </p>
             </div>
 
@@ -122,7 +129,7 @@ export function TeamCard({ member, index = 0 }: TeamCardProps) {
                 className="h-full overflow-y-auto scrollbar-none"
               >
                 <p className="text-xs sm:text-sm font-medium leading-relaxed text-white/90 whitespace-pre-line pb-8">
-                  {member.bio.join("\n\n")}
+                  {bio.join("\n\n")}
                 </p>
               </div>
               <div className="pointer-events-none absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-[#240824] to-transparent" />

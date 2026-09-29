@@ -9,7 +9,7 @@ import { Complements } from "@/components/sections/home/complements";
 import { TeamTeaser } from "@/components/sections/home/team-teaser";
 import { AboutFaq } from "@/components/sections/about/about-faq";
 import { StoreLocator } from "@/components/sections/about/store-locator";
-import { localizedAlternates } from "@/lib/seo";
+import { localizedAlternates, buildOpenGraph } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -21,7 +21,7 @@ export async function generateMetadata({
 
   return {
     alternates: { canonical, languages },
-    openGraph: { url: path },
+    openGraph: buildOpenGraph(path, locale),
   };
 }
 

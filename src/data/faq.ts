@@ -29,7 +29,7 @@ export const faqItems: FaqItem[] = [
       es: "¿Qué son las tarifas CAF y RAF, y en qué se diferencian del Impuesto sobre la Renta Corporativa?",
     },
     answer: {
-      en: "CAF (Corporate Annual Fee) refers to GM Attorneys' annual corporate compliance and administration service, formerly known as the Resident Agent Fee (RAF). This service provides support with ongoing corporate compliance obligations. As part of this service, GM Attorneys assists clients in complying with current legal requirements, including the registration and maintenance of the corporation's official email address for administrative and judicial notifications before the National Registry, pursuant to Law No. 10.597. This email address serves as the official means for receiving legal notifications from government authorities and courts and must remain valid and actively monitored.\nIn addition, GM Attorneys serves as the legal domicile of the CR LLC, where the company's legal and books are maintained and held in custody, ensuring compliance with applicable corporate record-keeping requirements and facilitating the proper administration of company matters.\nThis fee is separate from the Annual Corporate Tax, which is a government tax paid directly to the Costa Rican Tax Administration and varies depending on whether the company is active or inactive, with the amount adjusted annually.",
+      en: "CAF (Corporate Annual Fee) refers to GM Attorneys' annual corporate compliance and administration service, formerly known as the Resident Agent Fee (RAF). This service provides support with ongoing corporate compliance obligations. As part of this service, GM Attorneys assists clients in complying with current legal requirements, including the registration and maintenance of the CR LLC's official email address for administrative and judicial notifications before the National Registry, pursuant to Law No. 10.597. This email address serves as the official means for receiving legal notifications from government authorities and courts and must remain valid and actively monitored.\nIn addition, GM Attorneys serves as the legal domicile of the CR LLC, where the company's legal and books are maintained and held in custody, ensuring compliance with applicable corporate record-keeping requirements and facilitating the proper administration of company matters.\nThis fee is separate from the Annual Corporate Tax, which is a government tax paid directly to the Costa Rican Tax Administration and varies depending on whether the company is active or inactive, with the amount adjusted annually.",
       es: "El CAF (Cuota Anual Corporativa) es el servicio anual de cumplimiento y administración corporativa de GM Attorneys, antes conocido como la Cuota de Agente Residente (RAF). Este servicio brinda apoyo con las obligaciones de cumplimiento corporativo continuo. Como parte de este servicio, GM Attorneys ayuda a los clientes a cumplir con los requisitos legales vigentes, incluyendo el registro y mantenimiento del correo electrónico oficial de la sociedad para notificaciones administrativas y judiciales ante el Registro Nacional, conforme a la Ley N.° 10.597. Este correo electrónico es el medio oficial para recibir notificaciones legales de autoridades gubernamentales y tribunales, y debe mantenerse válido y monitoreado activamente.\nAdicionalmente, GM Attorneys actúa como domicilio legal de la SRL costarricense, donde los documentos legales y libros de la empresa se mantienen y custodian, garantizando el cumplimiento de los requisitos de llevanza de registros corporativos aplicables y facilitando la adecuada administración de los asuntos de la empresa.\nEsta tarifa es independiente del Impuesto Corporativo Anual, que es un impuesto estatal pagado directamente a la Administración Tributaria de Costa Rica y varía según si la sociedad está activa o inactiva, con el monto ajustado anualmente.",
     },
   },
@@ -49,11 +49,11 @@ export const faqItems: FaqItem[] = [
     slug: "rtbf-compliance",
     categoryKey: "corporateTax",
     question: {
-      en: "What is the RTBF (Registro de Transparencia y Beneficiarios Finales), and how can I ensure my corporation remains compliant?",
+      en: "What is the RTBF (Registro de Transparencia y Beneficiarios Finales), and how can I ensure my CR LLC remains compliant?",
       es: "¿Qué es el RTBF (Registro de Transparencia y Beneficiarios Finales), y cómo puedo asegurarme de que mi sociedad se mantenga en cumplimiento?",
     },
     answer: {
-      en: "The RTBF is the mandatory beneficial ownership declaration filed with the Central Bank of Costa Rica (BCCR).\nEvery corporation must disclose:\nShareholders.\nPercentage ownership.\nUltimate beneficial owners.\nThe filing must be submitted annually during April and must also be updated whenever ownership changes involving 15% or more of the corporation's shares occur. Failure to comply may result in penalties and restrictions.",
+      en: "The RTBF is the mandatory beneficial ownership declaration filed with the Central Bank of Costa Rica (BCCR).\nEvery CR LLC must disclose:\nShareholders.\nPercentage ownership.\nUltimate beneficial owners.\nThe filing must be submitted annually during April and must also be updated whenever ownership changes involving 15% or more of the CR LLC's shares occur. Failure to comply may result in penalties and restrictions.",
       es: "El RTBF es la declaración obligatoria de beneficiarios finales que se presenta ante el Banco Central de Costa Rica (BCCR).\nToda sociedad debe declarar:\nSus accionistas.\nEl porcentaje de participación.\nLos beneficiarios finales últimos.\nLa declaración debe presentarse anualmente durante abril, y también debe actualizarse cada vez que ocurran cambios de propiedad que involucren el 15% o más de las acciones de la sociedad. El incumplimiento puede resultar en sanciones y restricciones.",
     },
   },
@@ -61,11 +61,11 @@ export const faqItems: FaqItem[] = [
     slug: "need-an-accountant",
     categoryKey: "corporateTax",
     question: {
-      en: "Do I need an accountant if my corporation is active, and what services would they provide?",
+      en: "Do I need an accountant if my CR LLC is active, and what services would they provide?",
       es: "¿Necesito un contador si mi sociedad está activa, y qué servicios brindaría?",
     },
     answer: {
-      en: "Yes. Active corporations are generally required to maintain accounting records and file tax returns. Even inactive corporations must comply with certain filing obligations, including information returns.\n\nAn accountant can assist with:\nIncome tax returns.\nFilings for inactive corporations.\nTax registrations and updates.\nCorporate compliance matters.",
+      en: "Yes. Active CR LLCs are generally required to maintain accounting records and file tax returns. Even inactive CR LLCs must comply with certain filing obligations, including information returns.\n\nAn accountant can assist with:\nIncome tax returns.\nFilings for inactive CR LLCs.\nTax registrations and updates.\nCorporate compliance matters.",
       es: "Sí. Las sociedades activas generalmente están obligadas a llevar registros contables y presentar declaraciones de impuestos. Incluso las sociedades inactivas deben cumplir con ciertas obligaciones de declaración, incluyendo declaraciones informativas.\n\nUn contador puede ayudar con:\nDeclaraciones de impuesto sobre la renta.\nDeclaraciones para sociedades inactivas.\nInscripciones y actualizaciones tributarias.\nAsuntos de cumplimiento corporativo.",
     },
   },
@@ -121,7 +121,7 @@ export const faqItems: FaqItem[] = [
     slug: "personal-vs-corporate-ownership",
     categoryKey: "realEstatePurchases",
     question: {
-      en: "What are the advantages and disadvantages of purchasing property in my personal name versus through a corporation?",
+      en: "What are the advantages and disadvantages of purchasing property in my personal name versus through a CR LLC?",
       es: "¿Cuáles son las ventajas y desventajas de comprar una propiedad a mi nombre personal versus a través de una sociedad?",
     },
     answer: {
@@ -169,11 +169,11 @@ export const faqItems: FaqItem[] = [
     slug: "open-bank-account",
     categoryKey: "banking",
     question: {
-      en: "Can I open a bank account in Costa Rica as a foreigner or through my corporation?",
+      en: "Can I open a bank account in Costa Rica as a foreigner or through my CR LLC?",
       es: "¿Puedo abrir una cuenta bancaria en Costa Rica como extranjero o a través de mi sociedad?",
     },
     answer: {
-      en: "Yes. Foreign individuals and Costa Rican corporations can usually open bank accounts, subject to the bank's compliance and due diligence requirements.\n\nRequirements commonly include:\nPassport or identification.\nProof of address.\nSource of funds (backup documentation).\nCorporate documents if the account is being opened by a corporation.\nCash Flow Projections.\nForeign and Local CPA Certification.\nAt least 6 months of bank statements of the applicant.\n\nRequirements vary by bank and are subject to regulatory compliance review.",
+      en: "Yes. Foreign individuals and Costa Rican companies can usually open bank accounts, subject to the bank's compliance and due diligence requirements.\n\nRequirements commonly include:\nPassport or identification.\nProof of address.\nSource of funds (backup documentation).\nCorporate documents if the account is being opened by a company.\nCash Flow Projections.\nForeign and Local CPA Certification.\nAt least 6 months of bank statements of the applicant.\n\nRequirements vary by bank and are subject to regulatory compliance review.",
       es: "Sí. Los extranjeros y las sociedades costarricenses generalmente pueden abrir cuentas bancarias, sujeto a los requisitos de cumplimiento y debida diligencia del banco.\n\nLos requisitos comúnmente incluyen:\nPasaporte o documento de identificación.\nComprobante de domicilio.\nDocumentación sobre el origen de los fondos.\nDocumentos corporativos si la cuenta se abre a nombre de una sociedad.\nProyecciones de flujo de caja.\nCertificación de CPA extranjero y local.\nAl menos 6 meses de estados de cuenta bancarios del solicitante.\n\nLos requisitos varían según el banco y están sujetos a revisión de cumplimiento regulatorio.",
     },
   },
@@ -185,7 +185,7 @@ export const faqItems: FaqItem[] = [
       es: "¿Qué requisitos legales, fiscales y regulatorios debo cumplir para alquilar mi propiedad en Costa Rica?",
     },
     answer: {
-      en: "Depending on the type of rental activity, owners may be required to:\nRegister as a taxpayer with the Costa Rican Tax Office.\nFile rental income and VAT Tax.\nCollect and remit applicable taxes when required.\nObtain municipal licenses where applicable.\nComply with condominium and zoning regulations.\nICT Registration for Short-Term Rentals.\nOwners operating through a corporation must also maintain all corporate compliance requirements.",
+      en: "Depending on the type of rental activity, owners may be required to:\nRegister as a taxpayer with the Costa Rican Tax Office.\nFile rental income and VAT Tax.\nCollect and remit applicable taxes when required.\nObtain municipal licenses where applicable.\nComply with condominium and zoning regulations.\nICT Registration for Short-Term Rentals.\nOwners operating through a CR LLC must also maintain all corporate compliance requirements.",
       es: "Dependiendo del tipo de actividad de alquiler, los propietarios pueden estar obligados a:\nInscribirse como contribuyentes ante la Administración Tributaria de Costa Rica.\nDeclarar los ingresos por alquiler y el Impuesto al Valor Agregado (IVA).\nCobrar y remitir los impuestos aplicables cuando corresponda.\nObtener licencias municipales cuando aplique.\nCumplir con las regulaciones de condominio y zonificación.\nRegistro ante el ICT para alquileres a corto plazo.\nLos propietarios que operan a través de una sociedad también deben mantener todos los requisitos de cumplimiento corporativo.",
     },
   },

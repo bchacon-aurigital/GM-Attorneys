@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { localizedAlternates } from "@/lib/seo";
+import { localizedAlternates, buildOpenGraph } from "@/lib/seo";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 const TITLE = {
@@ -25,7 +25,7 @@ export async function generateMetadata({
     title: isSpanish ? TITLE.es : TITLE.en,
     description: isSpanish ? DESCRIPTION.es : DESCRIPTION.en,
     alternates: { canonical, languages },
-    openGraph: { url: path },
+    openGraph: buildOpenGraph(path, locale),
   };
 }
 
