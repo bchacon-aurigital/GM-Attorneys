@@ -61,7 +61,8 @@ interface GraphQLResponse<T> {
 async function fetchGraphQL<T>(
   query: string,
   variables: Record<string, unknown> = {},
-  revalidate: number | false = 3600
+  revalidate: number | false = 3600,
+  tags: string[] = []
 ): Promise<T | null> {
   if (!WORDPRESS_GRAPHQL_URL) {
     console.error(
@@ -75,7 +76,10 @@ async function fetchGraphQL<T>(
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, variables }),
-      next: revalidate === false ? undefined : { revalidate },
+      next:
+        revalidate === false
+          ? undefined
+          : { revalidate, tags: tags.length ? tags : undefined },
       cache: revalidate === false ? "no-store" : undefined,
     });
 
@@ -169,7 +173,7 @@ export async function getPosts({
 
   const data = await fetchGraphQL<{
     posts: { pageInfo: GetPostsResult["pageInfo"]; nodes: WPPost[] };
-  }>(query, { first, after, where });
+  }>(query, { first, after, where }, 3600, ["wp-posts"]);
 
   if (!data) {
     return { posts: [], pageInfo: { hasNextPage: false, endCursor: null } };
@@ -189,7 +193,12 @@ export async function getPostBySlug(slug: string): Promise<WPPost | null> {
     }
   `;
 
-  const data = await fetchGraphQL<{ post: WPPost | null }>(query, { slug });
+  const data = await fetchGraphQL<{ post: WPPost | null }>(
+    query,
+    { slug },
+    3600,
+    ["wp-posts", `wp-post-${slug}`]
+  );
   return data?.post ?? null;
 }
 
@@ -210,7 +219,8 @@ export async function getAllPostParams(): Promise<PostParams[]> {
   const data = await fetchGraphQL<{ posts: { nodes: PostParams[] } }>(
     query,
     {},
-    3600
+    3600,
+    ["wp-posts"]
   );
   return data?.posts.nodes ?? [];
 }
@@ -233,7 +243,10 @@ export async function getCategories(): Promise<WPCategory[]> {
   `;
 
   const data = await fetchGraphQL<{ categories: { nodes: WPCategory[] } }>(
-    query
+    query,
+    {},
+    3600,
+    ["wp-categories"]
   );
   return data?.categories.nodes ?? [];
 }
@@ -251,10 +264,15 @@ export async function getRelatedPosts(
     }
   `;
 
-  const data = await fetchGraphQL<{ posts: { nodes: WPPost[] } }>(query, {
-    first: limit + 1,
-    where: { categoryName: categorySlug, status: "PUBLISH" },
-  });
+  const data = await fetchGraphQL<{ posts: { nodes: WPPost[] } }>(
+    query,
+    {
+      first: limit + 1,
+      where: { categoryName: categorySlug, status: "PUBLISH" },
+    },
+    3600,
+    ["wp-posts"]
+  );
 
   const posts = data?.posts.nodes ?? [];
   return posts.filter((p) => p.id !== excludePostId).slice(0, limit);
