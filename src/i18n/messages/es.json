@@ -142,8 +142,10 @@
       "realEstate": {
         "title": "Bienes Raíces\nResidenciales y Comerciales",
         "heading": "Asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica.",
-        "description": "Brindamos asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica. Nuestro equipo acompaña a los clientes en cada etapa del proceso, incluyendo adquisiciones, ventas, debida diligencia, revisión de títulos y estructuración de transacciones, garantizando seguridad jurídica, cumplimiento normativo y eficiencia en cada inversión.",
-        "bullets": ["Debida Diligencia y Revisión de Títulos", "Adquisiciones y Ventas", "Estructuración de Transacciones", "Desarrollo Comercial"]
+        "description": "Brindamos asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica. Nuestro equipo acompaña a los clientes en cada etapa del proceso, incluyendo adquisiciones, ventas, debida diligencia, revisión de títulos y estructuración de transacciones, garantizando seguridad jurídica, cumplimiento normativo y eficiencia en cada inversión.\n\nNos enorgullece representar y brindar asesoría legal a clientes que compran en desarrollos emblemáticos como Andaz Fase I, Four Seasons (Club Residences y Prieta Villas), Enclave Residences, Ritz-Carlton Reserve Residences, W Residences, Las Catalinas, Hacienda Pinilla, Reserva Conchal, Waldorf Astoria Residences, Zapotal Golf & Beach Club, Vista Royale y Shift Nosara.",
+        "bullets": ["Debida Diligencia y Revisión de Títulos", "Adquisiciones y Ventas", "Estructuración de Transacciones", "Desarrollo Comercial"],
+        "developmentsTitle": "Representación en zonas exclusivas",
+        "developments": ["Andaz Fase I", "Four Seasons (Club Residences y Prieta Villas)", "Enclave Residences", "Ritz-Carlton Reserve Residences", "W Residences", "Las Catalinas", "Hacienda Pinilla", "Reserva Conchal", "Waldorf Astoria Residences", "Zapotal Golf & Beach Club", "Vista Royale", "Shift Nosara"]
       },
       "corporateLaw": {
         "title": "Derecho\nCorporativo y Empresarial",
@@ -209,7 +211,7 @@
   },
   "about": {
     "heroTitle": "Somos GM Attorneys",
-    "heroSubtitle": "Somos una firma/despacho legal boutique exclusivo. Claridad, Transparencia, Certeza Legal.",
+    "heroSubtitle": "Somos un despacho legal boutique exclusivo. Claridad, Transparencia, Certeza Legal.",
     "valuesIntro": "SOMOS el despacho legal boutique líder especializado en Bienes Raíces de Lujo. Mantenemos los más altos estándares de excelencia y ofrecemos",
     "valuesHighlight": "un servicio premium a nuestros valiosos clientes, mientras contribuimos al bienestar y la sostenibilidad de nuestro entorno local.",
     "values": {

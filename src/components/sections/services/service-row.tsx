@@ -18,6 +18,13 @@ export function ServiceRow({ serviceKey, isDark, variant = "main", image }: Serv
   const description = hasDescription ? t(`list.${serviceKey}.description` as never) : null;
   const hasBullets = t.has(`list.${serviceKey}.bullets` as never);
   const bullets = hasBullets ? (t.raw(`list.${serviceKey}.bullets` as never) as string[]) : [];
+  const hasDevelopments = t.has(`list.${serviceKey}.developments` as never);
+  const developments = hasDevelopments
+    ? (t.raw(`list.${serviceKey}.developments` as never) as string[])
+    : [];
+  const developmentsTitle = t.has(`list.${serviceKey}.developmentsTitle` as never)
+    ? t(`list.${serviceKey}.developmentsTitle` as never)
+    : null;
 
   const textPrimary = isDark ? "text-white" : "text-black";
   const textDescription = isDark ? "text-white/60" : "text-black/60";
@@ -62,7 +69,7 @@ export function ServiceRow({ serviceKey, isDark, variant = "main", image }: Serv
             {heading}
           </p>
           {description && (
-            <p className={cn("text-sm leading-relaxed", textDescription)}>
+            <p className={cn("text-sm leading-relaxed whitespace-pre-line", textDescription)}>
               {description}
             </p>
           )}
@@ -93,6 +100,23 @@ export function ServiceRow({ serviceKey, isDark, variant = "main", image }: Serv
               ))}
             </ul>
           )}
+          {developments.length > 0 && (
+            <div className="flex flex-col gap-2.5">
+              {developmentsTitle && (
+                <h4 className={cn("text-sm font-bold uppercase tracking-wide pt-2", textPrimary)}>
+                  {developmentsTitle}
+                </h4>
+              )}
+              <ul className="flex flex-col gap-2.5">
+                {developments.map((item) => (
+                  <li key={item} className={cn("flex items-center gap-2.5 text-sm font-medium", textPrimary)}>
+                    <span className={cn("size-1.5 shrink-0 rounded-full", isDark ? "bg-white/60" : "bg-black/40")} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <ContactButton
@@ -110,7 +134,7 @@ export function ServiceRow({ serviceKey, isDark, variant = "main", image }: Serv
             {heading}
           </p>
           {description && (
-            <p className={cn("text-sm sm:text-base leading-relaxed max-w-[1069px]", textDescription)}>
+            <p className={cn("text-sm sm:text-base leading-relaxed max-w-[1069px] whitespace-pre-line", textDescription)}>
               {description}
             </p>
           )}

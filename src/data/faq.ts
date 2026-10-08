@@ -25,8 +25,8 @@ export const faqItems: FaqItem[] = [
     slug: "caf-raf-fees",
     categoryKey: "corporateTax",
     question: {
-      en: "What are the CAF and RAF fees, and how do they differ from Corporate Income Tax?",
-      es: "¿Qué son las tarifas CAF y RAF, y en qué se diferencian del Impuesto sobre la Renta Corporativa?",
+      en: "What are the CAF and RAF fees, and how do they differ from the Annual Corporate Tax?",
+      es: "¿Qué son las tarifas CAF y RAF, y en qué se diferencian del Impuesto Corporativo Anual?",
     },
     answer: {
       en: "CAF (Corporate Annual Fee) refers to GM Attorneys' annual corporate compliance and administration service, formerly known as the Resident Agent Fee (RAF). This service provides support with ongoing corporate compliance obligations. As part of this service, GM Attorneys assists clients in complying with current legal requirements, including the registration and maintenance of the CR LLC's official email address for administrative and judicial notifications before the National Registry, pursuant to Law No. 10.597. This email address serves as the official means for receiving legal notifications from government authorities and courts and must remain valid and actively monitored.\nIn addition, GM Attorneys serves as the legal domicile of the CR LLC, where the company's legal and books are maintained and held in custody, ensuring compliance with applicable corporate record-keeping requirements and facilitating the proper administration of company matters.\nThis fee is separate from the Annual Corporate Tax, which is a government tax paid directly to the Costa Rican Tax Administration and varies depending on whether the company is active or inactive, with the amount adjusted annually.",
@@ -65,8 +65,8 @@ export const faqItems: FaqItem[] = [
       es: "¿Necesito un contador si mi sociedad está activa, y qué servicios brindaría?",
     },
     answer: {
-      en: "Yes. Active CR LLCs are generally required to maintain accounting records and file tax returns. Even inactive CR LLCs must comply with certain filing obligations, including information returns.\n\nAn accountant can assist with:\nIncome tax returns.\nFilings for inactive CR LLCs.\nTax registrations and updates.\nCorporate compliance matters.",
-      es: "Sí. Las sociedades activas generalmente están obligadas a llevar registros contables y presentar declaraciones de impuestos. Incluso las sociedades inactivas deben cumplir con ciertas obligaciones de declaración, incluyendo declaraciones informativas.\n\nUn contador puede ayudar con:\nDeclaraciones de impuesto sobre la renta.\nDeclaraciones para sociedades inactivas.\nInscripciones y actualizaciones tributarias.\nAsuntos de cumplimiento corporativo.",
+      en: "Yes. Active CR LLCs are generally required to maintain accounting records and file tax returns. Even inactive CR LLCs must comply with certain filing obligations, including information returns.\n\nAn accountant can assist with:\nIncome tax returns.\nVAT Tax Filing.\nFilings for inactive CR LLCs.\nTax registrations and updates.\nCorporate compliance matters.",
+      es: "Sí. Las sociedades activas generalmente están obligadas a llevar registros contables y presentar declaraciones de impuestos. Incluso las sociedades inactivas deben cumplir con ciertas obligaciones de declaración, incluyendo declaraciones informativas.\n\nUn contador puede ayudar con:\nDeclaraciones de impuesto sobre la renta.\nDeclaración de IVA.\nDeclaraciones para sociedades inactivas.\nInscripciones y actualizaciones tributarias.\nAsuntos de cumplimiento corporativo.",
     },
   },
   {

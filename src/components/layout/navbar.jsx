@@ -84,7 +84,7 @@ const Navbar = ({ variant = "default" }) => {
       >
         <div className="mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-10">
           <div className="flex items-center gap-3 sm:gap-4">
-            <Link href="/" className="flex-shrink-0" aria-label="Go to home">
+            <Link href="/" className="flex-shrink-0 flex items-start" aria-label="Go to home">
               <object
                 data="/assets/GM_logotipo.svg"
                 type="image/svg+xml"
@@ -98,6 +98,15 @@ const Navbar = ({ variant = "default" }) => {
               >
                 <img src="/assets/GM_logotipo.svg" alt="GM Attorneys logo" />
               </object>
+              <span
+                className={cn(
+                  "ml-0.5 text-[20px] sm:text-2xl leading-none transition-colors duration-300",
+                  isLight ? "text-white" : "text-black"
+                )}
+                aria-hidden="true"
+              >
+                ®
+              </span>
             </Link>
 
             <Link

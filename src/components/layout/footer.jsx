@@ -40,7 +40,7 @@ export function Footer({ variant = "dark" }) {
         corner="right"
         className="relative z-0 h-[100px] sm:h-[160px] lg:h-[226px]"
       >
-        <Link href="/" aria-label="Go to home" className="w-fit">
+        <Link href="/" aria-label="Go to home" className="w-fit flex items-start">
           <object
             data="/assets/GM_logotipo_Footer.svg"
             type="image/svg+xml"
@@ -54,6 +54,15 @@ export function Footer({ variant = "dark" }) {
           >
             <img src="/assets/GM_logotipo_Footer.svg" alt="GM Attorneys logo" />
           </object>
+          <span
+            className={cn(
+              "ml-1 sm:ml-1.5 text-[60px] sm:text-[70px] lg:text-[80px] leading-none transition-colors duration-300",
+              isDark ? "text-white" : "text-[#240824]"
+            )}
+            aria-hidden="true"
+          >
+            ®
+          </span>
         </Link>
       </Curve>
 

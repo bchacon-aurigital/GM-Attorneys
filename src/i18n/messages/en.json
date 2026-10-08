@@ -142,8 +142,10 @@
       "realEstate": {
         "title": "Residential and\nCommercial Real Estate",
         "heading": "Comprehensive legal counsel for residential and commercial real estate transactions in Costa Rica.",
-        "description": "We provide comprehensive legal counsel for residential and commercial real estate transactions in Costa Rica. Our team guides clients through every stage of the process, including acquisitions, sales, due diligence, title review, and transaction structuring, ensuring security, compliance, and efficiency in every investment.",
-        "bullets": ["Due Diligence & Title Review", "Acquisitions & Sales", "Transaction Structuring", "Commercial Development"]
+        "description": "We provide comprehensive legal counsel for residential and commercial real estate transactions in Costa Rica. Our team guides clients through every stage of the process, including acquisitions, sales, due diligence, title review, and transaction structuring, ensuring security, compliance, and efficiency in every investment.\n\nWe are grateful for representing and providing legal advisory services to clients purchasing in flagship developments such as Andaz Phase I, Four Seasons (Club Residences and Prieta Villas), Enclave Residences, Ritz-Carlton Reserve Residences, W Residences, Las Catalinas, Hacienda Pinilla, Reserva Conchal, Waldorf Astoria Residences, Zapotal Golf & Beach Club, Vista Royale, and Shift Nosara.",
+        "bullets": ["Due Diligence & Title Review", "Acquisitions & Sales", "Transaction Structuring", "Commercial Development"],
+        "developmentsTitle": "Representation in exclusive areas",
+        "developments": ["Andaz Phase I", "Four Seasons (Club Residences & Prieta Villas)", "Enclave Residences", "Ritz-Carlton Reserve Residences", "W Residences", "Las Catalinas", "Hacienda Pinilla", "Reserva Conchal", "Waldorf Astoria Residences", "Zapotal Golf & Beach Club", "Vista Royale", "Shift Nosara"]
       },
       "corporateLaw": {
         "title": "Corporate\nand Business Law",
