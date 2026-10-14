@@ -218,7 +218,7 @@ export const team: TeamMember[] = [
     roleKey: "paralegals",
     titleTag: { en: "Paralegal", es: "Asistente Legal" },
     tagKeys: ["versatile"],
-    image: "/assets/team/placeholder.avif",
+    image: "/assets/team/Arturo.avif",
     bio: {
       en: [
         "Jorge Arturo guides GM Attorneys clients through every stage of their legal matters with a rare mix of rigor and warmth. Over more than four years in the legal field, he has become known for his service-driven approach, his humanistic outlook and his ease in adapting to each client's needs. His natural curiosity leads him to dig beyond the obvious and find the detail others miss, a habit clients appreciate. He completed his law studies at Universidad Autónoma de Centro América (UACA) and works fluently in English and Spanish.",
