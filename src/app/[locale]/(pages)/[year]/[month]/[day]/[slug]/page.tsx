@@ -22,7 +22,7 @@ import {
 } from "@/lib/wordpress";
 import { BlogPostCard } from "@/components/ui/blog-post-card";
 import type { Locale } from "@/i18n/routing";
-import { DEFAULT_OG_IMAGES } from "@/lib/seo";
+import { DEFAULT_OG_IMAGES, SITE_URL, localizedAlternates } from "@/lib/seo";
 
 interface BlogPostPageProps {
   params: Promise<{ locale: Locale; year: string; month: string; day: string; slug: string }>;
@@ -44,7 +44,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, year, month, day, slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
@@ -53,16 +53,22 @@ export async function generateMetadata({
 
   const seo = post.seo;
   const imageUrl = seo?.opengraphImage?.sourceUrl || getFeaturedImageUrl(post) || undefined;
+  // The canonical is built by the frontend, not Yoast: Yoast's points at
+  // wp.gmattorneyscr.com, which is noindex.
+  const { canonical, languages } = localizedAlternates(
+    `/${year}/${month}/${day}/${slug}`,
+    locale
+  );
 
   return {
     title: seo?.title || post.title,
     description: seo?.metaDesc || undefined,
-    alternates: {
-      canonical: seo?.canonical || undefined,
-    },
+    alternates: { canonical, languages },
     openGraph: {
       title: seo?.opengraphTitle || seo?.title || post.title,
       description: seo?.opengraphDescription || seo?.metaDesc || undefined,
+      url: canonical,
+      siteName: "GM Attorneys",
       images: imageUrl ? [{ url: imageUrl }] : DEFAULT_OG_IMAGES,
       type: "article",
     },
@@ -87,7 +93,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const categorySlug = post.categories.nodes[0]?.slug;
   const relatedPosts = categorySlug ? await getRelatedPosts(categorySlug, post.id, 3) : [];
   const imageUrl = getFeaturedImageUrl(post);
-  const jsonLd = post.seo?.schema?.raw;
+  // Rewrite Yoast's schema host to the public domain, leaving image URLs
+  // (/wp-content/...) pointing at the WordPress backend.
+  const jsonLd = post.seo?.schema?.raw?.replace(
+    /https:\/\/(wp\.)?gmattorneyscr\.com(?!\/wp-content)/g,
+    SITE_URL
+  );
   const { html: withHeadingIds, headings } = addHeadingIdsAndExtract(post.content);
   const contentHtml = replaceStandaloneLinksWithPreviews(withHeadingIds);
 

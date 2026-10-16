@@ -17,6 +17,12 @@ const nextConfig: NextConfig = {
   async headers() {
     const isDev = process.env.NODE_ENV === 'development';
     return [
+      // Keep Vercel preview/deployment URLs out of search indexes.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "(.*\\.)?vercel\\.app" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
       {
         // Applies to every route. The old WordPress site's .htaccess set
         // these but .htaccess is an Apache-only directive — it does nothing
@@ -55,6 +61,23 @@ const nextConfig: NextConfig = {
         destination: "/blog?category=:slug",
         permanent: true,
       },
+      // Indexed images and absolute URLs inside post content
+      { source: "/wp-content/:path*", destination: "https://wp.gmattorneyscr.com/wp-content/:path*", permanent: true },
+      // Admin access for the client's team
+      { source: "/wp-admin", destination: "https://wp.gmattorneyscr.com/wp-admin/", permanent: false },
+      { source: "/wp-admin/:path*", destination: "https://wp.gmattorneyscr.com/wp-admin/:path*", permanent: false },
+      { source: "/wp-login.php", destination: "https://wp.gmattorneyscr.com/wp-login.php", permanent: false },
+      // Yoast sitemaps and feed
+      { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/:name(post|page|category|author|fb|wpm_team)-sitemap.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/feed", destination: "/blog", permanent: true },
+      { source: "/feed/:path*", destination: "/blog", permanent: true },
+      // Pending client decision: 302 to avoid 404s in the meantime
+      { source: "/newslettersubs", destination: "/", permanent: false },
+      { source: "/privacy-policy-2", destination: "/privacy-policy", permanent: false },
+      { source: "/wpm-team/:slug", destination: "/our-team", permanent: false },
+      { source: "/author/:slug", destination: "/blog", permanent: false },
+      { source: "/fb/:path*", destination: "/", permanent: false },
     ];
   },
 };
