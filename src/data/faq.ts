@@ -11,9 +11,9 @@ export interface FaqItem {
 }
 
 export const faqCategories = [
-  "corporateTax",
   "realEstatePurchases",
   "sellingRealEstate",
+  "corporateTax",
   "residencyImmigration",
   "banking",
   "rentalProperties",
@@ -121,8 +121,8 @@ export const faqItems: FaqItem[] = [
     slug: "personal-vs-corporate-ownership",
     categoryKey: "realEstatePurchases",
     question: {
-      en: "What are the advantages and disadvantages of purchasing property in my personal name versus through a CR LLC?",
-      es: "¿Cuáles son las ventajas y desventajas de comprar una propiedad a mi nombre personal versus a través de una sociedad?",
+      en: "Should I Buy Property Personally or Through a Costa Rica LLC?",
+      es: "¿Debo comprar la propiedad a nombre personal o a través de una Sociedad en Costa Rica?",
     },
     answer: {
       en: "Personal Ownership\nAdvantages:\nSimpler ownership structure.\nNo annual corporate compliance obligations.\nReduced administrative costs.\nDisadvantages:\nLess flexibility for future transfers or estate planning.\nUpdating ID everytime it gets expired or lost.\nIn Person appearance for the execution of closing.\n\nCorporate Ownership\nAdvantages:\nRemotely execution of Closing Documents.\nBroader Estate Planning alternatives.\nMay facilitate business or investment activities.\nDisadvantages:\nAnnual corporate taxes and filings.\nAccounting and compliance obligations.\nCorporate requirements.",

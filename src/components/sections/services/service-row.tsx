@@ -25,6 +25,9 @@ export function ServiceRow({ serviceKey, isDark, variant = "main", image }: Serv
   const developmentsTitle = t.has(`list.${serviceKey}.developmentsTitle` as never)
     ? t(`list.${serviceKey}.developmentsTitle` as never)
     : null;
+  const developmentsSubtitle = t.has(`list.${serviceKey}.developmentsSubtitle` as never)
+    ? t(`list.${serviceKey}.developmentsSubtitle` as never)
+    : null;
 
   const textPrimary = isDark ? "text-white" : "text-black";
   const textDescription = isDark ? "text-white/60" : "text-black/60";
@@ -102,6 +105,11 @@ export function ServiceRow({ serviceKey, isDark, variant = "main", image }: Serv
           )}
           {developments.length > 0 && (
             <div className="flex flex-col gap-2.5">
+              {developmentsSubtitle && (
+                <p className={cn("text-sm font-medium italic leading-relaxed pt-2", textDescription)}>
+                  {developmentsSubtitle}
+                </p>
+              )}
               {developmentsTitle && (
                 <h4 className={cn("text-sm font-bold uppercase tracking-wide pt-2", textPrimary)}>
                   {developmentsTitle}

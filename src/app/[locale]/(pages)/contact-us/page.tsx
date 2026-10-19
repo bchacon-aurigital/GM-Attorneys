@@ -58,9 +58,14 @@ export default async function ContactPage({
         <Section className="pt-32 sm:pt-40">
           <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
             <div className="flex w-full flex-col gap-10 lg:w-2/5">
-              <h1 className="text-4xl font-medium leading-tight tracking-tight text-[#240824] sm:text-5xl">
-                {t("title")}
-              </h1>
+              <div className="flex flex-col gap-4">
+                <h1 className="text-4xl font-medium leading-tight tracking-tight text-[#240824] sm:text-5xl">
+                  {t("title")}
+                </h1>
+                <p className="text-base sm:text-lg leading-relaxed text-[#240824]/70">
+                  {t("subtitle")}
+                </p>
+              </div>
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="flex flex-col gap-3 border-t border-[#240824]/15 pt-4">

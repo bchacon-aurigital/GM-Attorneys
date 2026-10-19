@@ -24,24 +24,31 @@ export function AboutValues() {
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-black/20">
-          {values.map((value, index) => (
-            <div
-              key={value.key}
-              className={`flex flex-col gap-8 lg:gap-12 py-6 px-0 lg:px-6 ${
-                index > 0 ? "lg:border-l" : ""
-              } border-black/20`}
-            >
-              <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide">
-                {t(`values.${value.key}.title`)}
-              </h3>
-              <p
-                className="text-sm sm:text-base font-medium max-w-md"
-                data-aos="fade-up"
+          {values.map((value, index) => {
+            const author = t(`values.${value.key}.author`);
+            return (
+              <div
+                key={value.key}
+                className={`flex flex-col gap-8 lg:gap-12 py-6 px-0 lg:px-6 ${
+                  index > 0 ? "lg:border-l" : ""
+                } border-black/20`}
               >
-                {t(`values.${value.key}.quote`)}
-              </p>
-            </div>
-          ))}
+                <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide">
+                  {t(`values.${value.key}.title`)}
+                </h3>
+                <div data-aos="fade-up" className="flex flex-col gap-3 max-w-md">
+                  <p className="text-sm sm:text-base font-medium">
+                    {t(`values.${value.key}.quote`)}
+                  </p>
+                  {author && (
+                    <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.14em] text-black/50">
+                      — {author}
+                    </p>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </Section>

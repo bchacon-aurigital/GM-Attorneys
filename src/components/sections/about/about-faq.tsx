@@ -48,6 +48,9 @@ export function AboutFaq({ curveCornerColor = "#1d0120" }: AboutFaqProps) {
 
       <Section className="!pt-8 sm:!pt-10">
         <div className="flex flex-col gap-8 sm:gap-10">
+          <p className="max-w-3xl text-base sm:text-lg lg:text-xl font-medium leading-relaxed text-[#240824]/70">
+            {t("subtitle")}
+          </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
             <div className="relative" ref={dropdownRef}>
               <button

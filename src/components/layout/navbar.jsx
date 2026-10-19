@@ -83,73 +83,88 @@ const Navbar = ({ variant = "default" }) => {
         aria-label="Main navigation"
       >
         <div className="mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-10">
-          <div className="flex items-center gap-3 sm:gap-4">
-            <Link href="/" className="flex-shrink-0 flex items-start" aria-label="Go to home">
-              <object
-                data="/assets/GM_logotipo.svg"
-                type="image/svg+xml"
-                width="179"
-                height="28"
-                className={cn(
-                  "h-auto w-[143px] sm:w-[163px] lg:w-[182px] transition-[filter] duration-300",
-                  isLight ? "brightness-0 invert" : ""
-                )}
-                aria-label="GM Attorneys logo"
-              >
-                <img src="/assets/GM_logotipo.svg" alt="GM Attorneys logo" />
-              </object>
-              <span
-                className={cn(
-                  "ml-0.5 text-[20px] sm:text-2xl leading-none transition-colors duration-300",
-                  isLight ? "text-white" : "text-black"
-                )}
-                aria-hidden="true"
-              >
-                ®
-              </span>
-            </Link>
+          <Link href="/" className="flex-shrink-0 flex items-start" aria-label="Go to home">
+            <object
+              data="/assets/GM_logotipo.svg"
+              type="image/svg+xml"
+              width="179"
+              height="28"
+              className={cn(
+                "h-auto w-[143px] sm:w-[163px] lg:w-[182px] transition-[filter] duration-300",
+                isLight ? "brightness-0 invert" : ""
+              )}
+              aria-label="GM Attorneys logo"
+            >
+              <img src="/assets/GM_logotipo.svg" alt="GM Attorneys logo" />
+            </object>
+            <span
+              className={cn(
+                "ml-0.5 text-[20px] sm:text-2xl leading-none transition-colors duration-300",
+                isLight ? "text-white" : "text-black"
+              )}
+              aria-hidden="true"
+            >
+              ®
+            </span>
+          </Link>
 
+          <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
             <Link
               href={pathname}
               locale={nextLocale}
-              className="flex items-center justify-center rounded-full size-7 sm:size-8 text-[10px] sm:text-[11px] font-bold uppercase transition-all duration-300 text-white bg-[#0aa39f]/70 backdrop-blur-md hover:bg-[#0aa39f] shadow-[0_0_12px_rgba(10,163,159,0.4)] hover:shadow-[0_0_18px_rgba(10,163,159,0.6)]"
+              className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all duration-300 text-white bg-[#0aa39f]/70 backdrop-blur-md hover:bg-[#0aa39f] shadow-[0_0_12px_rgba(10,163,159,0.4)] hover:shadow-[0_0_18px_rgba(10,163,159,0.6)]"
               aria-label="Switch language"
             >
-              {nextLocale.toUpperCase()}
+              <span aria-hidden="true" className="text-sm leading-none">
+                {nextLocale === "es" ? "🇪🇸" : "🇺🇸"}
+              </span>
+              <span>{t("switchLanguage")}</span>
             </Link>
+
+            <button
+              className={cn(
+                "focus:outline-none relative w-6 h-6 z-50",
+                isLight ? "text-white" : "text-gray-900"
+              )}
+              onClick={toggleMenu}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+            >
+              <span
+                className={cn(
+                  "absolute w-6 h-0.5 transition-all duration-500 ease-in-out",
+                  isOpen ? "rotate-45 top-3 bg-gray-900" : cn("top-1", isLight ? "bg-white" : "bg-gray-900")
+                )}
+              />
+              <span
+                className={cn(
+                  "absolute w-6 h-0.5 transition-all duration-500 ease-in-out",
+                  isOpen ? "opacity-0" : cn("top-3", isLight ? "bg-white" : "bg-gray-900")
+                )}
+              />
+              <span
+                className={cn(
+                  "absolute w-6 h-0.5 transition-all duration-500 ease-in-out",
+                  isOpen ? "-rotate-45 top-3 bg-gray-900" : cn("top-5", isLight ? "bg-white" : "bg-gray-900")
+                )}
+              />
+            </button>
           </div>
 
-          <button
-            className={cn(
-              "lg:hidden focus:outline-none relative w-6 h-6 z-50 -translate-x-4",
-              isLight ? "text-white" : "text-gray-900"
-            )}
-            onClick={toggleMenu}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-          >
-            <span
-              className={cn(
-                "absolute w-6 h-0.5 transition-all duration-500 ease-in-out",
-                isOpen ? "rotate-45 top-3 bg-gray-900" : cn("top-1", isLight ? "bg-white" : "bg-gray-900")
-              )}
-            />
-            <span
-              className={cn(
-                "absolute w-6 h-0.5 transition-all duration-500 ease-in-out",
-                isOpen ? "opacity-0" : cn("top-3", isLight ? "bg-white" : "bg-gray-900")
-              )}
-            />
-            <span
-              className={cn(
-                "absolute w-6 h-0.5 transition-all duration-500 ease-in-out",
-                isOpen ? "-rotate-45 top-3 bg-gray-900" : cn("top-5", isLight ? "bg-white" : "bg-gray-900")
-              )}
-            />
-          </button>
-
           <div className="hidden lg:flex items-center gap-1" role="menubar">
+            <Link
+              href={pathname}
+              locale={nextLocale}
+              className="flex items-center gap-1.5 rounded-full px-3 py-1.5 mr-2 text-sm font-semibold transition-all duration-300 text-white bg-[#0aa39f]/70 backdrop-blur-md hover:bg-[#0aa39f] shadow-[0_0_12px_rgba(10,163,159,0.4)] hover:shadow-[0_0_18px_rgba(10,163,159,0.6)]"
+              aria-label="Switch language"
+            >
+              <span aria-hidden="true" className="text-base leading-none">
+                {nextLocale === "es" ? "🇪🇸" : "🇺🇸"}
+              </span>
+              <span>{t("switchLanguage")}</span>
+            </Link>
+
             {navLinks.map((link) => (
               <Link
                 key={link.key}
@@ -207,10 +222,13 @@ const Navbar = ({ variant = "default" }) => {
             href={pathname}
             locale={nextLocale}
             onClick={toggleMenu}
-            className="mt-auto mb-6 flex w-fit items-center rounded-full px-4 py-2 text-sm font-bold uppercase tracking-widest text-white bg-[#0aa39f]/70 backdrop-blur-md transition-all duration-300 hover:bg-[#0aa39f] shadow-[0_0_12px_rgba(10,163,159,0.4)]"
+            className="mt-auto mb-6 flex w-fit items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white bg-[#0aa39f]/70 backdrop-blur-md transition-all duration-300 hover:bg-[#0aa39f] shadow-[0_0_12px_rgba(10,163,159,0.4)]"
             aria-label="Switch language"
           >
-            {nextLocale.toUpperCase()}
+            <span aria-hidden="true" className="text-base leading-none">
+              {nextLocale === "es" ? "🇪🇸" : "🇺🇸"}
+            </span>
+            <span>{t("switchLanguage")}</span>
           </Link>
         </div>
       </div>

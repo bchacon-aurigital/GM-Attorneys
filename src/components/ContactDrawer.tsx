@@ -40,7 +40,7 @@ export function ContactDrawer() {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label={t("title")}
+        aria-label={t("drawerTitle")}
         className={cn(
           "fixed right-0 top-0 z-[61] flex h-full w-full max-w-xl flex-col bg-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]",
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -49,7 +49,7 @@ export function ContactDrawer() {
         {/* Header */}
         <div className="flex shrink-0 items-center justify-between border-b border-[#240824]/10 px-6 py-5">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#240824]">
-            {t("title")}
+            {t("drawerTitle")}
           </p>
           <button
             type="button"

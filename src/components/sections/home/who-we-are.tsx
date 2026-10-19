@@ -17,9 +17,28 @@ export function WhoWeAre() {
 
       <img
         src="/assets/home/mermaid.avif"
-        alt=""
+        alt={t("mermaidCaption")}
+        data-aos="fade-right"
+        data-aos-duration="1200"
+        data-aos-easing="ease-out-cubic"
         className="pointer-events-none absolute left-0 bottom-0 hidden w-[72%] lg:block"
       />
+
+      <figcaption
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="900"
+        data-aos-easing="ease-out-cubic"
+        className="absolute left-[34%] bottom-[22%] hidden max-w-[26%] rounded-md bg-black/55 px-5 py-4 backdrop-blur-sm lg:block"
+      >
+        <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-white">
+          {t("mermaidCaption")}
+        </span>
+        <span className="mt-2 block h-px w-10 bg-white/40" aria-hidden="true" />
+        <span className="mt-2.5 block text-xs leading-relaxed text-white/90 italic">
+          {t("mermaidStory")}
+        </span>
+      </figcaption>
 
       <h2 className="font-arial relative max-w-4xl text-2xl sm:text-3xl lg:absolute lg:left-[1.7%] lg:top-[6%] lg:max-w-none lg:w-[96.7%] lg:text-5xl font-medium uppercase tracking-tight leading-tight text-black indent-[38%] sm:indent-[45%] lg:indent-[52%]">
         {t("whoWeAreTitle")}

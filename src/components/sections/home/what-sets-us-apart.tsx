@@ -43,24 +43,31 @@ export function WhatSetsUsApart() {
             id="testimonials"
             className="grid grid-cols-1 lg:grid-cols-3 border-t border-white/20 scroll-mt-24 lg:scroll-mt-[calc(50vh-11rem)]"
           >
-            {values.map((value, index) => (
-              <div
-                key={value.key}
-                className={`flex flex-col gap-8 lg:gap-12 py-6 px-0 lg:px-6 ${
-                  index > 0 ? "lg:border-l" : ""
-                } border-white/20`}
-              >
-                <p className="text-base sm:text-lg font-bold uppercase tracking-wide text-white">
-                  {tAbout(`values.${value.key}.title`)}
-                </p>
-                <p
-                  className="text-sm sm:text-base font-medium max-w-md text-white"
-                  data-aos="fade-up"
+            {values.map((value, index) => {
+              const author = tAbout(`values.${value.key}.author`);
+              return (
+                <div
+                  key={value.key}
+                  className={`flex flex-col gap-8 lg:gap-12 py-6 px-0 lg:px-6 ${
+                    index > 0 ? "lg:border-l" : ""
+                  } border-white/20`}
                 >
-                  {tAbout(`values.${value.key}.quote`)}
-                </p>
-              </div>
-            ))}
+                  <p className="text-base sm:text-lg font-bold uppercase tracking-wide text-white">
+                    {tAbout(`values.${value.key}.title`)}
+                  </p>
+                  <div data-aos="fade-up" className="flex flex-col gap-3 max-w-md">
+                    <p className="text-sm sm:text-base font-medium text-white">
+                      {tAbout(`values.${value.key}.quote`)}
+                    </p>
+                    {author && (
+                      <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.14em] text-white/60">
+                        — {author}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Section>

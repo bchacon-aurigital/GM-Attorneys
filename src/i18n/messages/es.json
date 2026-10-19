@@ -7,6 +7,8 @@
     "whoWeAre": "Quiénes somos",
     "whoWeAreTitle": "Desde 1978, GM Attorneys ha guiado a clientes de alto patrimonio en bienes raíces, inversión extranjera e inmigración en Costa Rica. Fuimos el primer despacho en hacer de la costa nuestro hogar, no una sucursal — y esa presencia todavía nos distingue.",
     "whoWeAreText": "Un despacho boutique premium arraigado en Guanacaste y San José. Combinamos conocimiento local con décadas de experiencia para brindar asesoría legal personalizada y precisa a inversionistas y compradores que esperan lo mejor.",
+    "mermaidCaption": "La Sirena de Esterillos",
+    "mermaidStory": "Esculpida en bronce por Albino Valverde e instalada en 1994, nació del relato del pescador Fernando Mora, quien en 1958 aseguró haberla visto emerger entre las rocas de Esterillos Oeste. Hoy es símbolo del arraigo costero que inspira nuestra práctica.",
     "whatSetsUsApart": "Qué nos distingue",
     "apartIntro": "Un despacho boutique se mide por su criterio, no por su tamaño. Durante más de cuatro décadas nos hemos ganado la confianza de inversionistas y compradores que eligieron Costa Rica —",
     "apartHighlight": "combinando el alcance de una práctica internacional con la cercanía que solo un socio local puede ofrecer.",
@@ -22,11 +24,12 @@
     "team": "Equipo",
     "blog": "Blog",
     "faq": "Preguntas",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "switchLanguage": "English"
   },
   "footer": {
     "slogan": "Claridad, Transparencia, Certeza Legal",
-    "description": "Somos un despacho legal boutique exclusivo. Por más de cuatro décadas nos hemos enfocado en brindar servicios legales integrales en diversas áreas a personas, empresas y organizaciones, de manera integral y personalizada, satisfaciendo pronta y eficazmente todos sus requerimientos legales.",
+    "description": "Desde 1978, GM Attorneys ha representado a inversionistas extranjeros, propietarios, desarrolladores y empresarios en toda Costa Rica, con una fuerte presencia en las comunidades y desarrollos turísticos más reconocidos de Guanacaste.",
     "shopTitle": "Navegación",
     "shopLinks": {
       "about": "Nosotros",
@@ -142,10 +145,11 @@
       "realEstate": {
         "title": "Bienes Raíces\nResidenciales y Comerciales",
         "heading": "Asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica.",
-        "description": "Brindamos asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica. Nuestro equipo acompaña a los clientes en cada etapa del proceso, incluyendo adquisiciones, ventas, debida diligencia, revisión de títulos y estructuración de transacciones, garantizando seguridad jurídica, cumplimiento normativo y eficiencia en cada inversión.\n\nNos enorgullece representar y brindar asesoría legal a clientes que compran en desarrollos emblemáticos como Andaz Fase I, Four Seasons (Club Residences y Prieta Villas), Enclave Residences, Ritz-Carlton Reserve Residences, W Residences, Las Catalinas, Hacienda Pinilla, Reserva Conchal, Waldorf Astoria Residences, Zapotal Golf & Beach Club, Vista Royale y Shift Nosara.",
+        "description": "Brindamos asesoría legal integral en transacciones inmobiliarias residenciales y comerciales en Costa Rica. Nuestro equipo acompaña a los clientes en cada etapa del proceso, incluyendo adquisiciones, ventas, debida diligencia, revisión de títulos y estructuración de transacciones, garantizando seguridad jurídica, cumplimiento normativo y eficiencia en cada inversión.\n\nNos enorgullece representar y brindar asesoría legal a clientes que compran en desarrollos emblemáticos como Andaz Residence, Enclave Residences, Four Seasons (Club Residences y Prieta Villas), Hacienda Pinilla, Las Catalinas, Reserva Conchal, Ritz-Carlton Reserve Residences, St. Regis Residence Papagayo, Vista Royale, W Residences, Waldorf Astoria Residences y Zapotal Golf & Beach Club.",
         "bullets": ["Debida Diligencia y Revisión de Títulos", "Adquisiciones y Ventas", "Estructuración de Transacciones", "Desarrollo Comercial"],
-        "developmentsTitle": "Representación en zonas exclusivas",
-        "developments": ["Andaz Fase I", "Four Seasons (Club Residences y Prieta Villas)", "Enclave Residences", "Ritz-Carlton Reserve Residences", "W Residences", "Las Catalinas", "Hacienda Pinilla", "Reserva Conchal", "Waldorf Astoria Residences", "Zapotal Golf & Beach Club", "Vista Royale", "Shift Nosara"]
+        "developmentsSubtitle": "La confianza de compradores e inversionistas en los desarrollos residenciales de lujo y hospitalidad más reconocidos de Costa Rica.",
+        "developmentsTitle": "Proyectos exclusivos",
+        "developments": ["Andaz Residence", "Enclave Residences", "Four Seasons (Club Residences y Prieta Villas)", "Hacienda Pinilla", "Las Catalinas", "Reserva Conchal", "Ritz-Carlton Reserve Residences", "St. Regis Residence Papagayo", "Vista Royale", "W Residences", "Waldorf Astoria Residences", "Zapotal Golf & Beach Club"]
       },
       "corporateLaw": {
         "title": "Derecho\nCorporativo y Empresarial",
@@ -217,15 +221,18 @@
     "values": {
       "commitment": {
         "title": "Compromiso",
-        "quote": "“GM Attorneys es excepcionalmente receptivo, combinando un profesionalismo sobresaliente con un trato genuinamente personal. Su equipo es conocedor, accesible y un placer con el que trabajar. Logran que asuntos legales complejos se sientan manejables, mientras aseguran que los clientes se sientan respaldados y confiados durante todo el proceso.”"
+        "quote": "“GM Attorneys es excepcionalmente receptivo, combinando un profesionalismo sobresaliente con un trato genuinamente personal. Su equipo es conocedor, accesible y un placer con el que trabajar. Logran que asuntos legales complejos se sientan manejables, mientras aseguran que los clientes se sientan respaldados y confiados durante todo el proceso.”",
+        "author": "Inversionista Privado | California"
       },
       "integrity": {
         "title": "Integridad",
-        "quote": "“Lo que más destaca de GM Attorneys es la integridad de su equipo. Cada recomendación y cada acción está guiada por un compromiso genuino de hacer lo correcto y velar por los mejores intereses de sus clientes.”"
+        "quote": "“Lo que más destaca de GM Attorneys es la integridad de su equipo. Cada recomendación y cada acción está guiada por un compromiso genuino de hacer lo correcto y velar por los mejores intereses de sus clientes.”",
+        "author": ""
       },
       "excellence": {
         "title": "Excelencia",
-        "quote": "“Una de las mayores ventajas de trabajar con GM Attorneys es su fuerte presencia local. Su equipo es accesible, cercano y genuinamente conectado con las comunidades a las que sirve. Los clientes pueden reunirse con ellos personalmente, fomentando confianza y seguridad, mientras se benefician de una asesoría legal que combina el conocimiento local con amplia experiencia.”"
+        "quote": "“Una de las mayores ventajas de trabajar con GM Attorneys es su fuerte presencia local. Su equipo es accesible, cercano y genuinamente conectado con las comunidades a las que sirve. Los clientes pueden reunirse con ellos personalmente, fomentando confianza y seguridad, mientras se benefician de una asesoría legal que combina el conocimiento local con amplia experiencia.”",
+        "author": "CEO, Hospitality Development Group"
       }
     },
     "impactTitle": "Impacto"
@@ -247,7 +254,9 @@
     "backHome": "Volver al inicio"
   },
   "contact": {
-    "title": "Ponte en contacto con nosotros",
+    "title": "¿Buscas comprar propiedad o invertir en Costa Rica?",
+    "subtitle": "Cuéntanos sobre tu transacción y un miembro de nuestro equipo se pondrá en contacto contigo.",
+    "drawerTitle": "Contáctanos",
     "offices": "Oficinas",
     "contact": "Contacto",
     "phoneNumbers": "Teléfono",
@@ -304,6 +313,7 @@
   },
   "faq": {
     "title": "FAQ",
+    "subtitle": "Preguntas frecuentes de inversionistas extranjeros y propietarios en Costa Rica",
     "sortBy": "Ordenar por",
     "sortAll": "Todas",
     "getInTouch": "Contáctanos",
