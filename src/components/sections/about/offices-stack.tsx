@@ -37,19 +37,23 @@ export function OfficesStack() {
                     sizes="(min-width: 1024px) 72rem, 100vw"
                     className="object-cover"
                   />
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"
-                  />
-                  <span className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 lg:bottom-8 lg:left-8 text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight tabular-nums text-white">
-                    {office.year}
-                  </span>
                 </div>
 
                 <div className="flex flex-col gap-4 p-6 sm:p-8 lg:p-10">
-                  <h3 className="text-4xl sm:text-5xl lg:text-6xl font-medium uppercase tracking-tight text-[#27102b]">
-                    {office.name}
-                  </h3>
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-medium uppercase tracking-tight text-[#27102b]">
+                      {office.name}
+                    </h3>
+
+                    <div className="flex items-baseline gap-3 sm:shrink-0 sm:border-l sm:border-[#0aa39f]/40 sm:pl-6">
+                      <span className="text-[0.65rem] sm:text-xs font-semibold uppercase tracking-[0.3em] text-[#0aa39f]">
+                        {t("since")}
+                      </span>
+                      <span className="text-3xl sm:text-4xl lg:text-5xl font-medium tabular-nums tracking-tight text-[#27102b]">
+                        {office.year}
+                      </span>
+                    </div>
+                  </div>
 
                   <div className="flex flex-col gap-3 text-sm sm:text-base font-medium leading-relaxed text-black/70">
                     <p>{t(`${office.id}.p1`)}</p>

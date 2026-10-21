@@ -56,7 +56,7 @@ export default async function ContactPage({
       <Navbar variant="default" />
       <main className="w-full bg-white">
         <Section className="pt-32 sm:pt-40">
-          <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
+          <div className="flex flex-col gap-12 lg:flex-row lg:gap-0 lg:justify-between">
             <div className="flex w-full flex-col gap-10 lg:w-2/5">
               <div className="flex flex-col gap-4">
                 <h1 className="text-4xl font-medium leading-tight tracking-tight text-[#240824] sm:text-5xl">
@@ -124,7 +124,7 @@ export default async function ContactPage({
               </div>
             </div>
 
-            <div className="w-full lg:w-[48%]">
+            <div className="w-full lg:w-1/2">
               <ContactForm />
             </div>
           </div>

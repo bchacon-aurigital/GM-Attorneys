@@ -36,12 +36,12 @@ export function AboutValues() {
                 <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide">
                   {t(`values.${value.key}.title`)}
                 </h3>
-                <div data-aos="fade-up" className="flex flex-col gap-3 max-w-md">
+                <div data-aos="fade-up" className="flex flex-col gap-3 max-w-md lg:flex-1">
                   <p className="text-sm sm:text-base font-medium">
                     {t(`values.${value.key}.quote`)}
                   </p>
                   {author && (
-                    <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.14em] text-black/50">
+                    <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.14em] text-black/50 lg:mt-auto">
                       — {author}
                     </p>
                   )}

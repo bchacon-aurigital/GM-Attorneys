@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -131,6 +132,19 @@ export function NewsletterModal({ isOpen, onClose }: Props) {
             </form>
 
             <p className="mt-4 text-center text-xs text-[#240824]/40">{t("disclaimer")}</p>
+            <p className="mt-2 text-center text-xs text-[#240824]/50">
+              {t.rich("privacy", {
+                link: (chunks) => (
+                  <Link
+                    href="/privacy-policy"
+                    onClick={onClose}
+                    className="underline underline-offset-2 transition-colors hover:text-[#240824]"
+                  >
+                    {chunks}
+                  </Link>
+                ),
+              })}
+            </p>
           </div>
         </div>
       </div>

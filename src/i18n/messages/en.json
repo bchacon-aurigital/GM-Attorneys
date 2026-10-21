@@ -222,17 +222,17 @@
       "commitment": {
         "title": "Commitment",
         "quote": "“GM Attorneys is exceptionally responsive, combining outstanding professionalism with a genuinely personal approach. Their team is knowledgeable, approachable, and a pleasure to work with. They make complex legal matters feel manageable while ensuring clients feel supported and confident throughout the process.”",
-        "author": "Private Investor | California"
+        "author": "Canadian Real Estate Investor"
       },
       "integrity": {
         "title": "Integrity",
         "quote": "“What stands out most about GM Attorneys is the integrity of their team. Every recommendation and every action is guided by a genuine commitment to doing what is right and in the best interests of their clients.”",
-        "author": ""
+        "author": "CEO, U.S. Real Estate Development Company"
       },
       "excellence": {
         "title": "Excellence",
         "quote": "“One of the greatest advantages of working with GM Attorneys is their strong local presence. Their team is accessible, engaged, and genuinely connected to the communities they serve. Clients can meet with them personally, fostering trust and confidence while benefiting from legal counsel that combines local insight with extensive experience.”",
-        "author": "CEO, Hospitality Development Group"
+        "author": "Owner, Hospitality & Tourism Business"
       }
     },
     "impactTitle": "Impact"
@@ -282,10 +282,12 @@
       "errorBody": "Please try again or email us directly at info@gmattorneyscr.com.",
       "sendAnother": "Send another message",
       "errorCaptcha": "Please confirm you are human.",
-      "errorRequired": "Please fill in all required fields."
+      "errorRequired": "Please fill in all required fields.",
+      "privacy": "By submitting this form, you agree to our <link>Privacy Policy</link>."
     }
   },
   "officesHistory": {
+    "since": "Since",
     "flamingo": {
       "p1": "The GM Attorneys office in Flamingo emerged as the result of years of work and a sustained presence in the area. Long before establishing a physical office, our team represented from San José the legal interests of major developers and investors connected to this destination's growth.",
       "p2": "Through complex litigation and significant real estate matters, we had the opportunity to serve clients who placed their trust in our firm for the protection of their projects and investments. That experience gave us a deep understanding of the legal, business, and development landscape of the region.",
@@ -335,6 +337,7 @@
     "lastName": "Last Name",
     "email": "Email address",
     "submit": "Download my free guide",
-    "disclaimer": "No spam. Unsubscribe at any time."
+    "disclaimer": "No spam. Unsubscribe at any time.",
+    "privacy": "By submitting, you agree to our <link>Privacy Policy</link>."
   }
 }

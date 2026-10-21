@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { mainServices, complementaryServices } from "@/data/services";
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
@@ -186,6 +187,19 @@ export function ContactForm() {
       >
         {status === "sending" ? t("form.sending") : t("form.submit")}
       </button>
+
+      <p className="text-xs leading-relaxed text-[#240824]/60">
+        {t.rich("form.privacy", {
+          link: (chunks) => (
+            <Link
+              href="/privacy-policy"
+              className="underline underline-offset-2 transition-colors hover:text-[#240824]"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
+      </p>
     </form>
   );
 }

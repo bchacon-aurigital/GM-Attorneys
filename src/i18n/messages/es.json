@@ -222,17 +222,17 @@
       "commitment": {
         "title": "Compromiso",
         "quote": "“GM Attorneys es excepcionalmente receptivo, combinando un profesionalismo sobresaliente con un trato genuinamente personal. Su equipo es conocedor, accesible y un placer con el que trabajar. Logran que asuntos legales complejos se sientan manejables, mientras aseguran que los clientes se sientan respaldados y confiados durante todo el proceso.”",
-        "author": "Inversionista Privado | California"
+        "author": "Inversionista Canadiense en Bienes Raíces"
       },
       "integrity": {
         "title": "Integridad",
         "quote": "“Lo que más destaca de GM Attorneys es la integridad de su equipo. Cada recomendación y cada acción está guiada por un compromiso genuino de hacer lo correcto y velar por los mejores intereses de sus clientes.”",
-        "author": ""
+        "author": "CEO, Empresa de Desarrollo Inmobiliario de EE.UU."
       },
       "excellence": {
         "title": "Excelencia",
         "quote": "“Una de las mayores ventajas de trabajar con GM Attorneys es su fuerte presencia local. Su equipo es accesible, cercano y genuinamente conectado con las comunidades a las que sirve. Los clientes pueden reunirse con ellos personalmente, fomentando confianza y seguridad, mientras se benefician de una asesoría legal que combina el conocimiento local con amplia experiencia.”",
-        "author": "CEO, Hospitality Development Group"
+        "author": "Propietario, Negocio de Hospitalidad y Turismo"
       }
     },
     "impactTitle": "Impacto"
@@ -282,10 +282,12 @@
       "errorBody": "Por favor intente de nuevo o escríbanos a info@gmattorneyscr.com.",
       "sendAnother": "Enviar otro mensaje",
       "errorCaptcha": "Por favor confirme que no es un robot.",
-      "errorRequired": "Por favor complete todos los campos requeridos."
+      "errorRequired": "Por favor complete todos los campos requeridos.",
+      "privacy": "Al enviar este formulario, acepta nuestra <link>Política de Privacidad</link>."
     }
   },
   "officesHistory": {
+    "since": "Desde",
     "flamingo": {
       "p1": "La oficina de GM Attorneys en Flamingo surgió como resultado de años de trabajo y presencia constante en la zona. Mucho antes de establecer una oficina física, nuestro equipo representó desde San José los intereses legales de importantes desarrolladores e inversionistas vinculados al crecimiento de este destino.",
       "p2": "A través de litigios complejos y asuntos inmobiliarios de gran relevancia, tuvimos la oportunidad de acompañar a clientes que depositaron su confianza en nuestra firma para la protección de sus proyectos e inversiones. Esa experiencia nos permitió conocer profundamente la realidad jurídica, empresarial y de desarrollo de la región.",
@@ -335,6 +337,7 @@
     "lastName": "Apellido",
     "email": "Correo electrónico",
     "submit": "Descargar mi guía gratuita",
-    "disclaimer": "Sin spam. Cancela cuando quieras."
+    "disclaimer": "Sin spam. Cancela cuando quieras.",
+    "privacy": "Al enviar, aceptas nuestra <link>Política de Privacidad</link>."
   }
 }
