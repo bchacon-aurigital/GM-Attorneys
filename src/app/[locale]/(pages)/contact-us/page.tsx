@@ -108,7 +108,7 @@ export default async function ContactPage({
                   </div>
                   <a
                     href="tel:+50641084070"
-                    className="text-sm text-[#240824] transition-opacity duration-300 hover:opacity-70"
+                    className="text-sm text-[rgb(36,8,36)] transition-opacity duration-300 hover:opacity-70"
                   >
                     (+506) 4108-4070
                   </a>
@@ -119,7 +119,7 @@ export default async function ContactPage({
                     <FaClock className="size-3.5 shrink-0" aria-hidden="true" />
                     <p className="text-xs font-semibold uppercase tracking-wide">{t("openHours")}</p>
                   </div>
-                  <p className="text-sm text-[#240824]">{t("openHoursValue")}</p>
+                  <p className="text-sm text-[#240824] whitespace-nowrap">{t("openHoursValue")}</p>
                 </div>
               </div>
             </div>
