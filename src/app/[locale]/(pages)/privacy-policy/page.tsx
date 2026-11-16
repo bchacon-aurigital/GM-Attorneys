@@ -47,6 +47,26 @@ const paragraphs: (string | { heading: string })[] = [
   "For the purposes of evaluating, establishing and maintaining a professional relationship, GM ATTORNEYS may collect, process and retain personal information and supporting documentation as necessary to provide legal services, verify client identity, conduct know-your-customer (KYC) and due diligence procedures, assess potential conflicts of interest, and comply with applicable legal, regulatory and professional obligations, including anti-money laundering requirements, where applicable. Such information may be retained for as long as necessary for the provision of services, compliance with applicable obligations and the protection of the firm's legitimate interests, subject to applicable law.",
 ];
 
+const paragraphsEs: (string | { heading: string })[] = [
+  "GM ATTORNEYS patrocina este sitio web únicamente para brindar información general sobre la firma y no pretende constituir publicidad, solicitud de servicios ni asesoría legal. No debe confiar en este sitio web ni utilizarlo sin consultar a un abogado que considere sus circunstancias específicas, posibles cambios en las leyes, reglas y regulaciones aplicables y otros asuntos legales. La información y los materiales contenidos en este sitio web pueden no reflejar los desarrollos legales más recientes, ni se garantiza que sean completos, correctos o actualizados. El uso de este sitio web no establece una relación abogado-cliente, ni tiene la intención de hacerlo.",
+  'Estamos muy orgullosos de los resultados que obtenemos para nuestros clientes, pero debe saber que los resultados pasados no garantizan resultados futuros; que cada caso es diferente y debe juzgarse según sus propios méritos; y que la elección de un abogado es una decisión importante que no debe basarse únicamente en publicidad. Si desea que lo representemos, por favor contacte directamente a uno de nuestros abogados o haga clic en la página "Contáctenos" y complete el formulario para enviarnos un mensaje electrónico y determinar si dicha representación sería apropiada. Con gusto consideraremos que un abogado lo represente. Si está interesado en que uno de nuestros abogados lo represente, le brindaremos información adicional sobre nuestras capacidades y términos de contratación. Por favor no nos envíe información privada o confidencial sin antes recibir autorización para hacerlo.',
+  "Si se comunica con nosotros a través de este sitio web, por correo electrónico o de otra forma respecto a un asunto legal en el cual aún no lo representamos, su comunicación podría no ser tratada como privilegiada o confidencial. Es posible que tengamos relaciones previas con clientes u otros posibles conflictos que nos impidan representarlo o tratar sus comunicaciones como confidenciales.",
+  "GM ATTORNEYS recopila cierta información personal a través de este sitio web y la trata de conformidad con la Ley costarricense N.º 8968, Protección de la Persona frente al Tratamiento de sus Datos Personales, y su reglamento.",
+  "En general, no se le exige proporcionar información personal para consultar nuestro sitio web. Adicionalmente, cierta información técnica puede recopilarse automáticamente mediante cookies o tecnologías similares, según se describe más adelante.",
+  'Sin embargo, usted puede optar por contactarnos completando el formulario de la página "Contáctenos" de este sitio web, en cuyo caso le solicitamos su nombre y apellidos, números de teléfono y móvil, y correo electrónico, entre otros. También se puede recopilar información personal cuando se suscribe a nuestro boletín o solicita publicaciones u otros materiales a través de este sitio web.',
+  "Utilizaremos su información para responder a sus consultas, proporcionarle la información o los materiales solicitados, gestionar las comunicaciones relacionadas con sus solicitudes y, cuando corresponda, administrar las suscripciones a nuestras publicaciones y boletines.",
+  "El suministro de información personal es voluntario. No obstante, cierta información puede ser necesaria para tramitar y responder su solicitud. Cuando lo exija la ley aplicable, el consentimiento se obtendrá de acuerdo con los requisitos legales correspondientes.",
+  "Tenga presente que, para tramitar su consulta, es posible que debamos compartir su información dentro de las oficinas de GM ATTORNEYS, o con proveedores de servicios externos que participen en el procesamiento de su solicitud o en la operación del sitio web, sujeto a los requisitos legales aplicables. La información personal también podrá divulgarse cuando la ley lo autorice o lo exija.",
+  "GM ATTORNEYS puede enviarle correos electrónicos sobre eventos, publicaciones y servicios de la firma que puedan ser de su interés, sujeto a su consentimiento previo cuando la ley aplicable lo requiera. En cualquier momento, puede dejar de recibir comunicaciones promocionales contactándonos.",
+  "Este sitio web contiene enlaces a otros sitios web. GM ATTORNEYS no es responsable de las prácticas de privacidad ni del contenido de dichos sitios web.",
+  'El sitio web de GM ATTORNEYS utiliza "cookies" para brindarle un mejor servicio cuando regrese a nuestro sitio. Las cookies utilizadas en nuestro sitio web nos permiten conocer la fecha y hora de su última visita, el contenido visto y ciertos parámetros de seguridad que controlan el acceso a áreas restringidas o protegidas dentro de este sitio web. Podrán utilizarse cookies adicionales u otras tecnologías similares según las funcionalidades del sitio web. Cuando corresponda, se proporcionará información sobre sus finalidades y los mecanismos de consentimiento o preferencias disponibles, de acuerdo con la ley aplicable. Puede configurar su navegador para que le notifique cuando reciba una "cookie", dándole la oportunidad de decidir si la acepta o no.',
+  "La información personal recopilada a través de este sitio web está sujeta a los requisitos de seguridad y confidencialidad establecidos por la legislación costarricense aplicable. Dicha información podrá conservarse para los fines para los cuales fue recopilada y durante cualquier período adicional que la ley exija o permita.",
+  "Usted puede ejercer en cualquier momento sus derechos de acceso, rectificación, actualización o supresión de sus datos personales, sujeto a los requisitos y excepciones legales aplicables. Dichas solicitudes se atenderán de acuerdo con los procedimientos y plazos establecidos por la ley aplicable. Las consultas y solicitudes deben enviarse directamente a una de nuestras oficinas o por correo electrónico a info@gmattorneyscr.com",
+  { heading: "Contratación de Servicios Profesionales" },
+  "Finalmente, esta Declaración de Privacidad aplica a los datos personales recopilados y tratados a través de este sitio web. Una vez que se haya establecido formalmente una relación abogado-cliente, el manejo de la información personal estará sujeto a los términos de contratación aplicables, las obligaciones de confidencialidad profesional, la legislación de protección de datos y las políticas y procedimientos internos de la firma.",
+  "Para efectos de evaluar, establecer y mantener una relación profesional, GM ATTORNEYS puede recopilar, tratar y conservar información personal y documentación de respaldo según sea necesario para prestar servicios legales, verificar la identidad del cliente, realizar procedimientos de conocimiento del cliente (KYC) y debida diligencia, evaluar posibles conflictos de interés y cumplir con las obligaciones legales, regulatorias y profesionales aplicables, incluidos los requisitos de prevención del lavado de dinero, cuando corresponda. Dicha información podrá conservarse durante el tiempo necesario para la prestación de los servicios, el cumplimiento de las obligaciones aplicables y la protección de los intereses legítimos de la firma, sujeto a la ley aplicable.",
+];
+
 export default async function PrivacyPolicyPage({
   params,
 }: {
@@ -55,6 +75,7 @@ export default async function PrivacyPolicyPage({
   const { locale } = await params;
   const isSpanish = locale === "es";
   const { path } = localizedAlternates("/privacy-policy", locale);
+  const content = isSpanish ? paragraphsEs : paragraphs;
 
   return (
     <>
@@ -72,12 +93,12 @@ export default async function PrivacyPolicyPage({
                 Legal
               </p>
               <h1 className="text-4xl font-medium uppercase tracking-tight text-[#240824] sm:text-5xl lg:text-6xl">
-                Legal Disclaimer &amp; Privacy Statement
+                {isSpanish ? "Aviso Legal y Declaración de Privacidad" : "Legal Disclaimer & Privacy Statement"}
               </h1>
             </div>
 
             <div className="flex max-w-3xl flex-col gap-6">
-              {paragraphs.map((paragraph, index) =>
+              {content.map((paragraph, index) =>
                 typeof paragraph === "string" ? (
                   <p key={index} className="text-sm font-medium leading-relaxed text-[#240824]/70 sm:text-base">
                     {paragraph}
